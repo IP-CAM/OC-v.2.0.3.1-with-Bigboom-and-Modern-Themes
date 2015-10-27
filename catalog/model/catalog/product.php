@@ -513,4 +513,9 @@ class ModelCatalogProduct extends Model {
 		$query=$this->db->query("SELECT date_start,date_end from ". DB_PREFIX . "product_special WHERE product_id = ".(int)$product_id. " AND priority = 1");		
 		return $query->row;
 	}
+
+	public function getProductbyCate($id){
+		return $this->db->query("SELECT " .DB_PREFIX."product_description.name FROM " . DB_PREFIX. "product_to_category left join " .DB_PREFIX."product_description on " .DB_PREFIX. "product_to_category.product_id = " .DB_PREFIX. "product_description.product_id WHERE " .DB_PREFIX. "product_to_category.category_id= ".(int)$id);
+	}
+	
 }
