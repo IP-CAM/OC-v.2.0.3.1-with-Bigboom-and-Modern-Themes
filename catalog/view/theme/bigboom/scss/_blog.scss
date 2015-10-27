@@ -1,0 +1,128 @@
+/**************  Lastest blog*************/
+#lastest-blog {
+	.blog-img {
+		float: left;
+		margin-right: 15px;
+	}
+	.blog-content {
+		width: 240px;
+		float: left;
+		padding: 10px 12px;
+		position: relative;
+		border: 1px solid #efefef;
+	}
+	.arrows {
+	    background: url(../images/arrows.png) 0 0 no-repeat;
+	    width: 10px;
+	    height: 19px;
+	    position: absolute;
+	    left: -10px;
+	    top: 20px;
+	}
+	.blog-title {
+		margin-top: 0;
+		margin-bottom: 3px;
+		a {
+			font-weight: bold;
+			font-size: 14px;
+			color: #555;
+			&:hover {
+				color: $main-color;
+				text-decoration: underline;
+			}
+		}
+	}
+	.blog-des {
+		margin-bottom: 8px;
+		p {
+			font-size: 12px;
+			line-height: 1.7;
+		}
+	}
+	.blog-info {
+		display: none;
+	}
+	.readmore {
+		color: #aaa;
+		&:hover {
+			color: $main-color;
+		}
+	}
+}
+
+/************Page Blog detail**************/
+.blog-single-post {
+	margin-bottom: 35px;
+	.blog-title {
+		margin-top: 0;
+		margin-bottom: 5px;
+		font-weight: bold;
+		a {
+			color: #333;
+			&:hover {
+				color: $main-color;
+			}
+		}
+	}
+	.blog-meta {
+		font-style: italic;
+		margin-bottom: 20px;
+		a {
+			color: #222;
+			font-weight: bold;
+			&:hover {
+				color: $main-color;
+			}
+		}
+		.post-category {
+			margin-bottom: 0;
+		}
+		span {
+			margin-right: 20px;
+			display: inline-block;
+		}
+		strong {
+			font-style: normal;
+			text-transform: capitalize;
+		}
+	}
+	.post-link {
+		margin-bottom: 30px;
+	}
+	.post-wrapper {
+		margin-bottom: 35px;
+	}
+	.post-list {
+		margin-left: 40px;
+		li{
+		list-style-type: disc;
+		}
+	}
+	.btn-blog {
+		margin-top: 5px;
+		padding: 6px 12px;
+		background-color: #222;
+		border-color: #222;
+		&:hover {
+			background-color: $main-color;
+			border-color: $main-color;
+		}
+	}	
+	.post-content {
+		margin-bottom: 10px;
+	}
+	.blog-img  {
+		margin-bottom: 15px;
+	}
+	.fb-comments {
+		margin-top: 40px;
+	}
+}
+/********Blog content**********/
+.blog-content {
+	.blog-meta {
+		margin-bottom: 5px;
+		font-size: 12px;
+	}
+}
+

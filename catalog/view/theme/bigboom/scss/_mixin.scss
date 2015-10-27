@@ -1,0 +1,30 @@
+@mixin transition($transition) {
+	transition: $transition;
+	-moz-transition: $transition;
+	-webkit-transition:  $transition;
+	-o-transition: $transition;
+}
+@mixin transition-property($transition-property1, $transition-property2) {
+	transition-property:$transition-property1, $transition-property2;
+	-moz-transition-property:$transition-property1, $transition-property2;
+	-webkit-transition-property:  $transition-property1, $transition-property2;
+	-o-transition-property:$transition-property1, $transition-property2;
+}
+@mixin transform($transform) {
+	transform: $transform;
+	-moz-transform: $transform;
+	-webkit-transform:  $transform;
+	-o-transform: $transform;
+}
+@mixin opacity($opacity) {
+	opacity: $opacity;
+	filter:Alpha(opacity=$opacity*100); //ie8 or under
+	zoom:1; //ie 7
+	-webkit-backface-visibility: hidden; //chrome
+}
+@mixin animation($animation) {
+	animation: $animation;
+	-moz-animation: $animation;
+	-webkit-animation:  $animation;
+	-o-animation: $animation;
+}
