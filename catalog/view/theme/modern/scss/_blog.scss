@@ -1,0 +1,135 @@
+/**************  Lastest blog*************/
+#lastest-blog {
+	.item {
+		background: #fff;
+		border: 1px solid #e5e5e5;
+	}
+	.blog-img {
+		float: left;
+		margin-right: 18px;
+	}
+	.blog-content {
+		padding: 14px;
+		padding-bottom: 0; 
+	}
+	.blog-title {
+		margin-top: 0;
+		margin-bottom: 10px;
+		a {
+			font-family: $font-title;
+			font-weight: 600;
+			font-size: 16px;
+			color: #333;
+			&:hover {
+				color: $main-color;
+				text-decoration: underline;
+			}
+		}
+	}
+	.blog-des {
+		margin-bottom: 37px;
+		p {
+			font-size: 12px;
+			line-height: 1.5;
+		}
+	}
+	.blog-info {
+		&:after {
+			display: table;
+			content: "";
+			clear: both;
+		}
+		h5 {
+			float: left;
+			padding-left: 20px;
+			padding-right: 20px;
+			border-right: 1px solid #b2b2b2;
+			color: #666;
+			font-family: $font-body;
+			font-size: 12px;
+			&:first-child {
+				padding-left: 0;
+			}
+			&:last-child {
+				padding-right: 0;
+				border-right: none;
+			}
+		}
+	}
+	.blog-date {
+		span {
+			padding-right: 4px;
+		}
+	}
+}
+
+/************Page Blog detail**************/
+.blog-single-post {
+	margin-bottom: 35px;
+	.blog-title {
+		margin-top: 0;
+		margin-bottom: 5px;
+		font-weight: bold;
+		a {
+			color: #333;
+			&:hover {
+				color: $main-color;
+			}
+		}
+	}
+	.blog-meta {
+		font-style: italic;
+		margin-bottom: 20px;
+		a {
+			color: #222;
+			font-weight: bold;
+			&:hover {
+				color: $main-color;
+			}
+		}
+		.post-category {
+			margin-bottom: 0;
+		}
+		span {
+			margin-right: 20px;
+			display: inline-block;
+		}
+		strong {
+			font-style: normal;
+			text-transform: capitalize;
+		}
+	}
+	.post-link {
+		margin-bottom: 30px;
+	}
+	.post-wrapper {
+		margin-bottom: 35px;
+	}
+	.post-list {
+		margin-left: 40px;
+		li{
+		list-style-type: disc;
+		}
+	}
+	.btn-blog {
+		margin-top: 5px;
+		padding: 8px 20px;
+	}	
+	.post-content {
+		margin-bottom: 10px;
+	}
+	.blog-img  {
+		margin-bottom: 15px;
+	}
+	.fb-comments {
+		margin-top: 40px;
+	}
+}
+/********Blog content**********/
+.blog-content {
+	.blog-meta {
+		margin-bottom: 5px;
+		font-size: 12px;
+	}
+}
+

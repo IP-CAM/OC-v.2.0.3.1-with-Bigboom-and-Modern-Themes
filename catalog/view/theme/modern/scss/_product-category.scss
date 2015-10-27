@@ -1,0 +1,32 @@
+#list-view, #grid-view{
+	padding: 0;
+	border: none;
+	background: none;
+	box-shadow: none;
+}
+/******* Page ************/
+[class*='product-category-'] {
+
+	.category-banner {
+		margin-bottom: 22px;
+	}
+	
+	.search-define-wrapper {
+		a {
+			color: $body-color;
+			&:hover {
+				color: $main-color;
+			}
+		}
+	}
+	.pagination-wrapper {
+		margin-top: 0;
+	}
+}
+@media only screen and (max-width: 479px) {
+	[class*='product-product']  {
+		.secondary-thumbnail {
+			display: none;
+		}
+	}
+}

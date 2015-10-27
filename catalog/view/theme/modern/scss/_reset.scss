@@ -1,0 +1,51 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box; //margin and padding size
+}
+body {
+	font-family: $font-body;
+	color: $body-color;
+	font-size: $font-size-body;
+	line-height: $line-height-base;
+}
+
+a {
+	cursor: pointer;
+	color: $main-color;
+	background-color: transparent;
+	&:hover {
+		color: $main-color;
+    	text-decoration: none;
+	}
+	&:focus {
+		outline: none;
+		color: $main-color;
+		text-decoration: none;
+	}
+	&:hover, &:active {
+		outline: none;
+	}
+}
+ul.list-unstyled > li > a {
+	color: #666;
+	&:hover {
+		color: $main-color;
+	}
+}
+
+img {
+	max-width: 100%;
+}
+
+ul li {
+	list-style-type: none;
+}
+.container {
+	padding: 0;
+}
+input {
+	&:focus {
+		outline: none;
+	}
+}

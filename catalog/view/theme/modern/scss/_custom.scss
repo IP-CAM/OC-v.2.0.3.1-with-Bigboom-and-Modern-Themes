@@ -1,0 +1,262 @@
+/********HOMEPAGE 1***********/
+.banner-slider {
+	margin-bottom: 30px;
+	position: relative;
+	.owl-controls {
+		position: static;
+	}
+	.owl-nav {
+		[class*='owl-'] {
+			position: absolute;
+			top: 50%;
+			margin-top: -20px;
+			display: none!important;
+			border: none;
+			color: #fff;
+			margin: 0;
+			background-color: rgba(255, 255, 255, 0.1);
+			&:hover {
+				background-color: #222;
+			}
+		}
+		.owl-prev {
+			left: 40px;
+		}
+		.owl-next {
+			right: 40px;
+		}
+	}
+	&:hover {
+		.owl-nav {
+			[class*="owl-"] {
+				display: block!important;
+			}
+		}
+	}
+}
+
+
+
+/*********Title************/
+.heading-title {
+	font-family: $font-title;
+	font-weight: 600;
+	font-size: 20px;
+	color: $secondary-color;
+	text-transform: uppercase;
+	margin-top: 0;
+	margin-bottom: 20px;
+	&:after {
+		content: "";
+		display: block;
+		width: 70px;
+		height: 1px;
+		background-color: #333;
+		margin-top: 16px;
+	}
+}
+
+.heading-slide-title {
+	margin-bottom: 100px;
+	text-align: center;
+	&:after {
+		content: "";
+		display: block;
+		width: 80px;
+		height: 1px;
+		background: #7f7f7f;
+		margin: auto;
+		margin-top: 16px;
+	}
+}
+
+
+
+/******************Slide*********************/
+
+
+.owl-controls {
+	position: absolute;
+	top: -80px;
+	width: 100%;
+	text-align: center;
+}
+.owl-nav {
+	[class*="owl-"] {
+		display: inline-block;
+		font-size: 0;
+		width: 48px;
+		height: 39px;
+		line-height: 39px;
+		color: #666;
+		background: #fff;
+		border: 1px solid #ddd;
+		@include transition(all 0.3s);
+		&:before {
+			font-family: FontAwesome;
+			font-size: 20px;
+		}
+		&:hover {
+			background: #333;
+			color: #fff;
+		}
+	}
+	.owl-prev {
+		margin-right: 8px;
+		&:before {
+			content: "\f104";
+		}
+	}
+	.owl-next {
+		&:before {
+			content: "\f105";
+		}
+	}
+}
+
+#top-footer {
+	background-color: #f8f8f8;
+	padding-top: 38px;
+	padding-bottom: 58px;
+	margin-bottom: 0;
+}
+.theme-ads {
+	background: url(../images/ads-theme-bg.png) repeat;
+	position: relative;
+	padding: 43px 50px 47px 50px;
+	margin-bottom: 56px;
+	&:before,
+	&:after {
+		display: block;
+		content: "";
+		width: 100%;
+		height: 2px;
+		background: #b9b9b9;
+		position: absolute;
+		left: 0;
+	}
+	&:before {
+		top: 10px;
+	}
+	&:after {
+		bottom: 10px;
+	}
+	.theme-ads-title {
+		font-family: $font-title;
+		font-size: 24px;
+		font-weight: normal;
+		color: #fffefe;
+		text-transform: uppercase;
+		margin: 0;
+		margin-bottom: 9px;
+		letter-spacing: 1px;
+	}
+	.theme-ads-description {
+		font-size: 15px;
+	    margin-top: 7px;
+	    color: #ffffff;
+	    letter-spacing: 0.8px;
+	}
+	> a {
+		text-transform: uppercase;
+		display: block;
+		font-family: $font-body-bold;
+		font-size: 14px;
+		padding: 10px 27px;
+		color: #fff;
+		background: $main-color;
+		position: absolute;
+		right: 65px;
+		top: 50%;
+		margin-top: -23.5px;
+		border-radius: 2px;
+		letter-spacing: 1px;
+		@include transition(0.2s);
+		&:hover {
+			color: #333;
+			background: #fff;
+		}
+	}
+}
+
+.banner1 {
+	margin-bottom: 50px;
+}
+.static-block-1 {
+	margin-bottom: 60px;
+	.free-deliver-shipping {
+	    background: url("../images/airplane.png") 90% 35px no-repeat #f46e6f;
+	    padding: 27px 30px;
+	    h4 {
+	    	color: #fff;
+		    font-size: 16px;
+		    text-transform: uppercase;
+		    padding-right: 50px;
+		    line-height: 22px;
+		    margin: 0;
+		    font-weight: 600;
+		    margin-bottom: 24px;
+		    letter-spacing: 0.3px;
+	    }
+	    p {
+	    	color: #fff;
+	    	font-size: 12px;
+	    	letter-spacing: 0.6px;
+	    }
+	}
+	.block-subcribe {
+		padding: 60px 0;
+		background: #f2f1f1;
+		.send-newsletter-text {
+			font-family: $font-title;
+			width: 23.15%;
+		    float: left;
+		    color: #444;
+		    font-size: 16px;
+		    text-transform: uppercase;
+		    letter-spacing: 0.8px;
+		    line-height: 1;
+		    padding-left: 30px;
+		    margin-right: 15px;
+		    margin-top: 2px;
+		    strong {
+		    	font-family: $font-body-bold;
+		    	letter-spacing: 0.8px;
+		    }
+		}
+		.send-newsletter-form {
+			width: 52.56%;
+			height: 36px;
+			float: left;
+			margin-right: 5px;
+			padding: 0px 20px;
+			border: 1px solid #DDD;
+			background-color: #FFF;
+
+		}
+		.send-newsletter-button {
+			font-family: $font-title;
+			font-size: 14px;
+			color: #fff;
+			padding: 5px 20px;
+			background: #3d3d3d;
+			font-weight: normal;
+			border: none;
+			@include transition(all 0.2s);
+			&:hover {
+				background-color: $main-color;
+			}
+		}
+	}
+}
+
+/***********HOMEPAGE 2***********/
+.static-block-4 {
+	margin-bottom: 60px;
+}
+.static-block-5 {
+	margin-bottom: 55px;
+}
+.four-column {
+	margin-bottom: 55px;
+}

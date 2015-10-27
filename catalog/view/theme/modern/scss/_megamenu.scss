@@ -1,0 +1,287 @@
+/******************MEGAMENU********************/
+#menu {
+	background-color: transparent;
+	background-image: none;
+	border: none;
+	min-height: auto;
+	margin-bottom: 0;
+	#category {
+		font-family: $font-title;
+		color: #222;
+		font-weight: bold;
+		text-transform: uppercase;
+	}
+	.nav {
+		> li {
+			> a {
+				display: block;
+				padding: 12px 19px;
+				font-size: 12px;
+				color: #333;
+				text-transform: uppercase;
+				font-weight: bold;
+				letter-spacing: 1.7px;
+				&:hover {
+					color: $main-color;
+					background-color: transparent;
+				}
+				.fa {
+					margin-left: 2px;
+				}
+			}
+			&:hover {
+				> a {
+					color: $main-color;
+				}
+			}
+			&:last-child {
+				> a {
+					padding-right: 0;
+				}
+			}
+		}
+	}
+	.dropdown-menu {
+		padding-top: 0;
+		top: 42px;
+	}
+	.sub-menu-1 {
+		> li {
+			margin-bottom: 15px;
+			margin-top: 20px;
+			> a {
+				display: block;
+				text-transform: capitalize;
+				font-family: $font-title;
+				color: #555;
+				padding: 7px 20px;
+				margin-top: 0;
+				font-size: 14px;
+				font-weight: 600;
+				&:hover {
+					background-color: transparent;
+					background-image: none;
+					color: $main-color;
+				}
+				&:after {
+					content: "";
+					display: block;
+					width: 35px;
+					height: 1px;
+					background-color: #999;
+					margin-top: 5px;
+				}
+			}
+		}
+	}
+	.sub-home {
+		> li {
+			> a {
+				&:after {
+					display: none;
+				}
+			}
+		}
+	}
+	
+	.sub-menu-2 {
+		@extend .sub-menu-1;
+		> li {
+			margin-bottom: 0;
+			margin-top: 0;
+			> a {
+				font-size: 13px;
+				font-weight: normal;
+				&:after {
+					display: none;
+				}
+			}
+		}
+	}
+	.megamenu-html-content {
+		padding: 20px;
+		min-width: 250px;
+		p {
+			margin-bottom: 0;
+		}
+	}
+	.navbar-collapse {
+		float: right;
+		padding-left: 0;
+		padding-right: 0;
+		//overwrite default opencart theme
+		overflow-x: hidden;
+		overflow-y: hidden;
+		max-height: 100%;
+	}
+	.see-all {
+		color: $body-color;
+		font-family: $font-title;
+		font-weight: bold;
+		font-size: 13px;
+		padding-top: 12px;
+		padding-bottom: 12px;
+		border-top: 1px solid #ddd;
+		&:hover {
+			background-color: #333;
+			background-image: none;
+			color: #fff;
+		}
+	}
+	.btn-navbar {
+		background-color: transparent;
+		background-image: none;
+		border: none;
+		&:hover,
+		&:active,
+		&:focus {
+			background-color: transparent;
+		}
+		.fa {
+			color: #222;
+			font-size: 18px;
+		}
+	}
+}
+
+/**************MEGAMENU HOME 2***************/
+.header-2 {
+	#menu {
+		.nav {
+			> li {
+				> a {
+					color: #fff;
+					padding-top: 13px;
+					padding-bottom: 13px;
+					&:hover {
+						color: $main-color;
+					}
+				}
+				&:hover {
+					> a {
+						color: $main-color;
+					}
+				}
+			}
+		}
+		.dropdown-menu {
+			top: 44px;
+		}
+	}
+}
+/****************For Responsive******************/
+@media only screen and (min-width: 767px) and (max-width: 991px) {
+	#menu {
+		.nav {
+			> li {
+				> a {
+					padding-left: 12px;
+					padding-right: 12px;
+				}
+			}
+		}
+	}
+}
+@media only screen and (max-width: 767px) {
+		#menu {
+			background-color: #eee;
+			padding-top: 0;
+			padding-bottom: 0;
+			margin-bottom: 30px;
+			width: 100%;
+			//overwrite default theme
+			.dropdown-menu {
+				
+				.see-all {
+					&:hover {
+						background-color: #333;
+						color: #fff;
+					}
+				}
+			}
+			div.dropdown-menu {
+				padding-bottom: 0;
+				background: none;
+			}//end
+			.navbar-collapse {
+				@include transition(0.5s); //transition dropdown
+				float: none;
+				.nav {
+					margin: 0;
+					> li {
+						> a {
+							display: block;
+							padding: 12px 19px;
+							font-size: 12px;
+							color: #333;
+							text-transform: uppercase;
+							font-weight: bold;
+							letter-spacing: 1.7px;
+							border-bottom: 1px solid #ddd;
+							&:hover {
+								background-color: #333;
+								color: #fff;
+							}
+							.fa {
+								display: none;
+							}
+						}
+						&:first-child {
+							> a {
+								border-top: 1px solid #ddd;
+							}
+						}
+						&.open,
+						&:hover  {
+							> a {
+								background-color: #333;
+								color: #fff;
+							}
+							> .sub-toggle {
+								color: #fff;
+							}
+						}
+					}
+				}
+				.dropdown-inner {
+					ul {
+						display: block;
+					}
+				}
+				.sub-menu-1 {
+					> li {
+						margin-bottom: 0;
+						margin-top: 0;
+						> a {
+							padding-left: 30px;
+							border-bottom: 1px solid #ddd;
+							&:after {
+								display: none;
+							}
+						}
+					}
+				}
+				.sub-menu-2 {
+					> li {
+						> a {
+							padding-left: 60px;
+						}
+					}
+				}
+			}
+			.sub-collapse {
+				position: relative;
+				.sub-toggle {
+					position:absolute;
+					z-index: 999;
+					padding: 10px;
+					top:0px;
+					right: 28px;
+					cursor: pointer;
+				}
+			}
+		}
+		.navbar-header {
+			padding: 8px 0;
+		}
+	}
