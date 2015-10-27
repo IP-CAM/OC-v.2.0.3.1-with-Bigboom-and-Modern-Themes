@@ -24,6 +24,11 @@ class ControllerCommonHome extends Controller {
 		$data['Threecolumns_1']		=$this->load->controller('common/Threecolumns_1');
 		$data['banner1']	=$this->load->controller('common/banner1');
 
+		//Addition position
+
+		$data['column_left_ex']		=	$this->load->controller('common/column_left_ex');
+		$data['column_right_ex']	=	$this->load->controller('common/column_right_ex');
+
 		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/common/home.tpl')) {
 			$this->response->setOutput($this->load->view($this->config->get('config_template') . '/template/common/home.tpl', $data));
 		} else {

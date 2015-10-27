@@ -288,6 +288,9 @@ class ControllerDesignLayout extends Controller {
 		$data['button_module_add'] = $this->language->get('button_module_add');
 		$data['button_remove'] = $this->language->get('button_remove');
 
+		$data['text_column_left_ex']		=	 $this->language->get('text_column_left_ex');
+		$data['text_column_right_ex']	=	$this->language->get('text_column_right_ex');
+
 		if (isset($this->error['warning'])) {
 			$data['error_warning'] = $this->error['warning'];
 		} else {

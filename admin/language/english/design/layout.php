@@ -21,6 +21,9 @@ $_['text_top_banner']	="Top banner";
 $_['text_Threecolumns_1']	="Three columns position 1";
 $_['text_banner1']		="banner1";
 
+$_['text_column_left_ex']	= 	"Column Left Extend";
+$_['text_column_right_ex']	=	"Column Right Extend";
+
 
 // Column
 $_['column_name']         = 'Layout Name';

@@ -160,6 +160,19 @@
                     <option value="banner1"><?php echo $text_banner1; ?></option>
                     <?php } ?> 
 
+                    <!--Addition position -->
+                    <?php if ($layout_module['position'] == 'column_left_ex') { ?>
+                    <option value="column_left_ex" selected="selected"><?php echo $text_column_left_ex; ?></option>
+                    <?php } else { ?>
+                    <option value="column_left_ex"><?php echo $text_column_left_ex; ?></option>
+                    <?php } ?> 
+
+                    <?php if ($layout_module['position'] == 'column_right_x') { ?>
+                    <option value="column_right_x" selected="selected"><?php echo $text_column_right_ex; ?></option>
+                    <?php } else { ?>
+                    <option value="column_right_x"><?php echo $text_column_right_ex; ?></option>
+                    <?php } ?>
+
 
                     
                   </select></td>
@@ -229,6 +242,8 @@ function addModule() {
     html += '    <option value="top_banner"><?php echo $text_top_banner; ?></option>';
     html += '    <option value="Threecolumns_1"><?php echo $text_Threecolumns_1; ?></option>';
     html += '    <option value="banner1"><?php echo $text_banner1; ?></option>';
+    html += '    <option value="column_left_ex"><?php echo $text_column_left_ex; ?></option>';
+    html += '    <option value="column_right_x"><?php echo $text_column_right_ex; ?></option>';
     html += '  </select></td>';
 	html += '  <td class="text-left"><input type="text" name="layout_module[' + module_row + '][sort_order]" value="" placeholder="<?php echo $entry_sort_order; ?>" class="form-control" /></td>';
 	html += '  <td class="text-left"><button type="button" onclick="$(\'#module-row' + module_row + '\').remove();" data-toggle="tooltip" title="<?php echo $button_remove; ?>" class="btn btn-danger"><i class="fa fa-minus-circle"></i></button></td>';
