@@ -1,0 +1,154 @@
+/**********Product slide*********/
+.owl-nav {
+	[class*='owl-'] {
+		position: absolute;
+		z-index: 999;
+		top: -48px;
+		width: 26px;
+		height: 26px;
+		line-height: 26px;
+		text-align: center;
+		display: block;
+		font-size: 0;
+		background-color: #efefef;
+		@include transition (0.2s);
+		border-radius: 1px;
+		&:before {
+			font-family: FontAwesome;
+			font-size: 16px;
+			color: #666;
+			display: block;
+		}
+		&:hover {
+			background-color: #666;
+			&:before {
+				color: #fff;
+			}
+		}
+	}
+	.owl-prev {
+		right: 32px;
+		&:before {
+			content: "\f104";
+		}
+	}
+	.owl-next {
+		right: 0;
+		&:before {
+			content: "\f105";
+		}
+	}
+}
+//Banner slider
+.banner-slider {
+	margin-bottom: 30px;
+	position: relative;
+	overflow: hidden;
+	.owl-controls {
+		position: static;
+	}
+	.owl-nav {
+		[class*='owl-'] {
+			position: absolute;
+			top: 50%;
+			width: 47px;
+			height: 58px;
+			margin-top: -29px;
+			opacity: 0;
+			border: none;
+			color: #fff;
+			margin: 0;
+			@include transition(0.5s);
+			background-color: rgba(0, 0, 0, 0.26);
+			&:hover {
+				background-color: rgba(0, 0, 0, 0.68)
+			}
+			&:before {
+				font-size: 30px;
+				line-height: 58px;
+			}
+		}
+		.owl-prev {
+			left: -50px;
+		}
+		.owl-next {
+			right: -50px;
+		}
+	}
+	&:hover {
+		.owl-nav {
+			[class*="owl-"] {
+				opacity: 1;
+			}
+		}
+		.owl-prev {
+			left: 0px;
+		}
+		.owl-next {
+			right: 0px;
+		}
+	}
+}
+
+
+
+
+/********HOMEPAGE 1***********/
+
+.heading-title {
+	font-family: $font-title;
+	font-size: 16px;
+	font-weight: bold;
+	color: #444;
+	text-transform: uppercase;
+	margin-top: 0;
+	margin-bottom: 25px;
+}
+
+.top-banner-wrapper {
+	.top-banner {
+		float: left;
+		&.top-banner-1 {
+			width: 23%;
+		}
+		&.top-banner-2 {
+			width: 54%;
+		}
+		&.top-banner-3 {
+			width: 21%;
+		}
+	}
+}
+
+.featured-product {
+	margin-bottom: 15px;
+}
+
+
+/***************Homepage2**************/
+
+.top-banner-2 {
+	.position {
+		float: left;
+		&.position1 {
+			width: 23%;
+			margin-right: 1%;
+		}
+		&.position2 {
+			width: 76%;
+			margin-top: 10px;
+		}
+	}
+	.owl-nav {
+		[class*='owl-'] {
+			&:before {
+				color: #fff;
+			}
+			&:hover {
+				&:before {
+					color: $main-color;
+				}
+			}
+		}
+	}
+}

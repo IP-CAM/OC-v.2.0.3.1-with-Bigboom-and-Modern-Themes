@@ -1,0 +1,141 @@
+/**********Page information-sitemap*************/
+.information-sitemap {
+	#content {
+		ul {
+			li {
+				margin-bottom: 20px;
+				a {
+					color: #000;
+					font-weight: bold;
+					&:hover {
+						color: $main-color;
+					}
+				}
+			}
+			> li {
+				color: $main-color;
+				font-weight: bold;
+			}
+		}
+	}
+}
+/*********Page account login***********/
+.forgotten-password-link {
+	display: block;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+/************Page product modal *************/
+.modal-header {
+	border: none;
+	.close {
+		position: fixed;
+		top: 35px;
+		right: 35px;
+		color: #222;
+		font-size: 35px;
+	}
+}
+@media only screen and (max-width: 767px) {
+	.modal-header {
+		.close {
+			top: 15px;
+		}
+	}
+}
+
+.modal-body {
+	padding-bottom: 30px;
+	padding: 0;
+	margin-left: 15px;
+	margin-right: 15px;
+	.rating .fa-stack {
+		font-size: 5px;
+	}
+	.quickview-button-wrapper {
+		margin-top:40px;
+		padding: 25px 0;
+		border-top: 1px solid #eee;
+		.button-action,
+		.add-to-cart-content {
+			display: inline-block;
+			margin-right: 25px;
+		}
+	}
+}
+
+.modal-dialog {
+	width: 60%;
+	position: absolute;
+	left: 25%;
+	.modal-content {
+		height: 600px;
+		overflow: auto;
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	.product-desc {
+		h3 {
+			font-family: $font-title;
+			color: #222;
+			margin: 0;
+		}
+		
+	}
+	.other-image {
+		> ul {
+			margin-bottom: 30px;
+			> li {
+				max-width: 30%;
+				display: inline-block;
+				margin-right: 6px;
+			}
+		}
+	}
+}
+.main-image {
+	margin-bottom: 20px;
+}
+.img-thumbnail {
+	padding: 0;
+}
+@media only screen and (max-width: 767px) {
+	.well {
+		margin-top: 30px;
+	}
+}
+/***********Page Search**************/
+#button-search {
+	margin-top: 10px;
+	margin-bottom: 25px;
+}
+.search-header {
+	> label {
+		margin-bottom: 10px;
+	}
+	.checkbox-inline {
+		margin-top: 10px;
+	}
+}
+
+/**********Page Comparision************/
+/***********Page check out**************/
+.checkout-cart {
+	#content {
+		> h1 {
+			margin-bottom: 30px;
+		}
+	}
+	#accordion {
+		margin-top: 25px;
+		.panel-default {
+			margin-bottom: 45px;
+		}
+		a {
+			color: #222;
+			&:hover {
+				color: $main-color;
+			}
+		}
+	}
+}
