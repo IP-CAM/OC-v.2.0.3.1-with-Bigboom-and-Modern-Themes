@@ -123,8 +123,8 @@
               </button>-->
               <a data-toggle="tooltip" title="<?php echo $button_wishlist; ?>" onclick="wishlist.add('<?php echo $product_id; ?>');">
                 <i class="fa fa-heart"></i><span>Add to wishlist</span>
-              </a data-toggle="tooltip" title="<?php echo $button_compare; ?>" onclick="compare.add('<?php echo $product_id; ?>');">
-              <a >
+              </a>
+              <a data-toggle="tooltip" title="<?php echo $button_compare; ?>" onclick="compare.add('<?php echo $product_id; ?>');">
                 <i class="fa fa-exchange"></i><span>Add to compare</span>
               </a>
             </div>
@@ -704,7 +704,7 @@ $('.image-add-ypn').owlCarousel({
             items:2
         },       
         1000:{
-            items:3
+            items:4
         }
     }
 });  

@@ -1,8 +1,6 @@
 <?php echo $header; ?>
 <div class="main-body">
     <div class="container">
-        <?php echo $themevast_1; ?>
-        <?php echo $banner1 ?>
         <div class="main-content">
             <div class="row">
                 <?php echo $column_left; ?>
