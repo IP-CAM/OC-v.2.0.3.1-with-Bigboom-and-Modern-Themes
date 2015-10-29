@@ -97,8 +97,8 @@
 			$this->load->model('tool/image');
 
 			$banner_id=$_POST['banner_id'];				
-			$image_des=$this->model_design_banner->getBannerImages($banner_id);		
-								
+			$image_des=$this->model_design_banner->getBannerImages($banner_id);
+											
 			foreach ($image_des as $img_des) {				
 			 	if (is_file(DIR_IMAGE . $img_des['image'])) {
 					$image = $this->model_tool_image->resize($img_des['image'], 200, 200);

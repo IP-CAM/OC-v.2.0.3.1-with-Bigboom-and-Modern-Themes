@@ -1,40 +1,42 @@
-<div class="vertical-megamenu" style="margin-top:-50px;">
-    <nav>    
-    <div>
-      <ul class="navbar navbar-default megamenu" style="padding-left:15px;">
-        <li class="dropdown category"><a href="#"><h2>CATEGORIES</h2><i class="fa fa-bars"></i></a>
-       		<div class="dropdown-menu drop-right-inner ">
-				<ul>
-					<?php foreach ($categories as $category) { ?>
-						<?php if($category['children']) { ?>
-						<li class="drop-right"><a href="<?php echo $category['href']; ?>"><?php if(isset($awesome[$category['category_id']])){ ?><i class="fa <?php echo html_entity_decode($awesome[$category['category_id']]);?>"></i><?php } ?><?php echo $category['name']; ?></a>
-							<div class="drop-right-menu">					
-								<div style="float:left;">				
-									<?php foreach ($category['children'] as $key=>$child) { ?>
-										<div class="item-right">
-											<div style="display:block;width:100%;" class="inner-item">
-												<h4><?php echo $child['name']; ?></h4>			
-												<ul>
-													<?php foreach ($child['product_id']->rows as $name) {?>
-													<li><a href="#"><?php echo $name['name']; ?></a></li>		
-													<?php } ?>
-												</ul>
-											</div>
-										</div>
-									<?php if(($key+1)%2==0) { echo "<br>";} } ?>
+<div class="vertical-menu">
+	<div class="category-text">
+		<h4>CATEGORY</h4>
+		<i class="fa fa-bars"></i>
+	</div>
+	<div class="category-list">
+		<ul>
+		<?php foreach ($categories as $category) { $k=$category['category_id']; ?>	
+			<?php if(!empty($category['children'])) { ?>	
+			<li>
+				<a href="<?php echo $category['href']; ?>"><?php if(isset($cate_conf[$k]['awesome'])){ ?><i class="fa <?php echo html_entity_decode($cate_conf[$k]['awesome']);?> menu-icon"></i><?php } ?><span><?php echo $category['name']; ?><span><i class="fa fa-angle-right"></i></a>
+				<div class="fly-sub-menu">
+					<div class="link-cate">	
+						<?php foreach (array_chunk($category['children'],3) as $key=>$children) { ?>						
+							<div class="row-cate-wrapper">
+								<?php foreach ($children as $child) { ?>
+								<div class="element-cate-wrapper">
+									<h4><?php echo $child['name']; ?></h4>
+									<ul>
+										<?php foreach ($child['sub_child'] as $sub_child) { ?>
+											<li><a href="<?php echo $sub_child['href']; ?>"><?php echo $sub_child['name']; ?></a></li>
+										 <?php } ?>
+									</ul>
 								</div>
-								<div style="float:right;">
-									<img style="height:300px;width:215px;" src="<?php echo $category['image'] ;?>">
-								</div>							
-							</div>								
-						</li>
-						<?php } else { ?>
-						<li><a href="<?php echo $category['href']; ?>"><?php if(isset($awesome[$category['category_id']])){ ?><i class="fa <?php echo html_entity_decode($awesome[$category['category_id']]); ?>"></i><?php } ?><?php echo $category['name']; ?></a></li>	
-					<?php } }?>
-				</ul>	
-			</div>
-        </li>    
-    </div>
-  </nav>
+								<?php } ?>	
+							</div>														
+						<?php } ?>							
+					</div>		
+					<div>		
+						<img src="<?php echo $cate_conf[$k]['image']; ?>">				
+					</div>	
+				</div>				
+			</li>
+			<?php }else{ ?>
+			<li>
+				<a href="<?php echo $category['href']; ?>"><?php if(isset($cate_conf[$k]['awesome'])){ ?><i class="fa <?php echo html_entity_decode($cate_conf[$k]['awesome']);?> menu-icon"></i><?php } ?><span><?php echo $category['name']; ?></span></a>	
+			</li>
+			<?php } ?>
+		<?php } ?>			
+		</ul>
+	</div>
 </div>
-

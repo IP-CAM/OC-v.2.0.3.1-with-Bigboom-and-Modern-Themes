@@ -59,8 +59,8 @@
                   <?php if(isset($images)) { foreach ($images as $img) { ?>               
                     <tr>
                         <td><input type="hidden" name="images[]" value="<?php echo $img['banner_des']['image_id'] ;?>"><img src="<?php echo $img['image']; ?>"></td>
-                        <td><textarea name="title[]" ><?php if(!empty($img['image_des'])) {echo $img['image_des'][0];} ?></textarea></td>
-                        <td><textarea name="content[]"><?php if(!empty($img['image_des'])){ echo $img['image_des'][1]; }?></textarea></td>
+                        <td><textarea name="titless[]" ><?php if(!empty($img['image_des'])) {echo $img['image_des'][0];} ?></textarea></td>
+                        <td><textarea name="contentss[]"><?php if(!empty($img['image_des'])){ echo $img['image_des'][1]; }?></textarea></td>
                     </tr>
                    <?php } } ?>
                   </tbody>
@@ -106,10 +106,8 @@
   </div>
 </div>
 <script type="text/javascript">  
-  var url="<?php  echo html_entity_decode($url_banner) ?>";
-  var module_id="<?php  echo $module_id; ?>";
- 
-  $('#input-banner').change(function(){
+  var url="<?php  echo html_entity_decode($url_banner) ?>"; 
+  $('#input-banner').change(function(){ 
     $('#images').find('tbody').empty();    
 
       $.ajax({
@@ -117,13 +115,12 @@
           url:url,
           data:{banner_id:$(this).val()}
       }).done(function(msg){
-        rs=jQuery.parseJSON(msg);      
+        rs=jQuery.parseJSON(msg); 
         
         var i,j;      
         for(i=0; i<rs.length;i++){  
-          j=rs[i]['banner_des']['image_id'];
-          console.log(j);
-              $('#images').find('tbody').append('<tr><td><input type="hidden" name="images[]" value="'+j+'"><img src="'+rs[i]['image']+'"></img></td><td><textarea name="title[]"></textarea></td><td><textarea name="content[]"></textarea></td></tr>');
+          j=rs[i]['banner_des']['image_id'];       
+              $('#images').find('tbody').append('<tr><td><input type="hidden" name="images['+i+'][path]" value="'+j+'"><img src="'+rs[i]['image']+'"></img></td><td><textarea name="images['+i+'][title]"></textarea></td><td><textarea name="images['+i+'][content]"></textarea></td></tr>');
           }        
       });
   });

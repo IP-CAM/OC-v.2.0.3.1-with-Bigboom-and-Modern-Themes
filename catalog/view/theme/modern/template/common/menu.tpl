@@ -29,7 +29,7 @@
 										<?php foreach (array_chunk($category['children'], ceil(count($category['children']) / $category['column'])) as $children) { ?>
 											<ul class="list-unstyled sub-menu-1">											
 												<?php foreach ($children as $child) { ?>
-													<li>
+													<li>,
 														<a href="<?php echo $child['href']; ?>">
 															<?php echo $child['name']; ?>
 														</a>										

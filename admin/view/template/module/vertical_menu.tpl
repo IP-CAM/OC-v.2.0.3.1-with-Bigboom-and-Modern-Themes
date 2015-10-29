@@ -14,8 +14,11 @@
           <?php } ?>
         </ul>
       </div>
-  </div>
+  </div>  
   <div class="container-fluid">
+  <div class="alert alert-danger" id="input-dem-check" style="display:none;"><i class="fa fa-exclamation-circle"></i> With or height of image must be numeric value
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+  </div>
     <?php if ($error_warning) { ?>
         <div class="alert alert-danger"><i class="fa fa-exclamation-circle"></i> <?php echo $error_warning; ?>
           <button type="button" class="close" data-dismiss="alert">&times;</button>
@@ -44,22 +47,28 @@
                   <table class="display-tb" style="width:100%;">
                     <thead>
                       <tr>
-                        <td class="text-center">Categories Id</td>
-                        <td class="text-center">Name</td>
+                        <td class="text-left">Name</td>                                            
                         <td class="text-center">FontAwesomeIcon</td>
+                        <td class="text-center">Image</td> 
+                        <td class="text-center">Width image</td>
+                        <td class="text-center">Height image</td> 
                       </tr>
                     </thead>
-                    <tbody>
-                      <?php foreach ($categories as $cate) { ?>
-                        <tr>
-                          <td><?php echo $cate['category_id']; ?></td>
-                          <td><?php echo $cate['name']; ?></td>
+                    <tbody>                  
+                      <?php foreach ($categories as $cate) { $k=$cate['category_id']; ?>
+                        <tr>                         
+                          <td class="text-left"><?php echo $cate['name']; ?></td>                                          
                           <td>
                             <div class="input-group">
-                              <input class="awesome-icon input-group form-control icp icp-auto" placeholder="input awesome icon" style="width:100%;" name="awesome[];" <?php if(isset($awesome[$cate['category_id']])){ ?>value="<?php echo $awesome[$cate['category_id']]; ?>" <?php } ?> data-placement="bottomRight" readonly />
+                              <input class="awesome-icon input-group form-control icp icp-auto" placeholder="input awesome icon" style="width:100%;" name="category[<?php echo $k ?>][awesome];" <?php if(isset($cate_conf[$k]['awesome'])){ ?>value="<?php if(!empty($cate_conf)) echo $cate_conf[$k]['awesome']; ?>" <?php } ?> data-placement="bottomRight" readonly />
                               <span class="input-group-addon"></span>
                             </div>
                           </td>
+                          <td><a href="" id="thumb-image<?php echo $k; ?>" data-toggle="image" class="img-thumbnail"><img src="<?php if(!empty($cate_conf)) echo $cate_conf[$k]['thumb']; ?>" data-placeholder="<?php echo $placeholder; ?>"></a>
+                          <input type="hidden" name="category[<?php echo $k ?>][image]" id="input-image<?php echo $k;  ?>" value="<?php echo $cate_conf[$k]['image']; ?>"/>
+                          </td>  
+                          <td><input type="text" name="category[<?php echo $k ?>][img_width];" value="<?php if(!empty($cate_conf)) echo $cate_conf[$k]['img_width'];  ?>" class="input-dem"></td>
+                          <td><input type="text" name="category[<?php echo $k ?>][img_height];" value="<?php if(!empty($cate_conf)) echo $cate_conf[$k]['img_height']; ?>" class="input-dem"></td> 
                         </tr>
                       <?php } ?>
                     </tbody>
@@ -86,7 +95,23 @@
         </div>       
     </div>
   </div>
+
   <script type="text/javascript" src="view/javascript/fontawesome-iconpicker.js"></script>
+  <script type="text/javascript">
+  $('#form-megamenu').submit(function () {
+    var isnum=true;
+    $('.input-dem').each(function () {        
+        var var_ip = $(this).val();
+        if(!($.isNumeric(var_ip))){   
+          $('#input-dem-check').show();           
+          isnum=false;  
+          return false;
+        }               
+    });    
+    return  isnum;  
+   
+  });
+  </script>
              
   <script>
             $(function() {                

@@ -15,18 +15,11 @@
 			}
 			if(($this->request->server['REQUEST_METHOD']=='POST')&&$this->validate()){
 				if(!isset($this->request->get['module_id'])){
-					$sender=$this->request->post;
-					$awesome=$sender['awesome'];										
-					$return = array_combine($arr_cate_id, $awesome);
-					$sender=array("name"=>$sender['name'],"awesome"=>$return,"status"=>$sender['status']);					
-					$this->model_extension_module->addModule('vertical_menu',$sender);
+					$this->model_extension_module->addModule('vertical_menu',$this->request->post);
 				}
 				else{
-					$sender=$this->request->post;										
-					$awesome=$sender['awesome'];								
-					$return = array_combine($arr_cate_id, $awesome);					
-					$sender=array("name"=>$sender['name'],"awesome"=>$return,"status"=>$sender['status']);												
-					$this->model_extension_module->editModule($this->request->get['module_id'],$sender);
+
+					$this->model_extension_module->editModule($this->request->get['module_id'],$this->request->post);
 				}
 
 				$this->session->data['success']=$this->language->get['text_success'];
@@ -91,7 +84,7 @@
 
 			if (isset($this->request->get['module_id']) && ($this->request->server['REQUEST_METHOD'] != 'POST')) {
 				$module_info = $this->model_extension_module->getModule($this->request->get['module_id']);
-			}
+			}	
 
 			$data['token'] = $this->session->data['token'];
 
@@ -103,14 +96,53 @@
 				$data['name'] = '';
 			}
 
-			if(isset($this->request->post['awesome'])){
-				$data['awesome']=$this->request->post['awesome'];
+
+			$this->load->model('tool/image');
+		
+
+			if(isset($this->request->post['category'])){
+				$cate_conf=$this->request->post['category'];				
+				$data['cate_conf']=array();
+				foreach ($cate_conf as $key=>$cf) {
+					if(isset($cf['image'])&&is_file(DIR_IMAGE . $cf['image'])){
+						$thumb = $this->model_tool_image->resize($cf['image'],50,50);
+					}
+					else{
+						$thumb	=	$this->model_tool_image->resize('no_image.png',50,50);
+					}
+					$data['cate_conf'][$key]=array(
+						'awesome'	=>	$cf['awesome'],
+						'thumb'		=>	$thumb,
+						'image'		=>	$cf['image'],
+						'img_width'	=>	$cf['img_width'],
+						'img_height'=>	$cf['img_height']	
+					);
+				}				
+				
 			}
-			elseif(!empty($module_info)){
-				$data['awesome']=$module_info['awesome'];
+
+			elseif(!empty($module_info['category'])){
+				$cate_conf=$module_info['category'];				
+				$data['cate_conf']=array();
+				foreach ($cate_conf as $key=>$cf) {
+					if(isset($cf['image'])&&is_file(DIR_IMAGE . $cf['image'])){
+						$thumb = $this->model_tool_image->resize($cf['image'],50,50);
+					}
+					else{
+						$thumb	=$this->model_tool_image->resize('no_image.png',50,50);
+					}					
+					$data['cate_conf'][$key]=array(
+						'awesome'	=>	$cf['awesome'],
+						'thumb'		=>	$thumb,
+						'image'		=>	$cf['image'],
+						'img_width'	=>	$cf['img_width'],
+						'img_height'=>	$cf['img_height']	
+					);
+				}		
 			}
 			else
-				{$data['awesome']=array();}	
+				{$data['cate_conf']=array();}
+			
 
 			if (isset($this->request->post['status'])) {
 				$data['status'] = $this->request->post['status'];
@@ -118,8 +150,9 @@
 				$data['status'] = $module_info['status'];
 			} else {
 				$data['status'] = '';
-			}
+			}			
 
+			$data['placeholder']	=	$this->model_tool_image->resize('no_image.png',30,30);
 
 
 			$data['header'] = $this->load->controller('common/header');
