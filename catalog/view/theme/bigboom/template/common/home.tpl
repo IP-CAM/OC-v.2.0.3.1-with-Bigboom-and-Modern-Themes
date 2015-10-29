@@ -2,6 +2,7 @@
 <div class="main-body">
     <div class="container">     
         <?php echo $banner1 ?>
+    <div class="container">
         <div class="main-content">
             <div class="row">
                 <?php echo $column_left; ?>
