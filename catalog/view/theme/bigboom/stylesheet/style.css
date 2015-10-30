@@ -238,34 +238,36 @@ input:focus {
 /* line 147, ../scss/_header.scss */
 .header #search-custom .dd-options > li .dd-option-text {
   cursor: pointer;
+  font-weight: normal;
 }
-/* line 152, ../scss/_header.scss */
+/* line 153, ../scss/_header.scss */
 .header #search-custom a.dd-selected {
   color: #555;
   padding: 0;
   text-align: center;
-  text-transform: capitalize;
 }
 /* line 157, ../scss/_header.scss */
 .header #search-custom a.dd-selected .dd-selected-text {
   margin: 0;
+  text-transform: capitalize;
+  font-weight: normal;
 }
-/* line 161, ../scss/_header.scss */
+/* line 163, ../scss/_header.scss */
 .header #search-custom .dd-option {
   padding: 0;
   padding-left: 10px;
-  line-height: 36px;
+  line-height: 30px;
 }
-/* line 166, ../scss/_header.scss */
+/* line 168, ../scss/_header.scss */
 .header #search-custom .dd-option:hover {
   background-color: #da4b52;
   color: #fff;
 }
-/* line 170, ../scss/_header.scss */
+/* line 172, ../scss/_header.scss */
 .header #search-custom .search-input {
   width: 150px;
 }
-/* line 173, ../scss/_header.scss */
+/* line 175, ../scss/_header.scss */
 .header #search-custom #btn-search {
   background-color: #da4b52;
   color: #fff;
@@ -278,24 +280,24 @@ input:focus {
   text-transform: uppercase;
   padding: 0 20px;
 }
-/* line 181, ../scss/_header.scss */
+/* line 183, ../scss/_header.scss */
 .header #search-custom #btn-search:hover {
   background-color: #666;
 }
-/* line 186, ../scss/_header.scss */
+/* line 188, ../scss/_header.scss */
 .header .shopping-cart {
   text-align: right;
 }
-/* line 189, ../scss/_header.scss */
+/* line 191, ../scss/_header.scss */
 .header #cart {
   position: relative;
 }
-/* line 191, ../scss/_header.scss */
+/* line 193, ../scss/_header.scss */
 .header #cart > button {
   border: none;
   background-color: #464646;
 }
-/* line 195, ../scss/_header.scss */
+/* line 197, ../scss/_header.scss */
 .header #cart .cart-text {
   font-family: "Montserrat", san-serif;
   font-size: 13px;
@@ -303,7 +305,7 @@ input:focus {
   display: inline-block;
   padding: 0 15px;
 }
-/* line 202, ../scss/_header.scss */
+/* line 204, ../scss/_header.scss */
 .header #cart .cart-arrow {
   display: inline-block;
   background-color: #da4b52;
@@ -312,14 +314,14 @@ input:focus {
   height: 40px;
   line-height: 40px;
 }
-/* line 209, ../scss/_header.scss */
+/* line 211, ../scss/_header.scss */
 .header #cart .cart-arrow .fa {
   transition: 0.5s;
   -moz-transition: 0.5s;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
 }
-/* line 215, ../scss/_header.scss */
+/* line 217, ../scss/_header.scss */
 .header #cart:hover .cart-arrow .fa {
   transform: rotate(90deg);
   -moz-transform: rotate(90deg);
@@ -2719,129 +2721,135 @@ footer .footer-2 .icon-payment-wrapper {
 
 /************Page product modal *************/
 /* line 42, ../scss/_other-page.scss */
-.modal-header {
+.modal-dialog {
   border: none;
 }
 /* line 44, ../scss/_other-page.scss */
-.modal-header .close {
-  position: fixed;
-  top: 35px;
-  right: 35px;
+.modal-dialog .close-custom {
+  position: absolute;
+  top: 8px;
+  right: -4px;
+  width: 36px;
+  height: 36px;
   color: #222;
   font-size: 35px;
+  z-index: 1311;
+  cursor: pointer;
+  background-image: url("../images/fancybox_sprite.png");
 }
 
 @media only screen and (max-width: 767px) {
-  /* line 54, ../scss/_other-page.scss */
+  /* line 59, ../scss/_other-page.scss */
   .modal-header .close {
     top: 15px;
   }
 }
-/* line 60, ../scss/_other-page.scss */
+/* line 65, ../scss/_other-page.scss */
 .modal-body {
   padding-bottom: 30px;
   padding: 0;
   margin-left: 15px;
   margin-right: 15px;
 }
-/* line 65, ../scss/_other-page.scss */
+/* line 70, ../scss/_other-page.scss */
 .modal-body .rating .fa-stack {
   font-size: 5px;
 }
-/* line 68, ../scss/_other-page.scss */
+/* line 73, ../scss/_other-page.scss */
 .modal-body .quickview-button-wrapper {
   margin-top: 40px;
   padding: 25px 0;
   border-top: 1px solid #eee;
 }
-/* line 73, ../scss/_other-page.scss */
+/* line 78, ../scss/_other-page.scss */
 .modal-body .quickview-button-wrapper .button-action,
 .modal-body .quickview-button-wrapper .add-to-cart-content {
   display: inline-block;
   margin-right: 25px;
 }
 
-/* line 80, ../scss/_other-page.scss */
+/* line 85, ../scss/_other-page.scss */
 .modal-dialog {
   width: 60%;
   position: absolute;
   left: 25%;
 }
-/* line 84, ../scss/_other-page.scss */
+/* line 89, ../scss/_other-page.scss */
 .modal-dialog .modal-content {
   height: 600px;
   overflow: auto;
   padding-left: 15px;
   padding-right: 15px;
+  padding-top: 35px;
 }
-/* line 91, ../scss/_other-page.scss */
+/* line 97, ../scss/_other-page.scss */
 .modal-dialog .product-desc h3 {
   font-family: "Montserrat", san-serif;
   color: #222;
   margin: 0;
 }
-/* line 99, ../scss/_other-page.scss */
+/* line 105, ../scss/_other-page.scss */
 .modal-dialog .other-image > ul {
   margin-bottom: 30px;
 }
-/* line 101, ../scss/_other-page.scss */
+/* line 107, ../scss/_other-page.scss */
 .modal-dialog .other-image > ul > li {
   max-width: 30%;
   display: inline-block;
   margin-right: 6px;
 }
 
-/* line 109, ../scss/_other-page.scss */
+/* line 115, ../scss/_other-page.scss */
 .main-image {
   margin-bottom: 20px;
 }
 
-/* line 112, ../scss/_other-page.scss */
+/* line 118, ../scss/_other-page.scss */
 .img-thumbnail {
   padding: 0;
 }
 
 @media only screen and (max-width: 767px) {
-  /* line 116, ../scss/_other-page.scss */
+  /* line 122, ../scss/_other-page.scss */
   .well {
     margin-top: 30px;
   }
 }
 /***********Page Search**************/
-/* line 121, ../scss/_other-page.scss */
+/* line 127, ../scss/_other-page.scss */
 #button-search {
   margin-top: 10px;
   margin-bottom: 25px;
 }
 
-/* line 126, ../scss/_other-page.scss */
+/* line 132, ../scss/_other-page.scss */
 .search-header > label {
   margin-bottom: 10px;
 }
-/* line 129, ../scss/_other-page.scss */
+/* line 135, ../scss/_other-page.scss */
 .search-header .checkbox-inline {
   margin-top: 10px;
 }
 
 /**********Page Comparision************/
 /***********Page check out**************/
-/* line 138, ../scss/_other-page.scss */
+/* line 144, ../scss/_other-page.scss */
 .checkout-cart #content > h1 {
   margin-bottom: 30px;
 }
-/* line 142, ../scss/_other-page.scss */
+/* line 148, ../scss/_other-page.scss */
 .checkout-cart #accordion {
   margin-top: 25px;
 }
-/* line 144, ../scss/_other-page.scss */
+/* line 150, ../scss/_other-page.scss */
 .checkout-cart #accordion .panel-default {
   margin-bottom: 45px;
 }
-/* line 147, ../scss/_other-page.scss */
+/* line 153, ../scss/_other-page.scss */
 .checkout-cart #accordion a {
   color: #222;
 }
-/* line 149, ../scss/_other-page.scss */
+/* line 155, ../scss/_other-page.scss */
 .checkout-cart #accordion a:hover {
   color: #da4b52;
 }

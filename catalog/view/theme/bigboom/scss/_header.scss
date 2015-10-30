@@ -146,6 +146,7 @@
 			> li {
 				.dd-option-text {
 					cursor: pointer;
+					font-weight: normal;
 				}
 			}
 		}
@@ -153,15 +154,16 @@
 			color: #555;
 			padding: 0;
 			text-align: center;
-			text-transform: capitalize;
 			.dd-selected-text {
 				margin: 0;
+				text-transform: capitalize;
+				font-weight: normal;
 			}
 		}
 		.dd-option {
 			padding: 0;
 			padding-left: 10px;
-			line-height: 36px;
+			line-height: 30px;
 		}
 		.dd-option:hover {
 			background-color: $main-color;
