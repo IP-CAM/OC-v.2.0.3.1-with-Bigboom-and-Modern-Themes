@@ -119,6 +119,14 @@
 
 
 .header {
+	.logo {
+		padding-top: 25px;
+		padding-bottom: 28px;
+	}
+	.top-search,
+	.shopping-cart {
+		padding-top: 37px;
+	}
 	#search-custom {
 		display: inline-flex;
 		.dd-select, 

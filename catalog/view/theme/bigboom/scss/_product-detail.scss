@@ -277,7 +277,7 @@
 			.control-label {
 				margin-right: 10px;
 				margin-bottom: 0;
-				line-height: 38px;
+				line-height: 40px;
 			}
 		}
 		.quantity {
@@ -286,6 +286,8 @@
 			display: inline-block;
 			#input-quantity {
 				text-align: center;
+				height: 41px;
+				font-size: 15px;
 			}
 			.arrow {
 				position: absolute;
