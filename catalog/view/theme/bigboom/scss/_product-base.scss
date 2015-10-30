@@ -34,7 +34,28 @@
 }
 
 /****************Product base*****************/
-
+//star rating
+.rating {
+	&:after {
+		display: table;
+		content: "";
+		clear: both;
+	}
+}
+.fa-stack {
+	width: 13px;
+	height: 12px;
+	float: left;
+}
+.fa-stack-2x {
+	font-size: 12px;
+}
+.fa-star {
+	color: #ffb432;
+}
+.fa-star-o {
+	color: #666;
+}
 .product-thumb {
 	border: 1px solid #efefef;
 	padding: 7px;
@@ -95,15 +116,6 @@
 			display: table;
 			content: "";
 			clear: both;
-		}
-		.fa-stack {
-			width: 13px;
-			height: 12px;
-			float: left;
-		}
-		.fa-stack-2x {
-			color: #ffb432;
-			font-size: 12px;
 		}
 	}
 	.product-price-content {

@@ -25,6 +25,19 @@
 	margin-top: 15px;
 	margin-bottom: 15px;
 }
+/************Page contact*************/
+.information-contact {
+	.buttons {
+		.btn-primary {
+			background-color: $main-color;
+			border: none;
+			padding: 8px 25px;
+			&:hover {
+				background-color: #222;
+			}
+		}
+	}
+}
 /************Page product modal *************/
 .modal-header {
 	border: none;

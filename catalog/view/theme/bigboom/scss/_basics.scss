@@ -133,6 +133,10 @@ footer {
 
 //Dropdown
 
+//button
+.btn {
+	@include transition(0.2s);
+}
 
 // Compare
 .compare-text {

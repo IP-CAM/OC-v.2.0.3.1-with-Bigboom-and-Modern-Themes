@@ -34,3 +34,41 @@
 		display: none;
 	}
 }
+
+// random-product-slide
+.random-product-slide {
+	.product-thumb {
+		&:after {
+			display: table;
+			content: "";
+			clear: both;
+		}
+		.product-image-box {
+			float: left;
+		}
+		.product-info {
+			float: left;
+		}
+	}
+	.owl-nav {
+		[class*='owl-'] {
+			background-color: transparent;
+			top: 50%;
+			margin-top: -13px;
+			@include transition(0.2s);
+			&:before {
+				font-size: 28px;
+				color: #ccc;
+			}
+			&:hover:before {
+				color: #333;
+			}
+		}
+		.owl-prev {
+			left: 0;
+		}
+		.owl-next {
+			right: 0;
+		}
+	}
+}

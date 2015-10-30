@@ -121,6 +121,7 @@
 
 	#product {
 		margin-bottom: 30px;
+		margin-left: 20px;
 		h3 {
 			margin-top: 0;
 			font-size: 20px;
@@ -320,6 +321,14 @@
 			}
 		}
 	}
+	#button-review {
+		padding: 8px 25px;
+		background-color: $main-color;
+		border: none;
+		&:hover {
+			background-color: #222;
+		}
+	}
 }
 
 /***************Relate product****************/
@@ -339,6 +348,12 @@
 				display: block;
 			}
 		}
+	}
+}
+//margin left 0 to #product
+@media only screen and (max-width: 479px) {
+	#product {
+		margin-left: 0;
 	}
 }
 
