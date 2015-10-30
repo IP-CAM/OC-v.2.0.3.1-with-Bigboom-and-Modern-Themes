@@ -32,13 +32,13 @@ class ControllerCommonSearch extends Controller {
 				foreach ($categories_3 as $category_3) {
 					$level_3_data[] = array(
 						'category_id' => $category_3['category_id'],
-						'name'        => $category_3['name'],
+						'name'        => '--'.$category_3['name'],
 					);
 				}
 
 				$level_2_data[] = array(
 					'category_id' => $category_2['category_id'],
-					'name'        => $category_2['name'],
+					'name'        => '-'.$category_2['name'],
 					'children'    => $level_3_data
 				);
 			}
