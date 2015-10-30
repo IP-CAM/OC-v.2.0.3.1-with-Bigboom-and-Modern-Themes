@@ -121,44 +121,46 @@
 .header {
 	#search-custom {
 		display: inline-flex;
-		.select-element-wrapper,
+		.dd-select, 
 		.search-input, 
 		#btn-search {
 			border: none;
 			height: 40px;
+			line-height: 40px;
 		}
-		.form-control {
-			height: 40px;
-			border: none;
-			position: relative;
-			letter-spacing: -0.3px;
-			width: 160px;
-			&:focus {
-				border: none;
-				box-shadow: none;
+		.dd-select {
+			border-radius: 0;
+			background: #fff!important;
+		}
+		.dd-options {
+			height: 335px;
+			overflow: auto!important;
+			> li {
+				.dd-option-text {
+					cursor: pointer;
+				}
 			}
 		}
-		.select-element-wrapper {
-			&:after {
-				content: "\f0d7";
-				color: #bbb;
-				right: 30px;
+		a.dd-selected {
+			color: #555;
+			padding: 0;
+			text-align: center;
+			text-transform: capitalize;
+			.dd-selected-text {
+				margin: 0;
 			}
-			&:before {
-				content: "";
-				display: inline-block;
-				width: 1px;
-				height: 18px;
-				background-color: #e9e9e9;
-				position: absolute;
-				z-index: 99;
-				right: 15px;
-				top: 50%;
-				margin-top: -9px;
-			}
+		}
+		.dd-option {
+			padding: 0;
+			padding-left: 10px;
+			line-height: 36px;
+		}
+		.dd-option:hover {
+			background-color: $main-color;
+			color: #fff;
 		}
 		.search-input {
-			width: 315px;
+			width: 150px;
 		}
 		#btn-search {
 			background-color: $main-color;
@@ -173,6 +175,40 @@
 			}
 		}
 	}
-	
+	.shopping-cart {
+		text-align: right;
+	}
+	#cart {
+		position: relative;
+		> button {
+			border: none;
+			background-color: #464646;
+		}
+		.cart-text {
+			font-family: $font-title;
+			font-size: 13px;
+			color: #fefefe;
+			display: inline-block;
+			padding: 0 15px;
+		}
+		.cart-arrow {
+			display: inline-block;
+			background-color: $main-color;
+			color: #fff;
+			width: 40px;
+			height: 40px;
+			line-height: 40px;
+			.fa {
+				@include transition(0.5s);
+			}
+		}
+		&:hover {
+			.cart-arrow {
+				.fa {
+					@include transform(rotate(90deg));
+				}
+			}
+		}
+	}
 }
 

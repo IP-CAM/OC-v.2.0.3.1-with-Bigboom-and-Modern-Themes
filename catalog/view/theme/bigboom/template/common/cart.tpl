@@ -1,6 +1,10 @@
 <div id="cart" class="btn-group btn-block">
   <button type="button" data-toggle="dropdown" data-loading-text="<?php echo $text_loading; ?>" class="dropdown-toggle">
-    <a href="#" class="top-icon cart-icon"><i class="fa fa-shopping-cart"></i></a href="#"><span id="cart-total"><?php echo $text_items; ?></span><span class="cart-arrow"><i class="fa fa-arrow-right"></i></span>
+    <span class="cart-text">
+      <i class="fa fa-shopping-cart"></i>
+      <span id="cart-total"><?php echo $text_items; ?></span>
+    </span>
+    <span class="cart-arrow"><i class="fa fa-arrow-right"></i></span>
   </button>
   <?php if ($products || $vouchers) { ?>
   <ul class="dropdown-menu cart-product pull-right">

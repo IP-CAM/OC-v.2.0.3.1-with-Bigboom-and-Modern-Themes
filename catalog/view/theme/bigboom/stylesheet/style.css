@@ -208,49 +208,54 @@ input:focus {
   display: inline-flex;
 }
 /* line 126, ../scss/_header.scss */
-.header #search-custom .select-element-wrapper,
+.header #search-custom .dd-select,
 .header #search-custom .search-input,
 .header #search-custom #btn-search {
   border: none;
   height: 40px;
+  line-height: 40px;
 }
-/* line 130, ../scss/_header.scss */
-.header #search-custom .form-control {
-  height: 40px;
-  border: none;
-  position: relative;
-  letter-spacing: -0.3px;
-  width: 160px;
+/* line 131, ../scss/_header.scss */
+.header #search-custom .dd-select {
+  border-radius: 0;
+  background: #fff!important;
 }
-/* line 136, ../scss/_header.scss */
-.header #search-custom .form-control:focus {
-  border: none;
-  box-shadow: none;
+/* line 135, ../scss/_header.scss */
+.header #search-custom .dd-options {
+  height: 335px;
+  overflow: auto!important;
 }
-/* line 142, ../scss/_header.scss */
-.header #search-custom .select-element-wrapper:after {
-  content: "\f0d7";
-  color: #bbb;
-  right: 30px;
+/* line 139, ../scss/_header.scss */
+.header #search-custom .dd-options > li .dd-option-text {
+  cursor: pointer;
 }
-/* line 147, ../scss/_header.scss */
-.header #search-custom .select-element-wrapper:before {
-  content: "";
-  display: inline-block;
-  width: 1px;
-  height: 18px;
-  background-color: #e9e9e9;
-  position: absolute;
-  z-index: 99;
-  right: 15px;
-  top: 50%;
-  margin-top: -9px;
+/* line 144, ../scss/_header.scss */
+.header #search-custom a.dd-selected {
+  color: #555;
+  padding: 0;
+  text-align: center;
+  text-transform: capitalize;
 }
-/* line 160, ../scss/_header.scss */
+/* line 149, ../scss/_header.scss */
+.header #search-custom a.dd-selected .dd-selected-text {
+  margin: 0;
+}
+/* line 153, ../scss/_header.scss */
+.header #search-custom .dd-option {
+  padding: 0;
+  padding-left: 10px;
+  line-height: 36px;
+}
+/* line 158, ../scss/_header.scss */
+.header #search-custom .dd-option:hover {
+  background-color: #da4b52;
+  color: #fff;
+}
+/* line 162, ../scss/_header.scss */
 .header #search-custom .search-input {
-  width: 315px;
+  width: 150px;
 }
-/* line 163, ../scss/_header.scss */
+/* line 165, ../scss/_header.scss */
 .header #search-custom #btn-search {
   background-color: #da4b52;
   color: #fff;
@@ -263,9 +268,53 @@ input:focus {
   text-transform: uppercase;
   padding: 0 20px;
 }
-/* line 171, ../scss/_header.scss */
+/* line 173, ../scss/_header.scss */
 .header #search-custom #btn-search:hover {
   background-color: #666;
+}
+/* line 178, ../scss/_header.scss */
+.header .shopping-cart {
+  text-align: right;
+}
+/* line 181, ../scss/_header.scss */
+.header #cart {
+  position: relative;
+}
+/* line 183, ../scss/_header.scss */
+.header #cart > button {
+  border: none;
+  background-color: #464646;
+}
+/* line 187, ../scss/_header.scss */
+.header #cart .cart-text {
+  font-family: "Montserrat", san-serif;
+  font-size: 13px;
+  color: #fefefe;
+  display: inline-block;
+  padding: 0 15px;
+}
+/* line 194, ../scss/_header.scss */
+.header #cart .cart-arrow {
+  display: inline-block;
+  background-color: #da4b52;
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+}
+/* line 201, ../scss/_header.scss */
+.header #cart .cart-arrow .fa {
+  transition: 0.5s;
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+/* line 207, ../scss/_header.scss */
+.header #cart:hover .cart-arrow .fa {
+  transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
 }
 
 /******************MEGAMENU********************/
@@ -547,7 +596,7 @@ input:focus {
   margin-right: 10px;
   margin-bottom: 20px;
   color: #555;
-  min-width: 140px;
+  min-width: 76px;
 }
 /* line 77, ../scss/_vertical-menu.scss */
 .vertical-menu .category-list > ul .link-cate .row-cate-wrapper .element-cate-wrapper h4 {
