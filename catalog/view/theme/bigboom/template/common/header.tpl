@@ -26,10 +26,10 @@
 	<?php foreach ($links as $link) { ?>
 		<link href="<?php echo $link['href']; ?>" rel="<?php echo $link['rel']; ?>" />
 	<?php } ?>
+	<link rel="stylesheet" type="text/css" href="catalog/view/javascript/owl.carousel.2.0.0-beta.2.4/assets/owl.carousel.css">
+	<link href="catalog/view/javascript/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
 	<link href="catalog/view/theme/bigboom/stylesheet/bootstrap.css" rel="stylesheet">
 	<link href="catalog/view/theme/bigboom/stylesheet/style.css" rel="stylesheet">
-	<link href="catalog/view/javascript/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-	<link rel="stylesheet" type="text/css" href="catalog/view/javascript/owl.carousel.2.0.0-beta.2.4/assets/owl.carousel.css">
 	<script src="catalog/view/javascript/jquery/jquery-2.1.1.min.js" type="text/javascript"></script>
 	<!-- <link href="catalog/view/javascript/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen" /> -->
 	<script src="catalog/view/javascript/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>

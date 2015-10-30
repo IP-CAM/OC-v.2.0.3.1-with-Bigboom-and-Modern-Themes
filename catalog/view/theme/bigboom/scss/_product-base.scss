@@ -1,5 +1,6 @@
 /*product image effect please don't change*/
 .product-thumb {
+	position: relative;
 	.product-image-link {
 		position: absolute;
 		display: block;
@@ -41,7 +42,6 @@
 		content: "";
 		clear: both;
 	}
-}
 .fa-stack {
 	width: 13px;
 	height: 12px;
@@ -55,6 +55,7 @@
 }
 .fa-star-o {
 	color: #666;
+}
 }
 
 //Product label

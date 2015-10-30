@@ -64,7 +64,6 @@
 			}		
 			.link-cate {	
 				float: left;
-				max-width: 576px;
 				.row-cate-wrapper {
 					display: -webkit-inline-flex;
 					display: -ms-inline-flexbox;
@@ -74,7 +73,7 @@
 						margin-right: 10px;	
 						margin-bottom: 20px;
 						color: #555;
-						max-width: 576px;
+						min-width: 140px;
 						h4 {
 							font-weight: bold;
 							font-family: $font-title;
@@ -84,30 +83,28 @@
 						> ul {
 							margin-right: 20px;
 							> li {
+								border-bottom: 1px solid $border-color;
 								&:first-child{
 									border-top:1px solid #ddd;
 								}
 								&:last-child {
-									> a {
-										border-bottom: none;
-									}
+									border-bottom: none;
 								}
 								> a {
 									display: block;
-									padding:7px 70px 7px 5px;
+									padding:7px 0px 7px 5px;
 									color:#555;
-									border-bottom: 1px solid $border-color;
 									@include transition(0.4s);
 									&:before{
 										content:"\f111";
 										font-family: "FontAwesome";
 										font-size:5px;
 										margin-right: 5px;
+										display: inline-block;
 									}
 									&:hover {
 										color: $main-color;
 										padding-left: 20px;
-										padding-right: 55px;
 									}
 								}						
 								
