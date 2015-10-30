@@ -29,7 +29,7 @@
    </button>
 </div>
 <script type="text/javascript"><!--
-$('#search-custom select').ddslick();
+$('#search-custom select').ddslick({width:160});
 $('#search-custom #btn-search').bind('click', function() {
 	url = 'index.php?route=product/search';
 
