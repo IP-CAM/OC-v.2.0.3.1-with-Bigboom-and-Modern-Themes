@@ -9,44 +9,16 @@ class ControllerModuleslideshowex extends Controller {
 
 		$this->load->model('extension/module');
 
-		$this->load->model('design/banner');
-		$image_des=$this->model_design_banner->getBannerImages(9);
-		print_r($image_des);die;
-
+		$this->load->model('design/banner');		
+		
 		if (($this->request->server['REQUEST_METHOD'] == 'POST') && $this->validate()) {
-			if (!isset($this->request->get['module_id'])) {
-				$var_post=$this->request->post;		
-				print_r($var_post);die;		
-				$a= array_map(null,$var_post['title'],$var_post['content'])	;
-				$arrcb=array_combine($var_post['images'], $a);	
-				$sender=array(
-					"name"=>$var_post['name'],
-					"banner_id"=>$var_post['banner_id'],
-					"width"=>$var_post['width'],
-					"height"=>$var_post['height'],
-					"status"=>$var_post['status'],
-					"images_des"=>$arrcb
-				);
+			if (!isset($this->request->get['module_id'])) {					
+				$this->model_extension_module->addModule('slideshow_ex',$this->request->post);
+			} else {	
 
-				$this->model_extension_module->addModule('slideshow_ex',$sender);
-			} else {
+				$this->model_extension_module->editModule($this->request->get['module_id'], $this->request->post);
 
-				$var_post=$this->request->post;	
-				print_r($var_post)					;
-				$a= array_map(null,$var_post['title'],$var_post['content'])	;
-				$arrcb=array_combine($var_post['images'], $a);
-				$sender=array(
-					"name"=>$var_post['name'],
-					"banner_id"=>$var_post['banner_id'],
-					"width"=>$var_post['width'],
-					"height"=>$var_post['height'],
-					"status"=>$var_post['status'],
-					"images_des"=>$arrcb
-				);	
-			
-				$this->model_extension_module->editModule($this->request->get['module_id'], $sender);
-
-			}
+			}	
 
 			$this->session->data['success'] = $this->language->get('text_success');
 
@@ -133,7 +105,7 @@ class ControllerModuleslideshowex extends Controller {
 		if (isset($this->request->get['module_id']) && ($this->request->server['REQUEST_METHOD'] != 'POST')) {
 			$module_info = $this->model_extension_module->getModule($this->request->get['module_id']);
 		}
-
+		
 		if (isset($this->request->post['name'])) {
 			$data['name'] = $this->request->post['name'];
 		} elseif (!empty($module_info)) {
@@ -160,50 +132,44 @@ class ControllerModuleslideshowex extends Controller {
 			$data['width'] = $module_info['width'];
 		} else {
 			$data['width'] = '';
-		}	
-
-		if(isset($this->request->post['images_des'])){	
-
-			$data['images_des']=$this->request->post['images_des'];
 		}
-		elseif(!empty($module_info['images_des'])){
-
-			$data['images_des']=$module_info['images_des'];
-		}
-
-
-		else{$data['images_des']=array();}	
-
 
 		$this->load->model('tool/image');
 
-		$image_des=$this->model_design_banner->getBannerImages($data['banner_id']);	
-		//print_r($image_des);die;
+		if(isset($this->request->post['images'])){
 
-		foreach ($image_des as $img_des) {				
-		 	if (is_file(DIR_IMAGE . $img_des['image'])) {
-				$image = $this->model_tool_image->resize($img_des['image'], 200, 200);
-			} else {
-				$image = $this->model_tool_image->resize('no_image.png', 200, 200);
-			}	
-
-			if(!empty($data['images_des'])){
-				$arr_img[]=array(
-				"image"=>$image,
-				"banner_des"=>$img_des['banner_image_description'],		
-				"image_des" =>$data['images_des'][$img_des['banner_image_description']['image_id']]
+			$image_info = 	$this->request->post['images'];
+			$data['image']=array();
+			foreach ($image_info as $ii) {
+				$path_img	=	$this->model_tool_image->resize($ii['path'],200,200);
+				$data['images'][] = array(
+					'image'	=> $ii['path'],
+					'path'	=>	$path_img,
+					'title'	=>	$ii['title'],
+					'content'	=>	$ii['content']
 				);
 			}
-			else{
-				$arr_img[]=array(
-				"image"=>$image,
-				"banner_des"=>$img_des['banner_image_description'],	
+			
+
+		}
+		elseif(!empty($module_info['images'])){
+			$image_info	= $module_info['images'];
+			$data['images']=array();
+			foreach ($image_info as $ii) {				
+				$path_img	=	$this->model_tool_image->resize($ii['path'],200,200);
+				$data['images'][] = array(
+					'image'	=>	$ii['path'],
+					'path'	=>	$path_img,
+					'title'	=>	$ii['title'],
+					'content'	=>	$ii['content']
 				);
 			}
 		}
-		if(!empty($arr_img)){
-		$data['images'] = $arr_img;}
-
+		else{
+			$data['images']	= array();
+		}	
+		
+		
 		if (isset($this->request->post['height'])) {
 			$data['height'] = $this->request->post['height'];
 		} elseif (!empty($module_info)) {

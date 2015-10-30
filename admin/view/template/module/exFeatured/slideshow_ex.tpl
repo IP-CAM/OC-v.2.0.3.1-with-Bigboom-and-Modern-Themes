@@ -55,12 +55,12 @@
                       <td class="text-center  "><?php echo "Content"; ?></td>
                     </tr>
                   </thead>
-                  <tbody> 
-                  <?php if(isset($images)) { foreach ($images as $img) { ?>               
+                  <tbody>                           
+                  <?php if(!empty($images)) { foreach ($images as $k=>$img) { ?>               
                     <tr>
-                        <td><input type="hidden" name="images[]" value="<?php echo $img['banner_des']['image_id'] ;?>"><img src="<?php echo $img['image']; ?>"></td>
-                        <td><textarea name="titless[]" ><?php if(!empty($img['image_des'])) {echo $img['image_des'][0];} ?></textarea></td>
-                        <td><textarea name="contentss[]"><?php if(!empty($img['image_des'])){ echo $img['image_des'][1]; }?></textarea></td>
+                        <td><input type="hidden" name="images[<?php echo $k ?>][path]" value="<?php echo $img['image'] ;?>"><img src="<?php echo $img['path']; ?>"></td>
+                        <td><textarea name="images[<?php echo $k ?>][title]" ><?php if(!empty($img['title'])) {echo $img['title'];} ?></textarea></td>
+                        <td><textarea name="images[<?php echo $k ?>][content]"><?php if(!empty($img['content'])){ echo $img['content']; }?></textarea></td>
                     </tr>
                    <?php } } ?>
                   </tbody>
@@ -115,12 +115,11 @@
           url:url,
           data:{banner_id:$(this).val()}
       }).done(function(msg){
-        rs=jQuery.parseJSON(msg); 
-        
-        var i,j;      
-        for(i=0; i<rs.length;i++){  
-          j=rs[i]['banner_des']['image_id'];       
-              $('#images').find('tbody').append('<tr><td><input type="hidden" name="images['+i+'][path]" value="'+j+'"><img src="'+rs[i]['image']+'"></img></td><td><textarea name="images['+i+'][title]"></textarea></td><td><textarea name="images['+i+'][content]"></textarea></td></tr>');
+        rs=jQuery.parseJSON(msg);        
+        var i;      
+        for(i=0; i<rs.length;i++){     
+
+              $('#images').find('tbody').append('<tr><td><input type="hidden" name="images['+i+'][path]" value="'+rs[i]['path']+'"><img src="'+rs[i]['image']+'"></img></td><td><textarea name="images['+i+'][title]"></textarea></td><td><textarea name="images['+i+'][content]"></textarea></td></tr>');
           }        
       });
   });

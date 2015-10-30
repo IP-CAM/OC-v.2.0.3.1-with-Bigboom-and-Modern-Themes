@@ -107,7 +107,8 @@
 				}	
 
 			$arr_img[]=array(
-				"image"=>$image,
+				"image"	=>$image,
+				"path"	=>$img_des['image'],
 				"banner_des"=>$img_des['banner_image_description']		
 			);
 

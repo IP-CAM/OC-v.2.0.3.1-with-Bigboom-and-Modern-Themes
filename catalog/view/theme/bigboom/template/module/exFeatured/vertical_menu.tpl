@@ -9,7 +9,7 @@
 			<?php if(!empty($category['children'])) { ?>	
 			<li>
 				<a href="<?php echo $category['href']; ?>"><?php if(isset($cate_conf[$k]['awesome'])){ ?><i class="fa <?php echo html_entity_decode($cate_conf[$k]['awesome']);?> menu-icon"></i><?php } ?><span><?php echo $category['name']; ?><span><i class="fa fa-angle-right"></i></a>
-				<div class="fly-sub-menu">
+				<div class="fly-sub-menu">						
 					<div class="link-cate">	
 						<?php foreach (array_chunk($category['children'],3) as $key=>$children) { ?>						
 							<div class="row-cate-wrapper">
@@ -25,10 +25,10 @@
 								<?php } ?>	
 							</div>														
 						<?php } ?>							
-					</div>		
+					</div>	
 					<div>		
 						<img src="<?php echo $cate_conf[$k]['image']; ?>">				
-					</div>	
+					</div>				
 				</div>				
 			</li>
 			<?php }else{ ?>

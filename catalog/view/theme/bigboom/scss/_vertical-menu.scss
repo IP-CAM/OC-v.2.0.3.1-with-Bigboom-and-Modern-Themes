@@ -40,6 +40,7 @@
 					padding-right: 0;	
 					border:1px solid #ddd;				
 					.link-cate{	
+						max-width: 575px;
 						.row-cate-wrapper{
 							display: inline-flex;
 							.element-cate-wrapper{
@@ -61,13 +62,18 @@
 									}
 								}						
 							}
-						}			
+						}	
+
+						div	{
+							display: inline-flex;
+						}		
 					}	
 										
 				}
 				&:hover{
-					.fly-sub-menu{
+					.fly-sub-menu{					
 						display: inline-flex;
+						width:1000px;
 					}
 				}
 
