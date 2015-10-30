@@ -529,6 +529,19 @@ input:focus {
   padding-right: 55px;
 }
 
+/* line 1, ../scss/_slideshow.scss */
+.slideshow-custom {
+  position: relative;
+}
+/* line 3, ../scss/_slideshow.scss */
+.slideshow-custom .slideshow-caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
 /**********Product slide*********/
 /* line 3, ../scss/_custom.scss */
 .owl-nav [class*='owl-'] {
