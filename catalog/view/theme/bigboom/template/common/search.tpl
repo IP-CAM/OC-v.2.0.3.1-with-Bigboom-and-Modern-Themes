@@ -25,7 +25,7 @@
 	</select>
   	<input class="search-input" type="text" name="search" value="<?php echo $search; ?>" placeholder="<?php echo $text_search; ?>">
    <button type="button" class="btn-group" id="btn-search">
-   	<a href="#" class="search-icon top-icon"><i class="fa fa-search"></i></a>
+   	search
    </button>
 </div>
 <script type="text/javascript"><!--
