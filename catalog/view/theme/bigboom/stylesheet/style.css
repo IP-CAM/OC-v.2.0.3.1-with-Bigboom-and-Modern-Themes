@@ -521,8 +521,9 @@ input:focus {
   font-family: "FontAwesome";
   font-size: 5px;
   margin-right: 5px;
+  display: inline-block;
 }
-/* line 107, ../scss/_vertical-menu.scss */
+/* line 108, ../scss/_vertical-menu.scss */
 .vertical-menu .category-list > ul .link-cate .row-cate-wrapper .element-cate-wrapper > ul > li > a:hover {
   color: #da4b52;
   padding-left: 20px;
@@ -1562,12 +1563,84 @@ footer .footer-2 .icon-payment-wrapper {
   color: #666;
 }
 
-/* line 59, ../scss/_product-base.scss */
+/* line 61, ../scss/_product-base.scss */
+.product-label {
+  position: absolute;
+  top: 15px;
+  right: 5px;
+  z-index: 99999;
+}
+/* line 66, ../scss/_product-base.scss */
+.product-label .label {
+  width: 37px;
+  height: 26px;
+  position: relative;
+  line-height: 26px;
+}
+/* line 72, ../scss/_product-base.scss */
+.product-label .label:before, .product-label .label:after {
+  content: "";
+  position: absolute;
+  display: block;
+}
+/* line 77, ../scss/_product-base.scss */
+.product-label .label.label-new {
+  background: #b0d95e;
+}
+/* line 79, ../scss/_product-base.scss */
+.product-label .label.label-new:before {
+  width: 26px;
+  height: 26px;
+  border: 13px solid #b0d95e;
+  border-left-color: transparent;
+  left: -26px;
+}
+/* line 86, ../scss/_product-base.scss */
+.product-label .label.label-new:after {
+  width: 3px;
+  height: 3px;
+  border-left: 3px solid #93b54e;
+  border-top: 3px solid transparent;
+  top: -3px;
+  right: 0px;
+}
+/* line 95, ../scss/_product-base.scss */
+.product-label .label.label-sale {
+  background: #e65951;
+}
+/* line 97, ../scss/_product-base.scss */
+.product-label .label.label-sale:before {
+  width: 26px;
+  height: 26px;
+  border: 13px solid #e65951;
+  border-left-color: transparent;
+  left: -26px;
+}
+/* line 104, ../scss/_product-base.scss */
+.product-label .label.label-sale:after {
+  width: 3px;
+  height: 3px;
+  border-left: 3px solid #c04943;
+  border-top: 3px solid transparent;
+  top: -3px;
+  right: 0px;
+}
+/* line 113, ../scss/_product-base.scss */
+.product-label .label > span {
+  color: #fff;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-family: "Montserrat", san-serif;
+  position: relative;
+  left: -2px;
+}
+
+/* line 125, ../scss/_product-base.scss */
 .product-thumb {
   border: 1px solid #efefef;
   padding: 7px;
 }
-/* line 64, ../scss/_product-base.scss */
+/* line 130, ../scss/_product-base.scss */
 .product-thumb .product-image-box .product-quickview > span {
   width: 68px;
   height: 68px;
@@ -1589,7 +1662,7 @@ footer .footer-2 .icon-payment-wrapper {
   -webkit-transition: 0.2s;
   -o-transition: 0.2s;
 }
-/* line 78, ../scss/_product-base.scss */
+/* line 144, ../scss/_product-base.scss */
 .product-thumb .product-image-box .product-quickview > span .fa {
   font-size: 13px;
   color: #eee;
@@ -1598,66 +1671,66 @@ footer .footer-2 .icon-payment-wrapper {
   -webkit-transform: rotateZ(-45deg);
   -o-transform: rotateZ(-45deg);
 }
-/* line 83, ../scss/_product-base.scss */
+/* line 149, ../scss/_product-base.scss */
 .product-thumb .product-image-box .product-quickview > span:hover {
   background-color: #da4b52;
 }
-/* line 87, ../scss/_product-base.scss */
+/* line 153, ../scss/_product-base.scss */
 .product-thumb .product-image-box .product-quickview .btn-quickview {
   display: block;
 }
-/* line 95, ../scss/_product-base.scss */
+/* line 161, ../scss/_product-base.scss */
 .product-thumb:hover .product-image-box .product-quickview > span {
   bottom: -34px;
   left: -34px;
 }
-/* line 102, ../scss/_product-base.scss */
+/* line 168, ../scss/_product-base.scss */
 .product-thumb .product-name {
   margin-bottom: 4px;
 }
-/* line 104, ../scss/_product-base.scss */
+/* line 170, ../scss/_product-base.scss */
 .product-thumb .product-name a {
   font-weight: bold;
   font-size: 14px;
   color: #555;
 }
-/* line 108, ../scss/_product-base.scss */
+/* line 174, ../scss/_product-base.scss */
 .product-thumb .product-name a:hover {
   color: #da4b52;
 }
-/* line 113, ../scss/_product-base.scss */
+/* line 179, ../scss/_product-base.scss */
 .product-thumb .rating {
   margin-bottom: 5px;
 }
-/* line 115, ../scss/_product-base.scss */
+/* line 181, ../scss/_product-base.scss */
 .product-thumb .rating:after {
   display: table;
   content: "";
   clear: both;
 }
-/* line 121, ../scss/_product-base.scss */
+/* line 187, ../scss/_product-base.scss */
 .product-thumb .product-price-content {
   margin-bottom: 5px;
 }
-/* line 123, ../scss/_product-base.scss */
+/* line 189, ../scss/_product-base.scss */
 .product-thumb .product-price-content .product-price {
   display: inline-block;
   font-family: "Montserrat", san-serif;
   margin: 0;
 }
-/* line 128, ../scss/_product-base.scss */
+/* line 194, ../scss/_product-base.scss */
 .product-thumb .product-price-content .new-price {
   color: #555;
   font-size: 16px;
 }
-/* line 132, ../scss/_product-base.scss */
+/* line 198, ../scss/_product-base.scss */
 .product-thumb .product-price-content .old-price {
   color: #aaa;
   font-size: 14px;
   text-decoration: line-through;
   margin-right: 5px;
 }
-/* line 140, ../scss/_product-base.scss */
+/* line 206, ../scss/_product-base.scss */
 .product-thumb .button-action:before {
   content: "";
   display: block;
@@ -1667,25 +1740,25 @@ footer .footer-2 .icon-payment-wrapper {
   margin: auto;
   margin-bottom: 6px;
 }
-/* line 149, ../scss/_product-base.scss */
+/* line 215, ../scss/_product-base.scss */
 .product-thumb .button-action .add-to-cart {
   float: left;
 }
-/* line 152, ../scss/_product-base.scss */
+/* line 218, ../scss/_product-base.scss */
 .product-thumb .button-action .wishlist-compare {
   float: right;
 }
-/* line 154, ../scss/_product-base.scss */
+/* line 220, ../scss/_product-base.scss */
 .product-thumb .button-action .wishlist-compare:after {
   display: table;
   content: "";
   clear: both;
 }
-/* line 159, ../scss/_product-base.scss */
+/* line 225, ../scss/_product-base.scss */
 .product-thumb .button-action .wishlist-compare .fa {
   line-height: 24px;
 }
-/* line 163, ../scss/_product-base.scss */
+/* line 229, ../scss/_product-base.scss */
 .product-thumb .button-action .btn-link {
   float: left;
   font-family: "Raleway", san-serif;
@@ -1694,71 +1767,71 @@ footer .footer-2 .icon-payment-wrapper {
   -webkit-transition: 0.4s;
   -o-transition: 0.4s;
 }
-/* line 168, ../scss/_product-base.scss */
+/* line 234, ../scss/_product-base.scss */
 .product-thumb .button-action .btn-add-cart {
   color: #555;
 }
-/* line 170, ../scss/_product-base.scss */
+/* line 236, ../scss/_product-base.scss */
 .product-thumb .button-action .btn-add-cart .fa {
   font-size: 14px;
   margin-right: 5px;
 }
-/* line 174, ../scss/_product-base.scss */
+/* line 240, ../scss/_product-base.scss */
 .product-thumb .button-action .btn-add-cart:hover {
   text-decoration: underline;
 }
-/* line 179, ../scss/_product-base.scss */
+/* line 245, ../scss/_product-base.scss */
 .product-thumb .button-action .btn-wishlist,
 .product-thumb .button-action .btn-compare {
   color: #aaa;
   font-size: 0;
   display: inline-block;
 }
-/* line 183, ../scss/_product-base.scss */
+/* line 249, ../scss/_product-base.scss */
 .product-thumb .button-action .btn-wishlist:hover,
 .product-thumb .button-action .btn-compare:hover {
   color: #da4b52;
 }
-/* line 187, ../scss/_product-base.scss */
+/* line 253, ../scss/_product-base.scss */
 .product-thumb .button-action .btn-compare {
   margin-right: 8px;
 }
-/* line 189, ../scss/_product-base.scss */
+/* line 255, ../scss/_product-base.scss */
 .product-thumb .button-action .btn-compare .fa {
   font-size: 13px;
 }
-/* line 194, ../scss/_product-base.scss */
+/* line 260, ../scss/_product-base.scss */
 .product-thumb .button-action .btn-wishlist .fa {
   font-size: 12px;
 }
 
-/* line 202, ../scss/_product-base.scss */
+/* line 268, ../scss/_product-base.scss */
 .product-grid {
   margin-bottom: 30px;
 }
 
-/* line 206, ../scss/_product-base.scss */
+/* line 272, ../scss/_product-base.scss */
 .common-home .product-grid {
   margin-bottom: 10px;
 }
 
-/* line 212, ../scss/_product-base.scss */
+/* line 278, ../scss/_product-base.scss */
 .product-list {
   margin-bottom: 30px;
 }
-/* line 214, ../scss/_product-base.scss */
+/* line 280, ../scss/_product-base.scss */
 .product-list .product-image-box {
   float: left;
 }
-/* line 217, ../scss/_product-base.scss */
+/* line 283, ../scss/_product-base.scss */
 .product-list .rating {
   display: inline-block;
 }
-/* line 222, ../scss/_product-base.scss */
+/* line 288, ../scss/_product-base.scss */
 .product-list .product-thumb .button-action:before {
   display: none;
 }
-/* line 225, ../scss/_product-base.scss */
+/* line 291, ../scss/_product-base.scss */
 .product-list .product-thumb .button-action .wishlist-compare {
   float: left;
   margin-left: 30px;

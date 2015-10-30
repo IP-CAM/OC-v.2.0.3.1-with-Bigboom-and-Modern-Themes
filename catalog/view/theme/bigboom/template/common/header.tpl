@@ -31,7 +31,7 @@
 	<script src="catalog/view/javascript/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
 	<link href="catalog/view/javascript/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
 	<link href="catalog/view/theme/bigboom/stylesheet/bootstrap.css" rel="stylesheet">
-	<link href="catalog/view/theme/bigboom/stylesheet/ypnstyle.css" rel="stylesheet">
+	<link href="catalog/view/theme/bigboom/stylesheet/style.css" rel="stylesheet">
 	<?php foreach ($styles as $style) { ?>
 	    	<link href="<?php echo $style['href']; ?>" type="text/css" rel="<?php echo $style['rel']; ?>" media="<?php echo $style['media']; ?>" />
 	<?php } ?>

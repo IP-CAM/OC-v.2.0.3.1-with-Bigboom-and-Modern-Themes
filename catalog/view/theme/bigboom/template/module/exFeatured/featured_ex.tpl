@@ -22,6 +22,14 @@
       <div class="product-layout product-grid" data-special="<?php echo $special; ?>">
         <!--col-lg-3 col-md-3 col-sm-6 col-xs-12-->    
         <div class="product-thumb">
+              <div class="product-label">
+                <div class="label label-new">
+                  <span>new</span>
+                </div>
+                <div class="label label-sale">
+                  <span>-15%</span>
+                </div>
+              </div>
               <div class="product-image-box">
                 <a href="<?php echo $product['href']; ?>" class="product-image-link" ></a>
                 <img class="product-image product-image-1 img-responsive" src="<?php echo $product['thumb']; ?>">
