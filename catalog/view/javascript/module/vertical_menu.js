@@ -10,9 +10,9 @@ $(document).ready(function(){
 
 		element_cate_wrapper.each(function(){
 			w = $(this).width();
-			max = w>max ? w+1 :max+1;
-		});		
-		element_cate_wrapper.css('min-width',max+'px');
+			max = w>max ? w :max;
+		});				
+		element_cate_wrapper.css('min-width',(max+1)+'px');
 
 		var max_width = link_cate.find('.row-cate-wrapper').width();	
 
