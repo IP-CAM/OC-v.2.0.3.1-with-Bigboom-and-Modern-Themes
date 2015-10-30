@@ -27,16 +27,10 @@
 				text-transform: uppercase;
 				letter-spacing: 0.3px;
 				&:hover {
-					color: $main-color;
-					background-color: transparent;
+					background-color: #3c3c3c;
 				}
 				.fa {
 					margin-left: 2px;
-				}
-			}
-			&:hover {
-				> a {
-					color: $main-color;
 				}
 			}
 			&:last-child {

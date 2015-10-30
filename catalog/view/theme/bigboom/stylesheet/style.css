@@ -363,50 +363,45 @@ input:focus {
 }
 /* line 29, ../scss/_megamenu.scss */
 #menu .nav > li > a:hover {
-  color: #da4b52;
-  background-color: transparent;
+  background-color: #3c3c3c;
 }
-/* line 33, ../scss/_megamenu.scss */
+/* line 32, ../scss/_megamenu.scss */
 #menu .nav > li > a .fa {
   margin-left: 2px;
 }
-/* line 38, ../scss/_megamenu.scss */
-#menu .nav > li:hover > a {
-  color: #da4b52;
-}
-/* line 43, ../scss/_megamenu.scss */
+/* line 37, ../scss/_megamenu.scss */
 #menu .nav > li:last-child > a {
   padding-right: 0;
 }
 
 /**************MEGAMENU HOME 2***************/
-/* line 57, ../scss/_megamenu.scss */
+/* line 51, ../scss/_megamenu.scss */
 .header-2 #menu .nav > li > a {
   color: #fff;
 }
-/* line 59, ../scss/_megamenu.scss */
+/* line 53, ../scss/_megamenu.scss */
 .header-2 #menu .nav > li > a:hover {
   color: #da4b52;
 }
-/* line 64, ../scss/_megamenu.scss */
+/* line 58, ../scss/_megamenu.scss */
 .header-2 #menu .nav > li:hover > a {
   color: #da4b52;
 }
-/* line 70, ../scss/_megamenu.scss */
+/* line 64, ../scss/_megamenu.scss */
 .header-2 #menu .dropdown-menu {
   top: 44px;
 }
 
 /****************For Responsive******************/
 @media only screen and (min-width: 767px) and (max-width: 991px) {
-  /* line 80, ../scss/_megamenu.scss */
+  /* line 74, ../scss/_megamenu.scss */
   #menu .nav > li > a {
     padding-left: 12px;
     padding-right: 12px;
   }
 }
 @media only screen and (max-width: 767px) {
-  /* line 89, ../scss/_megamenu.scss */
+  /* line 83, ../scss/_megamenu.scss */
   #menu {
     background-color: #eee;
     padding-top: 0;
@@ -414,21 +409,21 @@ input:focus {
     margin-bottom: 30px;
     width: 100%;
   }
-  /* line 95, ../scss/_megamenu.scss */
+  /* line 89, ../scss/_megamenu.scss */
   #menu .navbar-header {
     display: block;
   }
-  /* line 102, ../scss/_megamenu.scss */
+  /* line 96, ../scss/_megamenu.scss */
   #menu .dropdown-menu .see-all:hover {
     background-color: #333;
     color: #fff;
   }
-  /* line 108, ../scss/_megamenu.scss */
+  /* line 102, ../scss/_megamenu.scss */
   #menu div.dropdown-menu {
     padding-bottom: 0;
     background: none;
   }
-  /* line 112, ../scss/_megamenu.scss */
+  /* line 106, ../scss/_megamenu.scss */
   #menu .navbar-collapse {
     transition: 0.5s;
     -moz-transition: 0.5s;
@@ -436,11 +431,11 @@ input:focus {
     -o-transition: 0.5s;
     float: none;
   }
-  /* line 115, ../scss/_megamenu.scss */
+  /* line 109, ../scss/_megamenu.scss */
   #menu .navbar-collapse .nav {
     margin: 0;
   }
-  /* line 118, ../scss/_megamenu.scss */
+  /* line 112, ../scss/_megamenu.scss */
   #menu .navbar-collapse .nav > li > a {
     display: block;
     padding: 12px 19px;
@@ -451,55 +446,55 @@ input:focus {
     letter-spacing: 1.7px;
     border-bottom: 1px solid #ddd;
   }
-  /* line 127, ../scss/_megamenu.scss */
+  /* line 121, ../scss/_megamenu.scss */
   #menu .navbar-collapse .nav > li > a:hover {
     background-color: #333;
     color: #fff;
   }
-  /* line 131, ../scss/_megamenu.scss */
+  /* line 125, ../scss/_megamenu.scss */
   #menu .navbar-collapse .nav > li > a .fa {
     display: none;
   }
-  /* line 136, ../scss/_megamenu.scss */
+  /* line 130, ../scss/_megamenu.scss */
   #menu .navbar-collapse .nav > li:first-child > a {
     border-top: 1px solid #ddd;
   }
-  /* line 142, ../scss/_megamenu.scss */
+  /* line 136, ../scss/_megamenu.scss */
   #menu .navbar-collapse .nav > li.open > a, #menu .navbar-collapse .nav > li:hover > a {
     background-color: #333;
     color: #fff;
   }
-  /* line 146, ../scss/_megamenu.scss */
+  /* line 140, ../scss/_megamenu.scss */
   #menu .navbar-collapse .nav > li.open > .sub-toggle, #menu .navbar-collapse .nav > li:hover > .sub-toggle {
     color: #fff;
   }
-  /* line 153, ../scss/_megamenu.scss */
+  /* line 147, ../scss/_megamenu.scss */
   #menu .navbar-collapse .dropdown-inner ul {
     display: block;
   }
-  /* line 158, ../scss/_megamenu.scss */
+  /* line 152, ../scss/_megamenu.scss */
   #menu .navbar-collapse .sub-menu-1 > li {
     margin-bottom: 0;
     margin-top: 0;
   }
-  /* line 161, ../scss/_megamenu.scss */
+  /* line 155, ../scss/_megamenu.scss */
   #menu .navbar-collapse .sub-menu-1 > li > a {
     padding-left: 30px;
     border-bottom: 1px solid #ddd;
   }
-  /* line 164, ../scss/_megamenu.scss */
+  /* line 158, ../scss/_megamenu.scss */
   #menu .navbar-collapse .sub-menu-1 > li > a:after {
     display: none;
   }
-  /* line 172, ../scss/_megamenu.scss */
+  /* line 166, ../scss/_megamenu.scss */
   #menu .navbar-collapse .sub-menu-2 > li > a {
     padding-left: 60px;
   }
-  /* line 178, ../scss/_megamenu.scss */
+  /* line 172, ../scss/_megamenu.scss */
   #menu .sub-collapse {
     position: relative;
   }
-  /* line 180, ../scss/_megamenu.scss */
+  /* line 174, ../scss/_megamenu.scss */
   #menu .sub-collapse .sub-toggle {
     position: absolute;
     z-index: 999;
@@ -509,7 +504,7 @@ input:focus {
     cursor: pointer;
   }
 
-  /* line 190, ../scss/_megamenu.scss */
+  /* line 184, ../scss/_megamenu.scss */
   .navbar-header {
     padding: 8px 0;
   }
