@@ -39,14 +39,19 @@
 	}
 }
 /************Page product modal *************/
-.modal-header {
+.modal-dialog {
 	border: none;
-	.close {
-		position: fixed;
-		top: 35px;
-		right: 35px;
+	.close-custom {
+		position: absolute;
+		top: 8px;
+		right: -4px;
+		width:36px;
+		height:36px;
 		color: #222;
 		font-size: 35px;
+		z-index: 1311;
+		cursor: pointer;
+		background-image: url('../images/fancybox_sprite.png');
 	}
 }
 @media only screen and (max-width: 767px) {
@@ -86,6 +91,7 @@
 		overflow: auto;
 		padding-left: 15px;
 		padding-right: 15px;
+		padding-top: 35px;
 	}
 	.product-desc {
 		h3 {

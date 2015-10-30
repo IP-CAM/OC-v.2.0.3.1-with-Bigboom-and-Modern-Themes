@@ -62,11 +62,9 @@ Please donate via PayPal to donate@opencart.com
 <span id="scroll-top"><i class="fa fa-long-arrow-up"></i></span>
 <!--Product-quickview hidden-->
 <div id="product-quickview" class="modal fade" role="dialog">
-  <div class="modal-dialog">    
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>    
-      </div>
+  <div class="modal-dialog">  
+   <span type="button" class="close-custom" data-dismiss="modal"></span>      
+    <div class="modal-content">     
       <div class="row modal-body">  
           <div class="col-sm-4 product-images">
             <div class="main-image"><a href="#"><img class="img-thumbnail" src=""></div></a>
