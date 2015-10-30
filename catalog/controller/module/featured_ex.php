@@ -40,8 +40,19 @@ class ControllerModulefeaturedEx extends Controller {
 
 		$data['products'] = array();	
 
-				
+		$new_products	=	$this->model_catalog_product->getLatestProducts(8);
+		$spec_products	=	$this->model_catalog_product->getProductSpecials();
+	
+		$data['new_product_id']=array();
+		$data['spec_product_id']=array();
+		foreach ($new_products as $new_product) {
+			array_push($data['new_product_id'], $new_product['product_id']);
+		}
 
+		foreach ($spec_products as $spec_product) {
+			array_push($data['spec_product_id'], $spec_product['product_id']);
+		}
+		
 		if (!empty($setting['selected'])) {
 
 			$products = array_slice($setting['selected'], 0, (int)$setting['limit']);
@@ -54,15 +65,7 @@ class ControllerModulefeaturedEx extends Controller {
 
 				$product_image =$this->model_catalog_product->getProductImages($product_id);
 
-
-
-
-
-
-
 				$pro_img=array();
-
-
 
 				foreach ($product_image as $pi) {
 
@@ -71,7 +74,6 @@ class ControllerModulefeaturedEx extends Controller {
 					array_push($pro_img, $img);
 
 				}
-
 
 
 				if ($product_info) {
@@ -166,6 +168,8 @@ class ControllerModulefeaturedEx extends Controller {
 
 						'special'     => $special,
 
+						'discount'	  => '-' . (100-round((substr($special,1)/substr($price,1))*100)).'%',
+
 						'tax'         => $tax,
 
 						'rating'      => $rating,
@@ -184,9 +188,7 @@ class ControllerModulefeaturedEx extends Controller {
 
 		
 
-		}	
-
-		
+		}		
 
 		if ($data['products']) {
 

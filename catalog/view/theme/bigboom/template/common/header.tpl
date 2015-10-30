@@ -39,6 +39,7 @@
 	<script src="catalog/view/javascript/jquery.jCounter-0.1.4.js" type="text/javascript"></script>	
 	<script src="catalog/view/javascript/common.js" type="text/javascript"></script>
 	<script src="catalog/view/javascript/modern.js" type="text/javascript"></script>
+	<script src="catalog/view/javascript/module/ddSlick.js" type="text/javascript"></script>
 	<?php foreach ($scripts as $script) { ?>
 		<script src="<?php echo $script; ?>" type="text/javascript"></script>
 	<?php } ?>

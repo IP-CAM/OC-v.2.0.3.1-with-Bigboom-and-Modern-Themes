@@ -6,30 +6,26 @@
     <?php for ($k=0;$k<count($products);$k+=$row) {  ?>
     <div class="item"> 
     <?php for($j=$k;$j<$k+$row;$j++){if($j<count($products))$product=$products[$j];
-
-        $prod_quick_view=json_encode($product);
-        //print_r($prod_quick_view);
-        $special=null;
-        if(!empty($product['attributes'])){
-          $attributes=$product['attributes'];
-            foreach ($attributes as $att) {
-                if($att['attribute_group_id']==7){
-                      $special =$att['attribute'][0]['text'];                   
-                }
-            }
-        }
+        $prod_quick_view=json_encode($product);         
+       
      ?>
       <div class="product-layout product-grid" data-special="<?php echo $special; ?>">
-        <!--col-lg-3 col-md-3 col-sm-6 col-xs-12-->    
+        <!--col-lg-3 col-md-3 col-sm-6 col-xs-12-->          
         <div class="product-thumb">
+         <?php if(in_array($product['product_id'], $new_product_id)||in_array($product['product_id'],$spec_product_id )) { ?> 
               <div class="product-label">
+              <?php if(in_array($product['product_id'], $new_product_id)) { ?>
                 <div class="label label-new">
                   <span>new</span>
                 </div>
+                <?php } ?>
+                <?php if(in_array($product['product_id'],$spec_product_id )) { ?>
                 <div class="label label-sale">
-                  <span>-15%</span>
+                  <span><?php echo $product['discount']; ?></span>
                 </div>
+                <?php } ?>
               </div>
+            <?php } ?>
               <div class="product-image-box">
                 <a href="<?php echo $product['href']; ?>" class="product-image-link" ></a>
                 <img class="product-image product-image-1 img-responsive" src="<?php echo $product['thumb']; ?>">

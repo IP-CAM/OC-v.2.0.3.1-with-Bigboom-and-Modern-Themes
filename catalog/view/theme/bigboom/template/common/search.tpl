@@ -28,6 +28,9 @@
    	<a href="#" class="search-icon top-icon"><i class="fa fa-search"></i></a>
    </button>
 </div>
+<script type="text/javascript">
+	$('#search-custom').ddslick();
+</script>
 <script type="text/javascript"><!--
 $('#search-custom #btn-search').bind('click', function() {
 	url = 'index.php?route=product/search';
