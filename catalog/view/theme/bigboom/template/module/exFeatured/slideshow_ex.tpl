@@ -1,4 +1,4 @@
-<div id="slideshows<?php echo $module; ?>" class="owl-carousel ypn-carousel">
+<div id="slideshows<?php echo $module; ?>" class="owl-carousel ypn-carousel banner-slider">
   <?php foreach ($banners as $k=>$banner) { ?>
   <div class="item slideshow-custom">
     <?php if ($banner['link']) { ?>
@@ -7,9 +7,15 @@
     <img src="<?php echo $banner['image']; ?>" alt="<?php echo $banner['title']; ?>" class="img-responsive" />     
     <?php } ?>       
     <div class="slideshow-caption">
-        <h3><?php echo $image_des[$k]['title']; ?></h3>
-        <p><?php echo $image_des[$k]['content']; ?></p>
-        <div class="butt-caption"><a href="#">Get a look</a></div>
+        <?php if($image_des[$k]['title']) { ?><h3><?php echo $image_des[$k]['title']; ?></h3><?php } ?>
+        <?php if($image_des[$k]['content']) { ?><p><?php echo $image_des[$k]['content']; ?></p><?php } ?>
+        <?php if($image_des[$k]['html_code']) { ?><div class="butt-caption-<?php echo $k; ?>"></div>       
+        <script type="text/javascript">
+          var k  = <?php echo $k; ?>;    
+          var html_code    = "<?php echo $image_des[$k]['html_code']; ?>";          
+          $('.butt-caption-'+k).html($('<div />').html(html_code).text());
+        </script> 
+        <?php } ?>
     </div>  
   </div>  
   <?php } ?>
@@ -25,8 +31,7 @@
   function callback(event){  
       TweenMax.from('.slideshow-caption p',0.9,{y:"-100px",opacity:0,ease:Elastic.easeOut});
       TweenMax.from('.slideshow-caption h3',0.7,{y:"-100px",opacity:0,ease:Bounce.easeOut,delay:0.5});
-      TweenMax.from('.slideshow-caption .butt-caption',1,{opacity:0,delay:0.5});
-      console.log("awaa");
+      TweenMax.from('.slideshow-caption .butt-caption',1,{opacity:0,delay:0.5});      
   }
 
 </script>

@@ -146,7 +146,8 @@ class ControllerModuleslideshowex extends Controller {
 					'image'	=> $ii['path'],
 					'path'	=>	$path_img,
 					'title'	=>	$ii['title'],
-					'content'	=>	$ii['content']
+					'content'	=>	$ii['content'],
+					'html_code'	=> $ii['html_code']
 				);
 			}
 			
@@ -161,7 +162,8 @@ class ControllerModuleslideshowex extends Controller {
 					'image'	=>	$ii['path'],
 					'path'	=>	$path_img,
 					'title'	=>	$ii['title'],
-					'content'	=>	$ii['content']
+					'content'	=>	$ii['content'],
+					'html_code'	=>	$ii['html_code']
 				);
 			}
 		}

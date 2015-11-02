@@ -53,6 +53,7 @@
                       <td class="text-center" style="width:20%;"><?php echo "Image"; ?></td>
                       <td class="text-center"><?php echo "Title"; ?></td>
                       <td class="text-center  "><?php echo "Content"; ?></td>
+                      <td class="text-center"><?php echo "html code" ?></td>
                     </tr>
                   </thead>
                   <tbody>                           
@@ -61,6 +62,7 @@
                         <td><input type="hidden" name="images[<?php echo $k ?>][path]" value="<?php echo $img['image'] ;?>"><img src="<?php echo $img['path']; ?>"></td>
                         <td><textarea name="images[<?php echo $k ?>][title]" ><?php if(!empty($img['title'])) {echo $img['title'];} ?></textarea></td>
                         <td><textarea name="images[<?php echo $k ?>][content]"><?php if(!empty($img['content'])){ echo $img['content']; }?></textarea></td>
+                        <td><textarea  name="images[<?php echo $k ?>][html_code]"><?php if(!empty($img['html_code'])){echo $img['html_code'];} ?></textarea></td>
                     </tr>
                    <?php } } ?>
                   </tbody>
@@ -119,7 +121,7 @@
         var i;      
         for(i=0; i<rs.length;i++){     
 
-              $('#images').find('tbody').append('<tr><td><input type="hidden" name="images['+i+'][path]" value="'+rs[i]['path']+'"><img src="'+rs[i]['image']+'"></img></td><td><textarea name="images['+i+'][title]"></textarea></td><td><textarea name="images['+i+'][content]"></textarea></td></tr>');
+              $('#images').find('tbody').append('<tr><td><input type="hidden" name="images['+i+'][path]" value="'+rs[i]['path']+'"><img src="'+rs[i]['image']+'"></img></td><td><textarea name="images['+i+'][title]"></textarea></td><td><textarea name="images['+i+'][content]"></textarea></td><td><textarea name="images['+i+'][html_code]"></textarea></td></tr>');
           }        
       });
   });
