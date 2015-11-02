@@ -15,12 +15,12 @@
                         <?php $class = 'col-sm-12'; 
                     ?>
                 <?php } ?>
-                <div id="content" class="<?php echo $class; ?>">
+                <div id="content" class="<?php echo $class; ?> content-top">
                     <?php echo $content_top; ?>                   
                 </div>        
                 <?php echo $column_right; ?>
             </div>
-            <?php if($column_left_ex || $column_right_ex) { ?>
+            <?php if($column_left_ex || $column_right_ex || $content_bottom) { ?>
                 <div class="row">
                     <?php 
                         if($column_left_ex && $column_right_ex) { 

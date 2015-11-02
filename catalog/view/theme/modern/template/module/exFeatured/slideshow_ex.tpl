@@ -13,7 +13,7 @@
     <div class="slideshow-caption">
         <h3><?php echo $img_des[0]; ?></h3>
         <p><?php echo $img_des[1]; ?></p>
-        <div class="butt-caption"><a href="#">Get a look</a></div>
+       <a href="#">Get a look</a>
     </div>
     <?php }} ?>
   </div>  
@@ -21,18 +21,20 @@
 </div>
 <script type="text/javascript"><!--
 $('#slideshows<?php echo $module; ?>').owlCarousel({
-	items: 6,
 	//autoPlay: 6000,
 	singleItem: true,
 	navigation: true,
 	navigationText: ['<i class="fa fa-angle-left fa-5x"></i>','<i class="fa fa-angle-right fa-5x"></i>'],
 	pagination: true,
-  /*beforeMove:function(){
-    $('.slideshow-caption').find($('h3')).hide();
-     $('.slideshow-caption').find($('p')).hide();
+  beforeMove:function(){
+   /* $('.slideshow-caption').find($('h3')).hide();
+     $('.slideshow-caption').find($('p')).hide();*/
+
+     console.log("move");
   },afterMove:function(){
-      $('.slideshow-caption').find($('h3')).show(700);
-      $('.slideshow-caption').find($('p')).show(1000);
-  }*/
+     /* $('.slideshow-caption').find($('h3')).show(700);
+      $('.slideshow-caption').find($('p')).show(1000);*/
+      console.log("move");
+  }
 });
 --></script>

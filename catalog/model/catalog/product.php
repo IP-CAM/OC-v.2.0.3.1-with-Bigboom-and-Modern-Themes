@@ -31,6 +31,7 @@ class ModelCatalogProduct extends Model {
 				'manufacturer'     => $query->row['manufacturer'],
 				'price'            => ($query->row['discount'] ? $query->row['discount'] : $query->row['price']),
 				'special'          => $query->row['special'],
+				'discount'		   => ($query->row['special'])/($query->row['discount'] ? $query->row['discount'] : $query->row['price']),
 				'reward'           => $query->row['reward'],
 				'points'           => $query->row['points'],
 				'tax_class_id'     => $query->row['tax_class_id'],

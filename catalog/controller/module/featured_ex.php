@@ -10,9 +10,7 @@ class ControllerModulefeaturedEx extends Controller {
 
 		$data['heading_title'] = $setting['title'];
 
-		$data['text_tax'] = $this->language->get('text_tax');		
-
-
+		$data['text_tax'] = $this->language->get('text_tax');	
 
 		$data['button_cart'] = $this->language->get('button_cart');
 
@@ -168,7 +166,7 @@ class ControllerModulefeaturedEx extends Controller {
 
 						'special'     => $special,
 
-						'discount'	  => '-' . (100-round((substr($special,1)/substr($price,1))*100)).'%',
+						'discount'	  => '-'.(100-(round($product_info['discount']*100))).'%',
 
 						'tax'         => $tax,
 
@@ -188,7 +186,7 @@ class ControllerModulefeaturedEx extends Controller {
 
 		
 
-		}		
+		}	
 
 		if ($data['products']) {
 

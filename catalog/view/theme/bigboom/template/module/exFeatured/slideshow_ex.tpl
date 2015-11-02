@@ -1,4 +1,4 @@
-<div id="slideshows<?php echo $module; ?>" class="owl-carousel owl-carousel-slide">
+<div id="slideshows<?php echo $module; ?>" class="owl-carousel ypn-carousel">
   <?php foreach ($banners as $k=>$banner) { ?>
   <div class="item slideshow-custom">
     <?php if ($banner['link']) { ?>
@@ -14,18 +14,19 @@
   </div>  
   <?php } ?>
 </div>
-<script type="text/javascript"><!--
-$('#slideshows<?php echo $module; ?>').owlCarousel({
-	//autoPlay: 6000,
-	 items: 1,
-    nav:true,
-    loop:true, 
-  /*beforeMove:function(){
-    $('.slideshow-caption').find($('h3')).hide();
-     $('.slideshow-caption').find($('p')).hide();
-  },afterMove:function(){
-      $('.slideshow-caption').find($('h3')).show(700);
-      $('.slideshow-caption').find($('p')).show(1000);
-  }*/
-});
---></script>
+<script type="text/javascript">
+  $('#slideshows<?php echo $module; ?>').owlCarousel({
+      items: 1,    	 
+      nav:true,   
+      loop:true,       
+      onChanged: callback,  
+  });
+
+  function callback(event){  
+      TweenMax.from('.slideshow-caption p',0.9,{y:"-100px",ease:Elastic.easeOut});
+      TweenMax.from('.slideshow-caption h3',0.7,{y:"-100px",ease:Bounce.easeOut,delay:0.5});
+      TweenMax.from('.slideshow-caption .butt-caption',1,{delay:0.5});
+      console.log("awaa");
+  }
+
+</script>

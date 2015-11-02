@@ -2,6 +2,11 @@
 	 class ControllerModuleSlideShowEx extends Controller{
 	 	public function index($setting){		 		
 	 		static $module = 0;
+
+	 		$this->document->addScript('catalog/view/javascript/gsap/TweenMax.min.js');
+	 		/*$this->document->addScript('catalog/view/javascript/gsap/CSSPlugin.min.js');
+	 		$this->document->addScript('catalog/view/javascript/gsap/EasePack.min.js');*/
+
 			$this->load->model('design/banner');
 			$this->load->model('tool/image');
 			$data['banners'] = array();

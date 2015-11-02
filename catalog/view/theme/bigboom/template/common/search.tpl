@@ -29,17 +29,23 @@
    </button>
 </div>
 <script type="text/javascript"><!--
-$('#search-custom select').ddslick({width:160});
+var category_id;
+$('#search-custom select').ddslick({
+	width:160,	
+	onSelected: function (selectedData) {
+        category_id =selectedData.selectedData.value;
+    }
+
+});
 $('#search-custom #btn-search').bind('click', function() {
 	url = 'index.php?route=product/search';
 
 	var search = $('#search-custom input[name=\'search\']').prop('value');
 
+
 	if (search) {
 		url += '&search=' + encodeURIComponent(search);
 	}
-
-	var category_id = $('#search-custom select[name=\'category_id\']').prop('value');
 
 	if (category_id > 0) {
 		url += '&category_id=' + encodeURIComponent(category_id);
