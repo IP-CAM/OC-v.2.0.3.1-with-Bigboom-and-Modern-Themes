@@ -42,11 +42,12 @@
 .modal-dialog {
 	border: none;
 	.close-custom {
-		position: absolute;
-		top: 8px;
-		right: -4px;
 		width:36px;
 		height:36px;
+		position: absolute;
+		right: 0px;
+		top: 0px;
+		margin-top: 18px;
 		color: #222;
 		font-size: 35px;
 		z-index: 1311;
@@ -74,10 +75,50 @@
 		margin-top:40px;
 		padding: 25px 0;
 		border-top: 1px solid #eee;
-		.button-action,
+		&:after {
+			display: table;
+			content: "";
+			clear: both;
+		}
 		.add-to-cart-content {
-			display: inline-block;
-			margin-right: 25px;
+			float: left;
+			margin-right: 65px;
+		}
+		.add-to-cart-button {
+			background-color: $main-color;
+			font-family: $font-title;
+			font-size: 12px;
+			text-transform: uppercase;
+			color: #fff;
+			border-radius: 0;
+			border: none;
+			line-height: 41px;
+			padding: 0 20px;
+			&:hover {
+				background-color: #222;
+			}
+		}
+		.button-action {
+			float: left;
+			padding: 6px 0;
+			button {
+				color: #555;
+				margin-right: 10px;
+				font-size: 0;
+				width: 28px;
+				height: 28px;
+				text-align: center;
+				display: inline-block;
+				border-radius: 1px;
+				background-color: #eee;
+				.fa {
+					font-size: 13px;
+					line-height: 28px;
+				}
+				&:hover {
+					color: $main-color;
+				}
+			}
 		}
 	}
 }
@@ -154,6 +195,17 @@
 			color: #222;
 			&:hover {
 				color: $main-color;
+			}
+		}
+	}
+	.buttons {
+		.btn-primary {
+			padding: 12px 20px;
+			background-color: $main-color;
+			color: #fff;
+			border: none;
+			&:hover {
+				background-color: #222;
 			}
 		}
 	}

@@ -135,6 +135,7 @@ footer {
 	border: 1px solid #ddd;
 	color: $body-color;
 	margin-bottom: 30px;
+	padding: 8px 15px;
 	a {
 		color: $main-color;
 		&:hover {
@@ -489,5 +490,16 @@ footer {
 	}
 	&:hover {
 		background-color:#000;
+	}
+}
+
+/******Require*******/
+div.required {
+	.control-label {
+		&:before {
+			content: '* ';
+			color: #F00;
+			font-weight: bold;
+		}
 	}
 }

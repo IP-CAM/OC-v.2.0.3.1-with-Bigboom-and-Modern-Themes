@@ -14,10 +14,13 @@
 		}
 	}
 	.product-detail-information {
-		margin-bottom: 50px;
+		margin-bottom: 35px;
 		h2 {
 			margin-top: 0;
 			margin-bottom: 0px;
+			font-size: 16px;
+			color: #444;
+			font-weight: bold;
 		}
 		ul {
 			padding-left: 40px;
@@ -33,20 +36,33 @@
 					margin: 0;
 				}
 			}
-		}
-		.product-info {
-			text-align: left;
-			> div {
-				margin-bottom: 20px;
-				&:last-child {
-					margin-bottom: 0;
-				}
-				h4 {
-					margin-bottom: 5px;
+			.product-price {
+				font-family: $font-title;
+				font-size: 16px;
+				color: #333;
+				display: inline-block;
+				&.old-price {
+					font-size: 13px;
+					color: #aaa;
+					margin-right: 5px;
+					text-decoration: line-through;
 				}
 			}
 		}
+		.product-info {
+			text-align: left;
+			h4 {
+				font-size: 13px;
+				font-weight: bold;
+				color: #444;
+				margin-bottom: 2px;
+			}
+		}
 		.other-information {
+			.text-stock {
+				font-weight: bold;
+				color: #b0d95e;
+			}
 			ul {
 				li {
 					a {
@@ -59,6 +75,7 @@
 			}
 		}
 		.rating-review {
+			line-height: 26px;
 			&:after {
 				display: table;
 				content: "";
@@ -69,25 +86,19 @@
 				margin-right: 15px;
 				.fa-stack {
 					width: 12px;
+					height: 26px;
 				}
 			}
 			.review {
 				float: left;
 				a {
-					color: #333;
+					font-size: 12px;
+					color: #666;
 					&:hover {
 						color: $main-color;
 					}
 				}
 			}
-		}
-		.product-price,
-		.price {
-			font-size: 18px;
-			margin-bottom: 0;
-		}
-		.old-price {
-			font-size: 14px;
 		}
 		.list-unstyled {
 			margin-bottom: 20px;
@@ -102,38 +113,44 @@
 			}
 		}
 		.button-action {
-			text-align: left;
+			float: left;
+			margin-right: 40px;
 			a {
 				color: #555;
-				margin-right: 30px;
+				margin-right: 10px;
+				font-size: 0;
+				width: 28px;
+				height: 28px;
+				text-align: center;
+				display: inline-block;
+				border-radius: 1px;
+				background-color: #eee;
 				.fa {
-					margin-right: 5px;
+					font-size: 13px;
+					line-height: 28px;
 				}
 				&:hover {
 					color: $main-color;
 				}
 			}
 		}
+		.addthis_toolbox {
+			float: left;
+			position: relative;
+			top: 5px;
+		}
+		.form-group-wrapper {
+			max-height: 220px;
+			overflow-y: auto;
+			margin-bottom: 30px;
+			border: 1px solid #eee;
+			padding: 10px 20px;
+		}
 	}
 	.nav-tabs {
 		color: #000;
 	}
 
-	#product {
-		margin-bottom: 30px;
-		margin-left: 20px;
-		h3 {
-			margin-top: 0;
-			font-size: 20px;
-		}
-		.form-group-wrapper {
-			max-height: 285px;
-			overflow-y: auto;
-			margin-bottom: 30px;
-			border: 1px solid #eee;
-			padding: 15px;
-		}
-	}
 	//SLide product thumbnail
 	.image-add-ypn {
 		position: relative;
@@ -143,26 +160,29 @@
 		.owl-nav {
 			[class*='owl-'] {
 				position: absolute;
-				width: 35px;
+				width: 30px;
 				height: 30px;
 				line-height: 30px;
 				top: 50%;
 				margin-top: -15px; //center 
-				display: none!important;
 				@include transition(0.1s);
+				background: none;
 				&:before {
 					font-family: FontAwesome;
 					font-size: 20px;
 				}
+				&:hover:before {
+					color: $main-color;
+				}
 			}
 			.owl-prev {
-				left: 0;
+				left: -27px;
 				&:before {
 					content: "\f104";
 				}
 			}
 			.owl-next {
-				right: 0;
+				right: -27px;
 				&:before {
 					content: "\f105";
 				}
@@ -256,10 +276,11 @@
 	}
 	//Quantity select
 	.box-add-to-cart {
-		text-align: center;
-		background-color: #f2f2f2;
-		padding: 15px 25px;
-		margin-bottom: 20px;
+		&:after {
+			display: table;
+			content: "";
+			clear: both;
+		}
 		.quantity-text {
 			margin-bottom: 10px;
 			p {
@@ -270,7 +291,8 @@
 			}
 		}
 		.quantity-wrapper {
-			margin-bottom: 20px;
+			float: left;
+			margin-right: 45px;
 			strong {
 				font-size: 14px;
 			}
@@ -314,10 +336,17 @@
 			}
 		}
 		#button-cart {
-			margin-bottom: 15px;
+			width: auto;
+			float: left;
 			background-color: $main-color;
-			border-color: transparent;
+			font-family: $font-title;
+			font-size: 12px;
+			text-transform: uppercase;
+			color: #fff;
 			border-radius: 0;
+			border: none;
+			line-height: 41px;
+			padding: 0 20px;
 			&:hover {
 				background-color: #222;
 			}
