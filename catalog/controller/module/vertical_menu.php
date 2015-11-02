@@ -7,6 +7,7 @@
 			$data['categories']=$this->load->controller('bigbom/categories');
 			$data['cate_conf']	=array();		
 			$cate_conf = $setting['category'];
+			$data['menu']=$this->load->controller('common/menu');
 
 			$this->load->model('tool/image');
 			foreach ($cate_conf as $k=>$cf) {

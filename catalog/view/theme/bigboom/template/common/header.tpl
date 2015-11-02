@@ -140,9 +140,9 @@
 						</div>
 					</div>
 				</div>
-				<div class="megamenu">
+				<!-- <div class="megamenu">
 					<?php echo $menu; ?>						
-				</div>
+				</div> -->
 			</div>
 		</div>	
 	</header>

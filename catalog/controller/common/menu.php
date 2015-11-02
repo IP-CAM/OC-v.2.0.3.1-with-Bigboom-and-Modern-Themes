@@ -4,6 +4,7 @@
 			$this->load->model('catalog/category');
 
 			$this->load->model('catalog/product');
+			$this->load->model('tool/image');
 
 			$data['home1'] = $this->url->link('common/home');
 			$data['home2'] = $this->url->link('common/home2');			
