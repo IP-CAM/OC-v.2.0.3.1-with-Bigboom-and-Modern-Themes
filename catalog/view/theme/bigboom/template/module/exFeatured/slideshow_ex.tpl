@@ -23,9 +23,9 @@
   });
 
   function callback(event){  
-      TweenMax.from('.slideshow-caption p',0.9,{y:"-100px",ease:Elastic.easeOut});
-      TweenMax.from('.slideshow-caption h3',0.7,{y:"-100px",ease:Bounce.easeOut,delay:0.5});
-      TweenMax.from('.slideshow-caption .butt-caption',1,{delay:0.5});
+      TweenMax.from('.slideshow-caption p',0.9,{y:"-100px",opacity:0,ease:Elastic.easeOut});
+      TweenMax.from('.slideshow-caption h3',0.7,{y:"-100px",opacity:0,ease:Bounce.easeOut,delay:0.5});
+      TweenMax.from('.slideshow-caption .butt-caption',1,{opacity:0,delay:0.5});
       console.log("awaa");
   }
 
