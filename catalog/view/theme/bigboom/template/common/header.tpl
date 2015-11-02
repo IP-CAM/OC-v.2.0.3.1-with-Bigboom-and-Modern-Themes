@@ -71,29 +71,29 @@
 										<a href="#" class="top-link account-link"><?php echo $text_account; ?><i class="fa fa-angle-down"></i></a>
 									</button>
 									<?php if ($logged) { ?>
-									<ul class="dropdown-menu dropdown-menu-right">
+									<ul class="dropdown-menu dropdown-menu-right ">
 										<li>
-											<a href="<?php echo $account; ?>">
+											<a href="<?php echo $account; ?>" class="dropdown-menu-item">
 												<?php echo $text_account; ?>
 											</a>
 										</li>
 										<li>
-											<a href="<?php echo $order; ?>">
+											<a href="<?php echo $order; ?>" class="dropdown-menu-item">
 												<?php echo $text_order; ?>
 											</a>
 										</li>
 										<li>
-											<a href="<?php echo $transaction; ?>">
+											<a href="<?php echo $transaction; ?>" class="dropdown-menu-item">
 												<?php echo $text_transaction; ?>
 											</a>
 										</li>
 										<li>
-											<a href="<?php echo $download; ?>">
+											<a href="<?php echo $download; ?>" class="dropdown-menu-item">
 												<?php echo $text_download; ?>
 											</a>
 										</li>
 										<li>
-											<a href="<?php echo $logout; ?>">
+											<a href="<?php echo $logout; ?>" class="dropdown-menu-item">
 												<?php echo $text_logout; ?>
 											</a>
 										</li>

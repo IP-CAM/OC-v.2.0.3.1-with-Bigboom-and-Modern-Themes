@@ -18,9 +18,9 @@
     <ul class="dropdown-menu">
       <?php foreach ($currencies as $currency) { ?>
       <?php if ($currency['symbol_left']) { ?>
-      <li><button class="currency-select btn btn-link btn-block" type="button" name="<?php echo $currency['code']; ?>"><?php echo $currency['title']; ?></button></li>
+      <li><button class="currency-select btn btn-link btn-block dropdown-menu-item" type="button" name="<?php echo $currency['code']; ?>"><?php echo $currency['title']; ?></button></li>
       <?php } else { ?>
-      <li><button class="currency-select btn btn-link btn-block" type="button" name="<?php echo $currency['code']; ?>"><?php echo $currency['title']; ?></button></li>
+      <li><button class="currency-select btn btn-link btn-block dropdown-menu-item" type="button" name="<?php echo $currency['code']; ?>"><?php echo $currency['title']; ?></button></li>
       <?php } ?>
       <?php } ?>
     </ul>

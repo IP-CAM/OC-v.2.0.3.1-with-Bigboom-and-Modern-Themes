@@ -37,7 +37,10 @@
 
 // random-product-slide
 .random-product-slide {
+	padding: 22px 20px;
+	border: 1px solid #efefef;
 	.product-thumb {
+		border: none;
 		&:after {
 			display: table;
 			content: "";
@@ -45,9 +48,13 @@
 		}
 		.product-image-box {
 			float: left;
+			margin-right: 10px;
 		}
 		.product-info {
 			float: left;
+		}
+		.product-name {
+			margin-top: 10px;
 		}
 	}
 	.owl-nav {
@@ -65,10 +72,10 @@
 			}
 		}
 		.owl-prev {
-			left: 0;
+			left: -24px;
 		}
 		.owl-next {
-			right: 0;
+			right: 24px;
 		}
 	}
 }
