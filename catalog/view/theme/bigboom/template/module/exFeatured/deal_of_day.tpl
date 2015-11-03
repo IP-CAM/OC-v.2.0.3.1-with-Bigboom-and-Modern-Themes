@@ -1,6 +1,6 @@
+<h3 class="heading-title featured-title">top rate</h3>
 <?php foreach ($deal_total as $deal_item) {  $prod_quick_view=json_encode($deal_item); ?>
-<div class="deal-product">
-	<h3 class="heading-title featured-title">top rate</h3>
+<div class="deal-product">	
 	<div class="row">
 		<div class="product-grid col-sm-12">
 			<div class="product-thumb">

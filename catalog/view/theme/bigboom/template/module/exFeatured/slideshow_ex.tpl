@@ -25,13 +25,15 @@
       items: 1,    	 
       nav:true,   
       loop:true,       
-      onChanged: callback,  
+      autoPlay:1000,
+      onChange: callback,  
   });
 
-  function callback(event){  
+  function callback(event){        
+      TweenMax.killAll();
       TweenMax.from('.slideshow-caption p',0.9,{y:"-100px",opacity:0,ease:Elastic.easeOut});
       TweenMax.from('.slideshow-caption h3',0.7,{y:"-100px",opacity:0,ease:Bounce.easeOut,delay:0.5});
-      TweenMax.from('.slideshow-caption .butt-caption',1,{opacity:0,delay:0.5});      
+      TweenMax.from('.slideshow-caption .butt-caption',1,{opacity:0,delay:0.5});         
   }
 
 </script>
