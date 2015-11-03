@@ -13,7 +13,7 @@ class ControllerCommonHome extends Controller {
 		$data['column_right'] = $this->load->controller('common/column_right');
 		$data['content_top'] = $this->load->controller('common/content_top');
 		$data['content_bottom'] = $this->load->controller('common/content_bottom');
-		$data['footer'] = $this->load->controller('common/footer');		
+		$data['footer'] = $this->load->controller('common/footer2');		
 		$data['header'] = $this->load->controller('common/header');
 		$data['ex_position']	=$this->load->controller('common/ex_position');
 		$data['two_column']		=$this->load->controller('common/two_column');
