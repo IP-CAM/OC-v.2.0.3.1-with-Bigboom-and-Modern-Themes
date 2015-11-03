@@ -31,7 +31,7 @@
 <script type="text/javascript"><!--
 var category_id;
 $('#search-custom select').ddslick({
-	width:160,	
+	width:130,	
 	onSelected: function (selectedData) {
         category_id =selectedData.selectedData.value;
     }

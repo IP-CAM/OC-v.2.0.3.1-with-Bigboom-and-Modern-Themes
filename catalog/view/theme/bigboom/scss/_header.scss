@@ -130,6 +130,9 @@
 	.logo {
 		padding-top: 25px;
 		padding-bottom: 28px;
+		a {
+			display: inline-block;
+		}
 	}
 	.top-search,
 	.shopping-cart {
@@ -161,7 +164,7 @@
 		a.dd-selected {
 			color: #555;
 			padding: 0;
-			padding-left: 30px;
+			padding-left: 20px;
 			.dd-selected-text {
 				margin: 0;
 				text-transform: capitalize;
@@ -180,7 +183,7 @@
 			}
 		}
 		.dd-pointer {
-			right: 45px;
+			right: 25px;
 			&.dd-pointer-down {
 				border-top-color: #bbb!important;
 			}

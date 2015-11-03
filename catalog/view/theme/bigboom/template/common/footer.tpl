@@ -1,13 +1,13 @@
-<footer>
+<footer class="footer-1">
 	<div class="container">
-		<div class="footer-1">
+		<div class="main-footer">
 			<div class="row">
-				<div class="footer-1-col footer-logo-img col-sm-3">
+				<div class="main-footer-col footer-logo-img col-sm-3">
 					<img src="<?php echo $info['footer_logo']; ?>">
 					<p><?php echo $info['footer_slogan']; ?></p>
 				</div>
 				<?php foreach ($links as $link) { ?>					
-				<div class="footer-1-col col-sm-2 col-xs-6">
+				<div class="main-footer-col col-sm-2 col-xs-6">
 					<h5 class="footer-list-title"><?php echo $link['title']; ?></h5>
 					<ul class="footer-list-item">	
 					<?php foreach ($link['link'] as $sub_link) { ?>
@@ -21,7 +21,7 @@
 					</ul>
 				</div>
 				<?php } ?>
-				<div class="footer-1-col newsletter col-sm-3 col-xs-6">
+				<div class="main-footer-col newsletter col-sm-3 col-xs-6">
 					<h5 class="footer-list-title">Our newsletter</h5>
 					<p>Sign up for Our Newsletter &amp; Promotions</p>
 					<form action="">
@@ -31,14 +31,14 @@
 				</div>
 			</div>
 		</div>
-		<div class="footer-2">
+		<div class="footer-bottom">
 			<div class="row">
-				<div class="footer-2-col col-sm-8">
+				<div class="footer-bottom-col col-sm-8">
 					<div class="footer-copyright">
 						<?php echo $powered; ?>
 					</div>
 				</div>
-				<div class="footer-2-col col-sm-4">
+				<div class="footer-bottom-col col-sm-4">
 					<div class="icon-payment-wrapper">
 						<a class="icon-payment paypal-icon" href="#">paypal</a>
 						<a class="icon-payment visa-icon" href="#">visa</a>

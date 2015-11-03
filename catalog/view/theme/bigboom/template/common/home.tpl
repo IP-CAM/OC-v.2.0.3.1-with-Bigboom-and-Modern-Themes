@@ -1,7 +1,7 @@
 <?php echo $header; ?>
 <div class="main-body">
     <div class="container">
-        <div class="main-content">
+        <div class="top-banner-wrapper">
             <div class="row">
                 <?php echo $column_left; ?>
                 <?php 
@@ -20,6 +20,8 @@
                 </div>        
                 <?php echo $column_right; ?>
             </div>
+        </div> 
+        <div class="main-content">
             <?php if($column_left_ex || $column_right_ex || $content_bottom) { ?>
                 <div class="row">
                     <?php 
@@ -39,8 +41,8 @@
                     <?php if($column_right) {echo $column_right_ex;} ?>
                 </div>
             <?php } ?>
-        </div>    
-        <?php if($ex_position) { echo $ex_position;} ?>                  
+        </div> 
+        <?php if($ex_position) {echo $ex_position;} ?>                 
     </div>  
     <?php if($top_footer) { echo $top_footer; } ?>
 </div>  

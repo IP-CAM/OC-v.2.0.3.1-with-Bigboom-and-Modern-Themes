@@ -1,12 +1,21 @@
-<footer>
+<footer class="footer-2">
 	<div class="container">
-		<div class="footer-1">
+		<div class="footer-top">
 			<div class="row">
 				<div class="col-sm-6">
-					
+					<div class="get-in-touch">
+						<h3 class="title">Get in touch !</h3>
+						<div class="icon">
+							<a href="#"><i class="fa fa-facebook"></i></a>
+							<a href="#"><i class="fa fa-twitter"></i></a>
+							<a href="#"><i class="fa fa-rss"></i></a>
+							<a href="#"><i class="fa fa-pinterest-square"></i></a>
+							<a href="#"><i class="fa fa-instagram"></i></a>
+						</div>
+					</div>
 				</div>
 				<div class="col-sm-6">
-					<div class="footer-1-col newsletter col-sm-3 col-xs-6">
+					<div class="newsletter">
 						<h5 class="footer-list-title">Our newsletter</h5>
 						<form action="">
 							<input type="text" name="" class="input-email" placeholder="Your email address">
@@ -14,14 +23,19 @@
 						</form>
 					</div>
 				</div>
-			</div
+			</div>
+		</div>
+		<div class="main-footer">
 			<div class="row">
-				<div class="footer-1-col footer-logo-img col-sm-3">
+				<div class="main-footer-col footer-logo-img col-sm-3">
 					<img src="<?php echo $info['footer_logo']; ?>">
 					<p><?php echo $info['footer_slogan']; ?></p>
 				</div>
+				<div class="col-sm-3">
+					<?php echo $info['contact_info']; ?>
+				</div>
 				<?php foreach ($links as $link) { ?>					
-				<div class="footer-1-col col-sm-2 col-xs-6">
+				<div class="main-footer-col col-sm-2 col-xs-6">
 					<h5 class="footer-list-title"><?php echo $link['title']; ?></h5>
 					<ul class="footer-list-item">	
 					<?php foreach ($link['link'] as $sub_link) { ?>
@@ -34,17 +48,18 @@
 					<?php } ?>					
 					</ul>
 				</div>
-				<?php } ?>				
+				<?php } ?>
+				
 			</div>
 		</div>
-		<div class="footer-2">
+		<div class="footer-bottom">
 			<div class="row">
-				<div class="footer-2-col col-sm-8">
+				<div class="footer-bottom-col col-sm-8">
 					<div class="footer-copyright">
 						<?php echo $powered; ?>
 					</div>
 				</div>
-				<div class="footer-2-col col-sm-4">
+				<div class="footer-bottom-col col-sm-4">
 					<div class="icon-payment-wrapper">
 						<a class="icon-payment paypal-icon" href="#">paypal</a>
 						<a class="icon-payment visa-icon" href="#">visa</a>

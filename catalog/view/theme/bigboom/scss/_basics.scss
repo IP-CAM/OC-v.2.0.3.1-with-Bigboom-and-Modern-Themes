@@ -77,6 +77,10 @@ footer {
 
 //margin div in content in responsive
 @media only screen and (max-width: 767px) {
+	.container {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
 	.main-body {
 		> div {
 			margin-bottom: 40px;

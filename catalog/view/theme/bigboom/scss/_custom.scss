@@ -12,7 +12,7 @@
 		font-size: 0;
 		background-color: #efefef;
 		@include transition (0.2s);
-		border-radius: 1px;
+		border-radius: 3px;
 		&:before {
 			font-family: FontAwesome;
 			font-size: 16px;
@@ -134,22 +134,22 @@
 }
 
 .top-banner-wrapper {
-	.top-banner {
-		float: left;
-		&.top-banner-1 {
-			width: 23%;
-		}
-		&.top-banner-2 {
-			width: 54%;
-		}
-		&.top-banner-3 {
-			width: 21%;
-		}
-	}
+	margin-bottom: 25px;
 }
 
 .featured-product {
-	margin-bottom: 15px;
+	margin-bottom: 16px;
+}
+
+.image-block {
+	margin-bottom: 25px;
+}
+
+.static-block {
+	margin-bottom: 25px;
+}
+#lastest-blog {
+	margin-bottom: 65px;
 }
 
 

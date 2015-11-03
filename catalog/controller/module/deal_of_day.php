@@ -29,14 +29,14 @@
 				$product_image =$this->model_catalog_product->getProductImages($sp['product_id']);	
 				$pro_img=array();
 				foreach ($product_image as $pi) {
-					$img=$this->model_tool_image->resize($pi['image'],268,346);					
+					$img=$this->model_tool_image->resize($pi['image'],248,248);					
 					array_push($pro_img, $img);
 					}
 
 				$product_image =$this->model_catalog_product->getProductImages($sp['product_id']);
 
 				foreach ($product_image as $pi) {
-					$img=$this->model_tool_image->resize($pi['image'],268,346);					
+					$img=$this->model_tool_image->resize($pi['image'],248,248);					
 					array_push($pro_img, $img);
 					}
 
@@ -44,7 +44,7 @@
 					'name'			=>htmlentities($sp['name'], ENT_QUOTES),
 					'description_modal' 	=> htmlentities($sp['description'], ENT_QUOTES),
 					'product_id'	=>$sp['product_id'],
-					'thumb'			=>$this->model_tool_image->resize($sp['image'], 268, 346),
+					'thumb'			=>$this->model_tool_image->resize($sp['image'], 248, 248),
 					'special'		=>$special,
 					'price'			=>$price,
 					'rating'		=>$sp['rating'],
