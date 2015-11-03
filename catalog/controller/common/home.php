@@ -22,7 +22,7 @@ class ControllerCommonHome extends Controller {
 		$data['top_banner']		=$this->load->controller('common/top_banner');
 		$data['home']			=$this->url->link('common/home');		
 		$data['Threecolumns_1']		=$this->load->controller('common/Threecolumns_1');
-		$data['banner1']	=$this->load->controller('common/banner1');
+		$data['banner1']	=$this->load->controller('common/banner1');		
 
 		//Addition position
 

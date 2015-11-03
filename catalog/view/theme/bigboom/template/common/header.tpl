@@ -140,9 +140,16 @@
 						</div>
 					</div>
 				</div>
-				<!-- <div class="megamenu">
-					<?php echo $menu; ?>						
-				</div> -->
+				<div class="megamenu" style="margin-left:23%;">
+					<ul>
+						<li><a href="Home"></a>
+							<ul>
+								<li><a href="<?php echo $home2 ?>">Home2</a></li>
+								<li><a href="#">Home3</a></li>
+							</ul>
+						</li>
+					</ul>						
+				</div>
 			</div>
 		</div>	
 	</header>
