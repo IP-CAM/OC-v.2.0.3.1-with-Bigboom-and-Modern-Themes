@@ -60,7 +60,8 @@
               1000:{
                   items:$('#ypn-carousel-other').data("items")
               }
-          }
+          },
+          margin:10,
       })
     </script>
 </div>

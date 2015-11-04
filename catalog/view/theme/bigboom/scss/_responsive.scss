@@ -28,6 +28,21 @@
 }
 
 @media only screen and (max-width: 991px) {
+	.common-home {
+		#column-left {
+			display: none;
+		}
+		.content-top {
+			width: 66%;
+			float: left;
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+		#column-right {
+			width: 33%;
+			float: left;
+		}
+	}
 	#footer-ads-wrapper {
 		.footer-ads {
 			margin-bottom: 30px;
@@ -48,6 +63,9 @@
 				min-height: auto;
 			}
 		}
+		.main-footer-col {
+			margin-bottom: 20px;
+		}
 	}
 }
 @media only screen and (max-width: 767px) {
@@ -60,54 +78,75 @@
 			}
 		}
 		.main-header {
-			.logo,
-			.shopping-cart  {
+			.logo-search-cart,
+			.shopping-cart {
 				text-align: center;
 			}
 			.logo {
 				padding-bottom: 0;
 			}
 		}
+		.top-search,
+		.shopping-cart {
+			padding: 0;
+			margin-top: 20px;
+		}
 	}
-
-	.common-home {
-		.content-top {
-			width: 66%;
-			float: left;
-			padding-left: 15px;
-			padding-right: 15px;
+	.random-product-slide {
+		.product-thumb {
+			.product-image-box {
+				width: 80%;
+			}
 		}
-		#column-right {
-			width: 33%;
-			float: left;
-		}
+	}
+	#column-right-ex {
+		margin-bottom: 30px;
 	}
 	footer {
-		.footer-1 {
+		.footer-top {
 			padding-top: 10px;
 		}
 		.footer-logo-img {
 			text-align: center;
 		}
-		.footer-1 {
+		.footer-top {
 			.footer-logo-img {
 				margin-bottom: 25px;
 			}
 		}
-		.footer-2-col {
+		.footer-bottom-col {
 			text-align: center;
 			.icon-payment-wrapper {
 				display: inline-block;
 				float: none;
 			}
 		}
-		.footer-2 {
+		.footer-bottom {
 			.footer-copyright {
 				padding-top: 10px;
 			}
 			.icon-payment-wrapper {
 				padding: 0;
 				padding-bottom: 15px;
+			}
+			.copyright-link {
+				display: inline-block;
+			}
+		}
+
+
+
+		&.footer-2 {
+			.footer-top {
+				text-align: center;
+				padding: 20px 0;
+			}
+			.get-in-touch {
+				display: inline-block;
+				margin-bottom: 15px;
+			}
+			.newsletter {
+				display: inline-block;
 			}
 		}
 	}
@@ -120,15 +159,36 @@
 			width: 100%;
 		}
 		#column-right {
-			width: 100%;
+			display: none;
 		}
 		#content {
 			margin-bottom: 30px;
 		}
 	}
+	.footer-2 {
+		.newsletter {
+			.footer-list-title {
+				float: none;
+			}
+		}
+	}
+
 }
 @media only screen and (max-width: 479px) {
-	
+	.footer-2 {
+		.newsletter {
+			form {
+				.input-email {
+					margin-bottom: 20px;
+				}
+			}
+		}
+		.get-in-touch {
+			h3 {
+				float: none;
+			}
+		}
+	}
 }
 @media only screen and (max-width: 319px) {
  

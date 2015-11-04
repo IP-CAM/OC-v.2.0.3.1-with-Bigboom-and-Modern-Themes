@@ -1,8 +1,8 @@
 <footer class="footer-2">
-	<div class="container">
-		<div class="footer-top">
+	<div class="footer-top">
+		<div class="container">
 			<div class="row">
-				<div class="col-sm-6">
+				<div class="col-lg-6 col-sm-5">
 					<div class="get-in-touch">
 						<h3 class="title">Get in touch !</h3>
 						<div class="icon">
@@ -14,10 +14,10 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-sm-6">
+				<div class="col-lg-6 col-sm-7">
 					<div class="newsletter">
 						<h5 class="footer-list-title">Our newsletter</h5>
-						<form action="">
+						<form action=" ">
 							<input type="text" name="" class="input-email" placeholder="Your email address">
 							<input type="submit" class="subcribe-button" value="SUBSCRIBE">
 						</form>
@@ -25,47 +25,51 @@
 				</div>
 			</div>
 		</div>
-		<div class="main-footer">
-			<div class="row">
-				<div class="main-footer-col footer-logo-img col-sm-3">
-					<img src="<?php echo $info['footer_logo']; ?>">
-					<p><?php echo $info['footer_slogan']; ?></p>
-				</div>
-				<div class="col-sm-3">
-					<?php echo $info['contact_info']; ?>
-				</div>
-				<?php foreach ($links as $link) { ?>					
-				<div class="main-footer-col col-sm-2 col-xs-6">
-					<h5 class="footer-list-title"><?php echo $link['title']; ?></h5>
-					<ul class="footer-list-item">	
-					<?php foreach ($link['link'] as $sub_link) { ?>
-						<li>
-							<a href="<?php echo  $sub_link['href']; ?>">
-								<i class="fa fa-caret-right"></i>
-								<?php echo $sub_link['sub_link']; ?>
-							</a>
-						</li>								
-					<?php } ?>					
-					</ul>
-				</div>
-				<?php } ?>
-				
-			</div>
-		</div>
-		<div class="footer-bottom">
-			<div class="row">
-				<div class="footer-bottom-col col-sm-8">
-					<div class="footer-copyright">
-						<?php echo $powered; ?>
+	</div>
+	<div class="footer-main-wrapper">
+		<div class="container">
+			<div class="main-footer">
+				<div class="row">
+					<div class="main-footer-col footer-logo-img col-md-3 col-xsl-6">
+						<img src="<?php echo $info['footer_logo']; ?>">
+						<p><?php echo $info['footer_slogan']; ?></p>
 					</div>
+					<div class="main-footer-col col-md-3 col-xsl-6">
+						<?php echo $info['contact_info']; ?>
+					</div>
+					<?php foreach ($links as $link) { ?>					
+					<div class="main-footer-col  col-md-2 col-xsl-4 col-xs-6">
+						<h5 class="footer-list-title"><?php echo $link['title']; ?></h5>
+						<ul class="footer-list-item">	
+						<?php foreach ($link['link'] as $sub_link) { ?>
+							<li>
+								<a href="<?php echo  $sub_link['href']; ?>">
+									<i class="fa fa-caret-right"></i>
+									<?php echo $sub_link['sub_link']; ?>
+								</a>
+							</li>								
+						<?php } ?>					
+						</ul>
+					</div>
+					<?php } ?>
+					
 				</div>
-				<div class="footer-bottom-col col-sm-4">
-					<div class="icon-payment-wrapper">
-						<a class="icon-payment paypal-icon" href="#">paypal</a>
-						<a class="icon-payment visa-icon" href="#">visa</a>
-						<a class="icon-payment maestro-icon" href="#">maestro</a>
-						<a class="icon-payment mastercard-icon" href="#">mastercard</a>
-						<a class="icon-payment discover-icon" href="#">discover</a>
+			</div>
+			<div class="footer-bottom">
+				<div class="row">
+					<div class="footer-bottom-col col-sm-6">
+						<div class="footer-copyright">
+							<?php echo $powered; ?>
+						</div>
+					</div>
+					<div class="footer-bottom-col col-sm-6">
+						<div class="icon-payment-wrapper">
+							<a class="icon-payment paypal-icon" href="#">paypal</a>
+							<a class="icon-payment visa-icon" href="#">visa</a>
+							<a class="icon-payment maestro-icon" href="#">maestro</a>
+							<a class="icon-payment mastercard-icon" href="#">mastercard</a>
+							<a class="icon-payment discover-icon" href="#">discover</a>
+						</div>
 					</div>
 				</div>
 			</div>

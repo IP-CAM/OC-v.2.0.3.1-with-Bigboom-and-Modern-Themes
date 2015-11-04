@@ -1,6 +1,5 @@
 <div class="featured-product">
-  <h2 class="heading-title heading-slide-title heading-featured"><?php echo $heading_title; ?></h2>  
-  <div>
+  <h2 class="heading-title heading-slide-title heading-featured"><?php echo $heading_title; ?></h2> 
     <?php $random = rand(1, 1000); //Each slide has different id?> 
     <div class="owl-carousel product-slider-custom" id="ypn-carousel-<?php echo $random ?>" data-items="<?php echo $item; ?>">
     <?php for ($k=0;$k<count($products);$k+=$row) {  ?>
@@ -80,8 +79,7 @@
       </div>    
     <?php } ?>
     </div>
-    <?php } ?>   
-    </div>
+    <?php } ?> 
   </div> 
     <script type="text/javascript">
       $('.owl-carousel').owlCarousel({
@@ -106,7 +104,4 @@
       });  
 
     </script>
-    <style type="text/css">
-      ul {list-style:none;}
-    </style>
 </div>
