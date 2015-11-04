@@ -142,7 +142,7 @@
 				</div>
 				<div id="top-menu">
 					<?php echo $top_menu; ?>	 	
-				</div>
+				</div> 
 			</div>
 		</div>	
 	</header>
