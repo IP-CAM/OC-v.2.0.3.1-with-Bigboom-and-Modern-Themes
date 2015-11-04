@@ -121,6 +121,7 @@
           <li><a href="<?php echo $banner; ?>"><?php echo $text_banner; ?></a></li>
           <li><a href="<?php echo $links_footer; ?>"><?php echo $text_link_footer; ?></a></li>
           <li><a href="<?php echo $link_footer_contact ?>"><?php echo $text_footer_contact ?></a></li>
+          <li><a href="<?php echo $link_cms_block; ?>"><?php echo $text_cms_block; ?></a></li>
         </ul>
       </li>
       <li><a class="parent"><?php echo $text_users; ?></a>

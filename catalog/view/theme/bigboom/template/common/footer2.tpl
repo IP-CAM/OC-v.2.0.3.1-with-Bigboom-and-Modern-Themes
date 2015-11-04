@@ -83,6 +83,14 @@ Please donate via PayPal to donate@opencart.com
 //-->
 
 <!-- Theme created by Welford Media for OpenCart 2.0 www.welfordmedia.co.uk -->
+<div id="fixed-socials">
+    <a href="#" class="bb-facebook"><i class="fa fa-facebook"></i><span>Follow via facebook</span></a>
+    <a href="#" class="bb-twitter"><i class="fa fa-twitter"></i><span>Follow via twitter</span></a>
+    <a href="#" class="bb-google"><i class="fa fa-google-plus"></i><span>Follow via google plus</span></a>
+    <a href="#" class="bb-youtube"><i class="fa fa-youtube"></i><span>Follow via youtube</span></a>
+    <a href="#" class="bb-pinterest"><i class="fa fa-pinterest"></i><span>Follow via pinterest</span></a>
+    <a href="#" class="bb-mail"><i class="fa fa-envelope"></i><span>Follow via mail</span></a>     
+</div>
 
 <span id="scroll-top"><i class="fa fa-long-arrow-up"></i></span>
 <!--Product-quickview hidden-->

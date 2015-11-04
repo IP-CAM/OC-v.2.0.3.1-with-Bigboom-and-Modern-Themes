@@ -353,6 +353,14 @@ class ControllerDesignBanner extends Controller {
 			$data['status'] = true;
 		}
 
+		if (isset($this->request->post['status'])) {
+			$data['status'] = $this->request->post['status'];
+		} elseif (!empty($banner_info)) {
+			$data['status'] = $block_info['status'];
+		} else {
+			$data['status'] = true;
+		}
+
 		$this->load->model('localisation/language');
 
 		$data['languages'] = $this->model_localisation_language->getLanguages();
