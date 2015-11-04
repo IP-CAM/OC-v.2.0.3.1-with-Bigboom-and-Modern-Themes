@@ -24,7 +24,7 @@
 				<div class="main-footer-col newsletter col-sm-3 col-xs-6">
 					<h5 class="footer-list-title">Our newsletter</h5>
 					<p>Sign up for Our Newsletter &amp; Promotions</p>
-					<form action="">
+					<form action=" ">
 						<input type="text" name="" class="input-email" placeholder="Your email address">
 						<input type="submit" class="subcribe-button" value="SUBSCRIBE">
 					</form>

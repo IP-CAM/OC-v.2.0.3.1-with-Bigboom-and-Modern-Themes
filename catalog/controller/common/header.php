@@ -17,6 +17,7 @@ class ControllerCommonHeader extends Controller {
 		$data['scripts'] = $this->document->getScripts();
 		$data['lang'] = $this->language->get('code');
 		$data['direction'] = $this->language->get('direction');	
+		$this->load->model('catalog/category');
 
 		if ($this->config->get('config_google_analytics_status')) {
 			$data['google_analytics'] = html_entity_decode($this->config->get('config_google_analytics'), ENT_QUOTES, 'UTF-8');
@@ -69,7 +70,8 @@ class ControllerCommonHeader extends Controller {
 		$data['contact'] = $this->url->link('information/contact');
 		$data['telephone'] = $this->config->get('config_telephone');
 		$data['home']=$data['home1']=$this->url->link('common/home');
-		$data['home2']=$this->url->link('common/home2');		
+		$data['home2']=$this->url->link('common/home2');	
+		$data['home3']=$this->url->link('common/home3');	
 
 		$status = true;
 

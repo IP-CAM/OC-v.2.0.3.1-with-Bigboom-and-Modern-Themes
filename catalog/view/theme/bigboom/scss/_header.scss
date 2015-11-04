@@ -39,7 +39,7 @@
 /*********HEADER SETTING**********/
 
 #top {
-	background-color: #111;
+	background: url(../images/promotion-background.png) 50% 0 repeat #121212;
 	text-align: center;
 	padding-top: 33px;
 	padding-bottom: 43px;
@@ -66,31 +66,49 @@
 }
 #top-nav {
 	background-color: #222;
-	.top-link {
-		display: block;
-		font-family: $font-body;
-		color: #888;
-		line-height: 38px;
-		padding: 0 17px;
-		position: relative;
-		&:hover {
-			color: $main-color;
-		}
-		&:after {
-			content: "";
-			display: block;
-			width: 1px;
-			height: 10px;
-			background-color: rgba(255, 255, 255, 0.1);
-			position: absolute;
-			z-index: 99;
-			right: 0;
-			top: 50%;
-			margin-top: -5px;
-		}
-		.fa {
-			font-size: 10px;
-			margin-left: 5px;
+	.top-left,
+	.top-right .toplink-wrapper {
+		> li {
+			.top-link {
+				display: block;
+				font-family: $font-body;
+				color: #888;
+				line-height: 38px;
+				padding: 0 17px;
+				position: relative;
+				&:hover {
+					color: $main-color;
+				}
+				&:after {
+					content: "";
+					display: block;
+					width: 1px;
+					height: 10px;
+					background-color: rgba(255, 255, 255, 0.1);
+					position: absolute;
+					z-index: 99;
+					right: 0;
+					top: 50%;
+					margin-top: -5px;
+				}
+				.fa {
+					font-size: 10px;
+					margin-left: 5px;
+				}
+			}
+			&:last-child {
+				.top-link {
+					padding-right: 0;
+					&:after {
+						display: none;
+					}
+				}
+			}
+			&:first-child {
+				.top-link {
+					padding-left: 0;
+				}
+			}
 		}
 	}
 	//overwrite boostrap
