@@ -108,7 +108,9 @@ class ControllerCommonMenu extends Controller {
 		$data['text_openbay_links'] = $this->language->get('text_openbay_links');
 		$data['text_openbay_report_price'] = $this->language->get('text_openbay_report_price');
 		$data['text_openbay_order_import'] = $this->language->get('text_openbay_order_import');
+		$data['text_cms_block']				="CMS Block";
 
+		$data['link_cms_block']				=$this->url->link('design/cms_block','token='.$this->session->data['token'],'SSL');
 		$data['home'] = $this->url->link('common/dashboard', 'token=' . $this->session->data['token'], 'SSL');
 		$data['affiliate'] = $this->url->link('marketing/affiliate', 'token=' . $this->session->data['token'], 'SSL');
 		$data['api'] = $this->url->link('user/api', 'token=' . $this->session->data['token'], 'SSL');

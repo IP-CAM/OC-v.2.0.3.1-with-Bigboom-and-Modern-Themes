@@ -3,6 +3,8 @@ class ControllerCommonHeader extends Controller {
 	public function index($cond) {
 		$data['title'] = $this->document->getTitle();
 		$this->load->model('tool/image');
+		$this->load->model('catalog/category');
+		$this->load->model('catalog/product');
 
 		if ($this->request->server['HTTPS']) {
 			$server = $this->config->get('config_ssl');
@@ -68,8 +70,7 @@ class ControllerCommonHeader extends Controller {
 		$data['checkout'] = $this->url->link('checkout/checkout', '', 'SSL');
 		$data['contact'] = $this->url->link('information/contact');
 		$data['telephone'] = $this->config->get('config_telephone');
-		$data['home']=$data['home1']=$this->url->link('common/home');
-		$data['home2']=$this->url->link('common/home2');		
+		$data['home']=$data['home1']=$this->url->link('common/home');		
 
 		$status = true;
 

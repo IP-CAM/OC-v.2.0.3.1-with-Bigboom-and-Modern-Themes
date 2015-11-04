@@ -481,8 +481,8 @@ footer {
 	width:45px;
 	position:fixed;
 	z-index:999999;
-	bottom: 10%;
-	right:30px;
+	bottom: 20%;
+	right:0;
 	background-color: $main-color;
 	cursor: pointer;
 	text-align: center;
@@ -494,6 +494,53 @@ footer {
 	}
 	&:hover {
 		background-color:#000;
+	}
+}
+
+/*****Fixed Social network****/
+
+#fixed-socials{
+	position: fixed;
+	top: 130px;
+	right: -185px;
+	width: 230px;
+	z-index: 3;	
+	.bb-facebook{
+		background: #39599f;
+	}
+
+	.bb-twitter{
+		background: #45b0e3;
+	}
+	.bb-google{
+		background: #DF5138;
+	}
+	.bb-youtube{
+		background: #39599F;
+	}
+	.bb-pinterest{
+		background: #CD2026;
+	}
+	.bb-mail{
+		background: #2A056F;
+	}
+	a{
+		display: block;
+		margin-bottom: 2px;
+		@include transition(0.3s);
+		color:#fff;
+		&:hover{
+			margin-left: -120px;
+		}
+
+	}
+	span{text-decoration: underline;}
+	i{
+		height: 45px;
+		width: 45px;
+		text-align: center;
+		line-height: 45px;
+		font-size: 20px;
 	}
 }
 
