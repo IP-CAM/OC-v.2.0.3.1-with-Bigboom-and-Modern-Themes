@@ -140,6 +140,10 @@
 						</div>
 					</div>
 				</div>
+				<div id="top-menu">
+					<?php echo $top_menu; ?>	 	
+				</div> 
+
 			</div>
 		</div>	
 	</header>
