@@ -65,41 +65,10 @@
 					</ul>
 					<div class="top-right col-sm-6">
 						<ul class="toplink-wrapper pull-right clearfix">
-							<li class="dropdown my-account">
-								<div class="btn-group">
-									<button href="<?php echo $account; ?>" title="<?php echo $text_account; ?>" class="btn btn-link dropdown-toggle" data-toggle="dropdown">
-										<a href="#" class="top-link account-link"><?php echo $text_account; ?><i class="fa fa-angle-down"></i></a>
-									</button>
-									<?php if ($logged) { ?>
-									<ul class="dropdown-menu dropdown-menu-right ">
-										<li>
-											<a href="<?php echo $account; ?>" class="dropdown-menu-item">
-												<?php echo $text_account; ?>
-											</a>
-										</li>
-										<li>
-											<a href="<?php echo $order; ?>" class="dropdown-menu-item">
-												<?php echo $text_order; ?>
-											</a>
-										</li>
-										<li>
-											<a href="<?php echo $transaction; ?>" class="dropdown-menu-item">
-												<?php echo $text_transaction; ?>
-											</a>
-										</li>
-										<li>
-											<a href="<?php echo $download; ?>" class="dropdown-menu-item">
-												<?php echo $text_download; ?>
-											</a>
-										</li>
-										<li>
-											<a href="<?php echo $logout; ?>" class="dropdown-menu-item">
-												<?php echo $text_logout; ?>
-											</a>
-										</li>
-									</ul>
-									<?php }  ?>
-								</div>
+							<li>
+								<a href="<?php echo $account; ?>" class="top-link account-link">
+									<?php echo $text_account; ?>
+								</a>
 							</li>
 							<li>
 								<a href="<?php echo $checkout; ?>" class="top-link checkout-link" title="<?php echo $text_checkout; ?>"><span><?php echo $text_checkout; ?></span></a>
@@ -113,6 +82,10 @@
 							<li>
 								<a href="<?php echo $login; ?>" class="top-link login-link">
 									<span><?php echo $text_login; ?></span>
+								</a>
+								<span> / </span>
+								<a href="<?php echo $logout; ?>" class="top-link logout-link">
+									<?php echo $text_logout; ?>
 								</a>
 							</li>
 							

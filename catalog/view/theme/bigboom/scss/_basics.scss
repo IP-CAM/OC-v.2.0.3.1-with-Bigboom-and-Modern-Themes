@@ -159,6 +159,16 @@ footer {
 .btn {
 	@include transition(0.2s);
 }
+.buttons {
+	.btn-primary {
+		padding: 8px 20px;
+		background-color: $main-color;
+		border: none;
+		&:hover {
+			background-color: #222;
+		}
+	}
+}
 
 // Compare
 .compare-text {
