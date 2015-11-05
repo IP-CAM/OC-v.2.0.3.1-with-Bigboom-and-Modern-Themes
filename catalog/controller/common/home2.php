@@ -14,7 +14,7 @@ class ControllerCommonHome2 extends Controller {
 		$data['content_top'] = $this->load->controller('common/content_top');
 		$data['content_bottom'] = $this->load->controller('common/content_bottom');
 		$data['footer'] = $this->load->controller('common/footer');		
-		$data['header'] = $this->load->controller('common/header',2);
+		$data['header'] = $this->load->controller('common/header');
 		$data['ex_position']	=$this->load->controller('common/ex_position');
 		$data['two_column']		=$this->load->controller('common/two_column');
 		$data['three_column']	=$this->load->controller('common/three_column');
