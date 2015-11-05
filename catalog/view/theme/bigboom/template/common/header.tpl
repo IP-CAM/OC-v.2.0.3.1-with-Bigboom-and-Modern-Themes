@@ -140,10 +140,9 @@
 						</div>
 					</div>
 				</div>
-				<div id="top-menu">
+				<div id="top-menu" class="hidden-xs">
 					<?php echo $top_menu; ?>	 	
 				</div> 
-
 			</div>
 		</div>	
 	</header>
