@@ -9,6 +9,11 @@
 			$cate_conf = $setting['category'];
 			$data['menu']=$this->load->controller('common/menu');
 
+			if ($this->request->server['HTTPS']) {
+				$server =  $this->config->get('config_ssl') . 'image/' ;
+			} else {
+				$server = $this->config->get('config_url') . 'image/' ;
+			}
 			$this->load->model('tool/image');
 			foreach ($cate_conf as $k=>$cf) {
 				if(isset($cf['image'])&&is_file(DIR_IMAGE . $cf['image'])){
@@ -19,7 +24,7 @@
 				}
 
 				$data['cate_conf'][$k]=array(
-					"awesome"	=>	$cf['awesome'],
+					"icon_url"	=>	$server.$cf['icon'],
 					"image"		=> $image					
 				);
 			}		
