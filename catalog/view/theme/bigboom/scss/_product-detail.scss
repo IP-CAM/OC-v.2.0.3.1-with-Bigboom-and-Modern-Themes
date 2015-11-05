@@ -41,6 +41,7 @@
 				font-size: 16px;
 				color: #333;
 				display: inline-block;
+				margin: 0;
 				&.old-price {
 					font-size: 13px;
 					color: #aaa;
@@ -76,6 +77,7 @@
 		}
 		.rating-review {
 			line-height: 26px;
+			margin-bottom: 4px;
 			&:after {
 				display: table;
 				content: "";
