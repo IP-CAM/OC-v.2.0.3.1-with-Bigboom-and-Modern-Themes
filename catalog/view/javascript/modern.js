@@ -142,12 +142,12 @@ $(document).ready(function () {
 
     /*dropdown*/
 
-    $('#top .dropdown').hover(function () {
+
+    $('header .dropdown-toggle').parent().hover(function () {
 
        $(this).find('.dropdown-menu').show();
 
-    },function(){
-
+    },function(){        
         $(this).find('.dropdown-menu').hide();
 
     });

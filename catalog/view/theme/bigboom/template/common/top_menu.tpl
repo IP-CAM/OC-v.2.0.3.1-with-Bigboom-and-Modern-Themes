@@ -1,10 +1,10 @@
-<div class="header-menu hidden-xs">
+<div class="header-menu">
 	<ul>
 		<li class="home"><a href="#">Home</a>
 			<div class="dropdown">
 				<ul>
 					<li><a href="<?php echo $home2 ?>">Home2</a></li>
-					<li><a href="#">Home3</a></li>
+					<li><a href="<?php echo $home3 ?>">Home3</a></li>
 				</ul>
 			</div>
 		</li>

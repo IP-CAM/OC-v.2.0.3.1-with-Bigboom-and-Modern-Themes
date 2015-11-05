@@ -1,8 +1,10 @@
 /************HEADER BASIC************/
 #cart {
 	.dropdown-menu {
-		min-width: 430px;
-		z-index: 999999;
+		min-width: 196px;
+		border-top:5px solid #da4b52;
+		top:97%;
+		z-index: 99;
 		.btn-remove {
 			border-radius: 3px;
 			padding: 1px 5px;

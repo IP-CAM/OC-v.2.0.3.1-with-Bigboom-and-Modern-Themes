@@ -46,6 +46,7 @@
              <?php } ?>
            </div>
            <div class="col-sm-7 col-xs-6">
+           <div id="product">
              <div class="product-detail-information">
                <h2 class="product-name"><?php echo $heading_title; ?></h2>
                <div class="rating-review">
@@ -300,6 +301,7 @@
                <?php } ?>
                <button type="button" id="button-cart" data-loading-text="<?php echo $text_loading; ?>" class="btn btn-primary btn-lg btn-block"><?php echo $button_cart; ?></button>
              </div>
+            </div>
            </div>
          </div>
          <!--description-->
@@ -539,9 +541,13 @@ $('#button-cart').on('click', function() {
       if (json['success']) {
         $('.breadcrumb').after('<div class="alert alert-success">' + json['success'] + '<button type="button" class="close" data-dismiss="alert">&times;</button></div>');
 
-        $('#cart > button').html('<i class="fa fa-shopping-cart"></i><span id="cart-total">' + json['total']);
+        setTimeout(function(){
+          $('.alert.alert-success').hide('slow');
+        },2000);
 
-        $('html, body').animate({ scrollTop: 0 }, 'slow');
+        $('#cart > button').html('<span class="cart-text"><i class="fa fa-shopping-cart"></i><span id="cart-total">' + json['total'] + '</span></span> <span class="cart-arrow"><i class="fa fa-arrow-right"></i></span>');
+
+        //$('html, body').animate({ scrollTop: 0 }, 'slow');
 
         $('#cart > ul').load('index.php?route=common/cart/info ul li');
       }
