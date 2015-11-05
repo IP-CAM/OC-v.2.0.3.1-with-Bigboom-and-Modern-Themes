@@ -44,11 +44,11 @@
             <div class="form-group">
               <label class="col-sm-2 control-label"><?php echo "Categories icon" ?></label>
               <div class="col-sm-10">
-                  <table class="display-tb" style="width:100%;">
+                  <table class="table table-bordered table-hover display-tb" style="width:100%;">
                     <thead>
                       <tr>
-                        <td class="text-left">Name</td>                                            
-                        <td class="text-center">FontAwesomeIcon</td>
+                        <td class="text-center">Icon</td>
+                        <td class="text-left">Name</td>     
                         <td class="text-center">Image</td> 
                         <td class="text-center">Width image</td>
                         <td class="text-center">Height image</td> 
@@ -56,14 +56,12 @@
                     </thead>
                     <tbody>                  
                       <?php foreach ($categories as $cate) { $k=$cate['category_id']; ?>
-                        <tr>                         
-                          <td class="text-left"><?php echo $cate['name']; ?></td>                                          
+                        <tr>  
                           <td>
-                            <div class="input-group">
-                              <input class="awesome-icon input-group form-control icp icp-auto" placeholder="input awesome icon" style="width:100%;" name="category[<?php echo $k ?>][awesome];" <?php if(isset($cate_conf[$k]['awesome'])){ ?>value="<?php if(!empty($cate_conf)) echo $cate_conf[$k]['awesome']; ?>" <?php } ?> data-placement="bottomRight" readonly />
-                              <span class="input-group-addon"></span>
-                            </div>
-                          </td>
+                            <a href="" id="thumb-icon<?php echo $k;  ?>" data-toggle="image" class="img-thumbnail"><img src="<?php if(!empty($cate_conf)) echo $cate_conf[$k]['icon_path']; ?>" data-placeholder="<?php echo $placeholder; ?>"></a>
+                            <input type="hidden" name="category[<?php echo $k ?>][icon]" id="input-icon<?php echo $k; ?>" value="<?php echo $cate_conf[$k]['icon']; ?>" />
+                          </td>                       
+                          <td class="text-left"><?php echo $cate['name']; ?></td>                                   
                           <td><a href="" id="thumb-image<?php echo $k; ?>" data-toggle="image" class="img-thumbnail"><img src="<?php if(!empty($cate_conf)) echo $cate_conf[$k]['thumb']; ?>" data-placeholder="<?php echo $placeholder; ?>"></a>
                           <input type="hidden" name="category[<?php echo $k ?>][image]" id="input-image<?php echo $k;  ?>" value="<?php echo $cate_conf[$k]['image']; ?>"/>
                           </td>  
@@ -112,7 +110,7 @@
    
   });
   </script>
-             
+  <!--           
   <script>
             $(function() {                
                 $('.action-create').on('click', function() {
@@ -166,6 +164,7 @@
                 }).trigger('click');
             });
   </script>
+  -->
 
   <?php echo $footer; ?>
 <style type="text/css">

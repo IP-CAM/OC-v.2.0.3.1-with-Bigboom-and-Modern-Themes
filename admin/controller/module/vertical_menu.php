@@ -98,7 +98,12 @@
 
 
 			$this->load->model('tool/image');
-		
+
+			if ($this->request->server['HTTPS']) {
+				$server = HTTPS_CATALOG .'image/' ;
+			} else {
+				$server = HTTP_CATALOG .'image/';
+			}		
 
 			if(isset($this->request->post['category'])){
 				$cate_conf=$this->request->post['category'];				
@@ -111,7 +116,8 @@
 						$thumb	=	$this->model_tool_image->resize('no_image.png',50,50);
 					}
 					$data['cate_conf'][$key]=array(
-						'awesome'	=>	$cf['awesome'],
+						'icon_path'	=>	$server.$cf['icon'],
+						'icon'		=>	$cf['icon'],
 						'thumb'		=>	$thumb,
 						'image'		=>	$cf['image'],
 						'img_width'	=>	$cf['img_width'],
@@ -132,7 +138,8 @@
 						$thumb	=$this->model_tool_image->resize('no_image.png',50,50);
 					}					
 					$data['cate_conf'][$key]=array(
-						'awesome'	=>	$cf['awesome'],
+						'icon_path'	=>	$server.$cf['icon'],
+						'icon'		=>	$cf['icon'],
 						'thumb'		=>	$thumb,
 						'image'		=>	$cf['image'],
 						'img_width'	=>	$cf['img_width'],
