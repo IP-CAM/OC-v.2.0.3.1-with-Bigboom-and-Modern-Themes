@@ -6,11 +6,11 @@
 					<div class="get-in-touch">
 						<h3 class="title">Get in touch !</h3>
 						<div class="icon">
-							<a href="#"><i class="fa fa-facebook"></i></a>
-							<a href="#"><i class="fa fa-twitter"></i></a>
-							<a href="#"><i class="fa fa-rss"></i></a>
-							<a href="#"><i class="fa fa-pinterest-square"></i></a>
-							<a href="#"><i class="fa fa-instagram"></i></a>
+							<a href="#" data-toggle="tooltip" title="Facebook"><i class="fa fa-facebook"></i></a>
+							<a href="#" data-toggle="tooltip" title="Twitter"><i class="fa fa-twitter"></i></a>
+							<a href="#" data-toggle="tooltip" title="RSS"><i class="fa fa-rss"></i></a>
+							<a href="#" data-toggle="tooltip" title="Pinterest"><i class="fa fa-pinterest-square"></i></a>
+							<a href="#" data-toggle="tooltip" title="Instagram"><i class="fa fa-instagram"></i></a>
 						</div>
 					</div>
 				</div>
@@ -64,11 +64,11 @@
 					</div>
 					<div class="footer-bottom-col col-sm-6">
 						<div class="icon-payment-wrapper">
-							<a class="icon-payment paypal-icon" href="#">paypal</a>
-							<a class="icon-payment visa-icon" href="#">visa</a>
-							<a class="icon-payment maestro-icon" href="#">maestro</a>
-							<a class="icon-payment mastercard-icon" href="#">mastercard</a>
-							<a class="icon-payment discover-icon" href="#">discover</a>
+							<a class="icon-payment paypal-icon" href="#" data-toggle="tooltip" title="Paypal">paypal</a>
+							<a class="icon-payment visa-icon" href="#" data-toggle="tooltip" title="Visa">visa</a>
+							<a class="icon-payment maestro-icon" href="#" data-toggle="tooltip" title="Maestro">maestro</a>
+							<a class="icon-payment mastercard-icon" href="#" data-toggle="tooltip" title="Mastercard">mastercard</a>
+							<a class="icon-payment discover-icon" href="#" data-toggle="tooltip" title="Discover">discover</a>
 						</div>
 					</div>
 				</div>

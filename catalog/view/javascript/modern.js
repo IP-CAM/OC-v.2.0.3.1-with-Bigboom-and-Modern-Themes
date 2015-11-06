@@ -142,8 +142,7 @@ $(document).ready(function () {
 
     /*dropdown*/
 
-
-    $('header .dropdown-toggle').parent().hover(function () {
+    $('header .dropdown-hover').parent().hover(function () {
 
        $(this).find('.dropdown-menu').show();
 

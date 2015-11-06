@@ -1,3 +1,4 @@
+<h3 class="heading-title heading-slide-title lastest-blog-title"><?php echo $title; ?></h3>
 <div id="carousel<?php echo $module; ?>" class="owl-carousel brand">
   <?php foreach ($banners as $banner) { ?>
   <div class="item text-center">

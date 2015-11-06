@@ -1,7 +1,7 @@
 <?php if (count($languages) > 1) { ?>
 <form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data" id="language">
   <div class="btn-group">
-    <button class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+    <button class="btn btn-link dropdown-toggle dropdown-hover" data-toggle="dropdown">
     <?php foreach ($languages as $language) { ?>
     <?php if ($language['code'] == $code) { ?>
     <a href="#" class="top-link language-link ">

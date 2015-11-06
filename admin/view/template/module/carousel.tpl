@@ -35,6 +35,15 @@
             </div>
           </div>
           <div class="form-group">
+            <label class="col-sm-2 control-label" for="input-title"><?php echo $entry_title; ?></label>
+            <div class="col-sm-10">
+              <input type="text" name="title" value="<?php echo $title; ?>" placeholder="<?php echo $entry_title; ?>" id="input-name" class="form-control" />
+              <?php if ($error_title) { ?>
+              <div class="text-danger"><?php echo $error_title; ?></div>
+              <?php } ?>
+            </div>
+          </div>
+          <div class="form-group">
             <label class="col-sm-2 control-label" for="input-banner"><?php echo $entry_banner; ?></label>
             <div class="col-sm-10">
               <select name="banner_id" id="input-banner" class="form-control">

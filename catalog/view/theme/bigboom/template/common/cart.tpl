@@ -1,5 +1,5 @@
 <div id="cart" class="btn-group btn-block">
-  <button type="button" data-toggle="dropdown" data-loading-text="<?php echo $text_loading; ?>" class="dropdown-toggle">
+  <button type="button" data-toggle="dropdown" data-loading-text="<?php echo $text_loading; ?>" class="dropdown-toggle dropdown-hover">
     <span class="cart-text">
       <i class="fa fa-shopping-cart"></i>
       <span id="cart-total"> <?php echo $text_items; ?></span>
