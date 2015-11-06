@@ -1,4 +1,4 @@
-<div class="hidden-xs vertical-menu">
+<div class="vertical-menu">
 	<div class="category-text">
 		<h4>CATEGORY</h4>
 		<i class="fa fa-bars"></i>
@@ -39,7 +39,4 @@
 		<?php } ?>			
 		</ul>
 	</div>
-</div>
-<div class="visible-xs">
-<?php echo $menu; ?>
 </div>

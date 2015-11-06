@@ -19,6 +19,7 @@ class ControllerCommonHeader extends Controller {
 		$data['scripts'] = $this->document->getScripts();
 		$data['lang'] = $this->language->get('code');
 		$data['direction'] = $this->language->get('direction');	
+		$data['menu']		= $this->load->controller('common/menu');
 		$this->load->model('catalog/category');
 
 		if ($this->config->get('config_google_analytics_status')) {

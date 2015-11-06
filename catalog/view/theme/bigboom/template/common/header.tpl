@@ -55,7 +55,7 @@
 		<nav id="top-nav">
 			<div class="container">
 				<div class="row">
-					<ul class="top-left col-sm-6 clearfix">
+					<ul class="top-left col-sm-4 clearfix">
 						<li class="dropdown language">
 							<?php echo $language; ?>
 						</li>
@@ -63,7 +63,7 @@
 							<?php echo $currency; ?>
 						</li>
 					</ul>
-					<div class="top-right col-sm-6">
+					<div class="top-right col-sm-8">
 						<ul class="toplink-wrapper pull-right clearfix">
 							<li>
 								<a href="<?php echo $account; ?>" class="top-link account-link">
@@ -98,17 +98,17 @@
 			<div class="container">
 				<div class="logo-search-cart">
 					<div class="row">
-						<div class="logo col-sm-3">
+						<div class="logo col-md-3 col-sm-12">
 							<?php if ($logo) { ?>
 							<a href="<?php echo $home1; ?>"><img src="<?php echo $logo; ?>" title="<?php echo $name; ?>" alt="<?php echo $name; ?>"></a>
 							<?php } else { ?>
 							<h1><a href="<?php echo $home1; ?>"><?php echo $name; ?></a></h1>
 							<?php } ?>
 						</div>
-						<div class="top-search col-sm-6">
+						<div class="top-search col-md-6 col-sm-8">
 							<?php echo $search; ?>
 						</div>
-						<div class="shopping-cart col-sm-3">
+						<div class="shopping-cart col-md-3 col-sm-4">
 							<?php echo $cart; ?>
 						</div>
 					</div>
@@ -116,6 +116,9 @@
 				<div id="top-menu" class="hidden-xs">
 					<?php echo $top_menu; ?>	 	
 				</div> 
+				<div class="visible-xs">
+					<?php echo $menu; ?>
+				</div>
 			</div>
 		</div>	
 	</header>

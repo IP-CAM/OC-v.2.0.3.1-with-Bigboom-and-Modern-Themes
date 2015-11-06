@@ -30,11 +30,11 @@
 		<div class="container">
 			<div class="main-footer">
 				<div class="row">
-					<div class="main-footer-col footer-logo-img col-md-3 col-xsl-6">
+					<div class="main-footer-col footer-logo-img col-md-3 col-xsl-5">
 						<img src="<?php echo $info['footer_logo']; ?>">
 						<p><?php echo $info['footer_slogan']; ?></p>
 					</div>
-					<div class="main-footer-col col-md-3 col-xsl-6">
+					<div class="main-footer-col col-md-3 col-xsl-7">
 						<?php echo $info['contact_info']; ?>
 					</div>
 					<?php foreach ($links as $link) { ?>					

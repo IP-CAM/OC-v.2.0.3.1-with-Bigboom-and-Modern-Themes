@@ -5,7 +5,7 @@
     <?php for($j=$k;$j<$k+$row;$j++){if($j<count($products))$product=$products[$j];    
         
      ?>
-      <div class="product-layout" data-special="<?php echo $special; ?>"><!--col-lg-3 col-md-3 col-sm-6 col-xs-12-->     
+      <div class="product-layout"><!--col-lg-3 col-md-3 col-sm-6 col-xs-12-->     
           <div class="product-thumb clearfix">
             <div class="product-image-box">
               <a href="<?php echo $product['href'] ?>" class="product-image-link"></a>

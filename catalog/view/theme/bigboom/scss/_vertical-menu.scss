@@ -23,7 +23,7 @@
 		}
 	}
 	.category-list{
-		border:1px solid $border-color;
+		border: 1px solid $border-color;
 		border-top: none;
 		border-bottom: none;
 		 > ul{			
@@ -37,11 +37,14 @@
 					span {
 						font-size: 14px;
 					}
-					i.menu-icon{
-						padding-right: 10px;
-					}
-					i.fa-angle-right{
+					.fa-angle-right{
 						float:right;
+					}
+					img {
+						display: inline-block;
+						margin-right: 14px;
+						position: relative;
+						top: -3px;
 					}
 				}		
 				

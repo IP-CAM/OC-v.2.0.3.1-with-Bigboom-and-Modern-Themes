@@ -130,6 +130,13 @@
 					padding-left: 0;
 				}
 			}
+			&.dropdown {
+				&:hover {
+					.top-link {
+						color: $main-color;
+					}
+				}
+			}
 		}
 	}
 	//overwrite boostrap
