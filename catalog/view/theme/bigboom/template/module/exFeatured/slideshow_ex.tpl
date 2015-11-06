@@ -25,7 +25,7 @@
       items: 1,    	 
       nav:true,   
       loop:true,       
-      autoPlay:1000,
+      autoplay:3000,
       onChange: callback,  
   });
 

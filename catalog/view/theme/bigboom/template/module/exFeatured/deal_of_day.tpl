@@ -77,8 +77,7 @@
 		<script type="text/javascript">		
 		 	$(".countdown").each(function(){
 		 		$(this).jCounter({ 		
-		 		date: $(this).data('datend'),
-		 		timezone:"Asia/Ho_Chi_Minh",
+		 		date: $(this).data('datend'),		 		
 		 		twoDigits:"on",
 		  		fallback: function() { console.log("count finished!")}
 				});	

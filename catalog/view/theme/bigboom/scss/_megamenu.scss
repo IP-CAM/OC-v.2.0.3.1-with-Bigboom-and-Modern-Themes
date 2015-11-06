@@ -265,7 +265,7 @@
 			top: 250%;
 			left:0;
 			border:1px solid #ddd;
-			z-index: 999;
+			z-index: 10;
 			background: #fff;	
 			line-height: 30px;
 			@include opacity(0);
