@@ -29,6 +29,7 @@
 			$data['button_cancel']=$this->language->get('button_cancel');
 			$data['button_save']=$this->language->get('button_save');			
 			$data ['entry_name']=$this->language->get('entry_name');
+			$data['entry_limit']	= $this->language->get('entry_limit');
 
 			$data['heading_title']=$this->language->get('heading_title');
 			$data['text_edit']=$this->language->get('text_edit');
@@ -69,7 +70,13 @@
 			} else {
 				$data['error_name'] = '';
 			}
-			
+
+			if(isset($this->error['limit'])){
+				$data['error_limit']	= $this->error['limit'];
+			}
+			else{
+				$data['error_limit']	=	'';
+			}
 			if (!isset($this->request->get['module_id'])) {
 			$data['action'] = $this->url->link('module/deal_of_day', 'token=' . $this->session->data['token'], 'SSL');
 			} else {
@@ -90,6 +97,16 @@
 				$data['name'] = $module_info['name'];
 			} else {
 				$data['name'] = '';
+			}
+
+			if(isset($this->request->post['limit'])){
+				$data['limit']	= $this->request->post['limit'];
+			}
+			else if(!empty($module_info['limit'])){
+				$data['limit']	= $module_info['limit'];
+			}
+			else {
+				$data['limit']	=	'';
 			}
 
 			if (isset($this->request->post['status'])) {
@@ -114,8 +131,11 @@
 
 		if ((utf8_strlen($this->request->post['name']) < 3) || (utf8_strlen($this->request->post['name']) > 64)) {
 			$this->error['name'] = $this->language->get('error_name');
-		}		
+		}	
 
+		if(!is_numeric($this->request->post['limit'])){
+			$this->error['limit']	= $this->language->get('error_limit');
+		}	
 		return !$this->error;
 	
 		}

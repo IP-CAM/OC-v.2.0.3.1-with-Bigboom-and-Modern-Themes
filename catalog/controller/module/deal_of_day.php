@@ -1,6 +1,6 @@
 <?php 
 	class ControllerModuleDealOfDay extends Controller{		
-			public function index(){
+			public function index($setting){
 
 			$this->load->model('catalog/product');
 			$this->load->model('tool/image');
@@ -10,7 +10,8 @@
 			$data['button_wishlist'] = $this->language->get('button_wishlist');
 			$data['button_compare'] = $this->language->get('button_compare');
 			$data['button_quickview']="Quick view";			
-			$specials=$this->model_catalog_product->getProductSpecials();				
+			$specials=array_slice($this->model_catalog_product->getProductSpecials(),0,(int)$setting['limit']);		
+			
 			$deal_item=array();
 			foreach ($specials as $sp) {	
 
