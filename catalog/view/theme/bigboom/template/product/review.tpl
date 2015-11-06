@@ -11,9 +11,9 @@
       <div class="rating">
       <?php for ($i = 1; $i <= 5; $i++) { ?>
       <?php if ($review['rating'] < $i) { ?>
-        <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
+        <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x" style="color:#999;"></i></span>
         <?php } else { ?>
-        <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i><i class="fa fa-star-o fa-stack-2x"></i></span>
+        <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i><i class="fa fa-star fa-stack-2x"></i></span>
       <?php } ?>
       <?php } ?>
       </div>
