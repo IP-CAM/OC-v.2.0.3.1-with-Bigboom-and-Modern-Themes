@@ -13,8 +13,8 @@
 					<div id="product-content<?php echo $product['product_id']; ?>" class="product-thumb">
 						<div class="product-image-box">
 							<a href="<?php echo $product['href']; ?>" class="product-image-link" ></a>
-							<img class="product-image product-image-1 img-responsive" src="<?php echo $product['thumb']; ?>">
-							<img class="product-image product-image-2 img-responsive" src="<?php echo $product['thumb1']; ?>">
+							<img class="product-image product-image-1 img-responsive" src="<?php echo $product['thumb']; ?>" alt=" ">
+							<img class="product-image product-image-2 img-responsive" src="<?php echo $product['thumb1']; ?>" alt=" ">
 							<div class="button-action">							
 									<span style="display:inline-block;" data-toggle="tooltip" title="<?php echo $button_quickview; ?>">
 										<a class="btn-quickview btn-link quickview" data-toggle="modal" data-target="#product-quickview" data-productinfo='<?php echo $prod_quick_view; ?>'>

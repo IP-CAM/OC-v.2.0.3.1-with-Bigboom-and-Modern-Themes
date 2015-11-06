@@ -9,8 +9,8 @@
           <div class="product-thumb clearfix">
             <div class="product-image-box">
               <a href="<?php echo $product['href'] ?>" class="product-image-link"></a>
-              <img class="product-image product-image-1 img-responsive" src="<?php echo $product['thumb']; ?>">
-              <img class="product-image product-image-2 img-responsive" src="<?php echo $product['thumb1'] ?>">
+              <img class="product-image product-image-1 img-responsive" src="<?php echo $product['thumb']; ?>" alt=" ">
+              <img class="product-image product-image-2 img-responsive" src="<?php echo $product['thumb1'] ?>" alt=" ">
             </div>
             <div class="product-info">
               <h3 class="product-name"><a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a></h3>
