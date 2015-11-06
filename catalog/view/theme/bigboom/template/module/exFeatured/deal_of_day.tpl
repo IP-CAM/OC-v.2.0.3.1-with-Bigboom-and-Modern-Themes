@@ -5,10 +5,15 @@
 		<div class="row">
 			<div class="product-grid col-sm-12">
 				<div class="product-thumb">
+						<div class="product-label">
+						  <div class="label label-hot">
+						    <span>hot</span>
+						  </div>
+						</div>
 						<div class="product-image-box">
 							<a href="<?php echo $deal_item['href']; ?>" class="product-image-link"></a>
-							<img class="product-image product-image-1 img-responsive" src="<?php echo $deal_item['thumb']; ?>">
-							<img class="product-image product-image-2 img-responsive" src="<?php echo $deal_item['thumb1']; ?>">
+							<img class="product-image product-image-1 img-responsive" src="<?php echo $deal_item['thumb']; ?>" alt=" ">
+							<img class="product-image product-image-2 img-responsive" src="<?php echo $deal_item['thumb1']; ?>" alt=" ">
 							<div class="product-quickview">
 								<span style="display:inline-block;" data-toggle="tooltip" title="<?php echo $button_quickview ?>">
 									<a class="btn-quickview btn-link quickview" data-toggle="modal"  data-target="#product-quickview" data-productinfo='<?php echo $prod_quick_view; ?>'>

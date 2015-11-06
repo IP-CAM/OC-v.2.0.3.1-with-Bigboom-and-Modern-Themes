@@ -195,7 +195,7 @@
 	line-height: 50px;
 	position: relative;
 	.header-menu {
-		margin-left: 23%;
+		margin-left: 22.3%;
 		> ul {
 			> li {
 				display: inline-block;	
@@ -206,7 +206,7 @@
 					padding: 0 20px;
 					text-transform: uppercase;					
 					display: block;
-					line-height: 50px;
+					line-height: 48px;
 					position: relative;		
 				}
 				&:hover {					
@@ -215,7 +215,9 @@
 						top: -12px;
 					}
 					.dropdown {
-						display: block;
+						visibility: visible;
+						@include opacity(1);
+						top: 100%;
 					}
 				}
 				&.item-has-dropdown {
@@ -258,14 +260,16 @@
 			}
 		}
 		.dropdown {
-			display: none;
+			visibility: hidden;
 			position: absolute;
-			top:100%;
+			top: 250%;
 			left:0;
 			border:1px solid #ddd;
 			z-index: 999;
 			background: #fff;	
 			line-height: 30px;
+			@include opacity(0);
+			@include transition(0.4s);
 			h3 {
 				font-size: 16px;
 				font-weight: bold;

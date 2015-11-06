@@ -46,12 +46,12 @@
 	<script type="text/javascript" src="catalog/view/javascript/owl.carousel.2.0.0-beta.2.4/owl.carousel.min.js"></script>
 </head>
 <body class="<?php echo $class; ?>">	
+	<div id="top">
+		<h2>Special Offer!</h2>
+		<h4>Rewarding all customers with a 15% discount.</h4>
+		<h5>this offer is available from 9th December to 19th December 2015</h5>
+	</div>
 	<header class="header header-1">
-		<div id="top">
-			<h2>Special Offer!</h2>
-			<h4>Rewarding all customers with a 15% discount.</h4>
-			<h5>this offer is available from 9th December to 19th December 2015</h5>
-		</div>
 		<nav id="top-nav">
 			<div class="container">
 				<div class="row">
