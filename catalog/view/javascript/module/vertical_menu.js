@@ -10,10 +10,7 @@ $(document).ready(function(){
 
 	element_cate_wrapper.width(max+20);			
 	
-	li.hover(function(){
-		
-		fly_sub_menu.stop().animate({left:"100%"});
-		
+	li.hover(function(){		
 		var link_cate = $(this).find('.link-cate');			
 
 		var max_width = link_cate.find('.row-cate-wrapper').width();	
@@ -23,9 +20,8 @@ $(document).ready(function(){
 		width_image = $(this).find('.fly-sub-menu img').width();
 
 		width = width_image+max_width+27;
+
 		($(this).find('.fly-sub-menu')).css('width',width+'px');	
 
-	},function(){		
-		fly_sub_menu.css('left','110%');		
 	});
 });

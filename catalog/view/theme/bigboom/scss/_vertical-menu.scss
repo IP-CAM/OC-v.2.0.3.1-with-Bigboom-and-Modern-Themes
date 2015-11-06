@@ -54,21 +54,22 @@
 						background-color: $main-color;
 					}
 					.fly-sub-menu{
-						z-index: 9999;
-						opacity: 1;
+						visibility: visible;
+						left: 100%;
+						@include opacity(1);
 					}
 				}
 
 			}
-			.fly-sub-menu {
-				background-color: #fff;	
-				width: 900px;
-				display: block;
-				opacity: 0;											
-				position: absolute;				
+			.fly-sub-menu {				
+				visibility: hidden;
+				background-color: #fff;																				
+				position: absolute;	
+				@include opacity(0);
+				@include transition(0.3s); 			
 				top:0;
-				left:110%;
-				z-index:-9999;				
+				left:120%;
+				z-index: 9;							
 				padding: 25px;
 				padding-right: 0;	
 				border:1px solid #ddd;	

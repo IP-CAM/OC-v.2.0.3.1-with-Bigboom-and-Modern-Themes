@@ -40,11 +40,11 @@
 				</div>
 				<div class="footer-bottom-col col-sm-4">
 					<div class="icon-payment-wrapper">
-						<a class="icon-payment paypal-icon" href="#">paypal</a>
-						<a class="icon-payment visa-icon" href="#">visa</a>
-						<a class="icon-payment maestro-icon" href="#">maestro</a>
-						<a class="icon-payment mastercard-icon" href="#">mastercard</a>
-						<a class="icon-payment discover-icon" href="#">discover</a>
+						<a class="icon-payment paypal-icon" href="#" data-toggle="tooltip" title="Paypal">paypal</a>
+						<a class="icon-payment visa-icon" href="#" data-toggle="tooltip" title="Visa">visa</a>
+						<a class="icon-payment maestro-icon" href="#" data-toggle="tooltip" title="Maestro">maestro</a>
+						<a class="icon-payment mastercard-icon" href="#" data-toggle="tooltip" title="Master Cart">mastercard</a>
+						<a class="icon-payment discover-icon" href="#" data-toggle="tooltip" title="Discover">discover</a>
 					</div>
 				</div>
 			</div>
