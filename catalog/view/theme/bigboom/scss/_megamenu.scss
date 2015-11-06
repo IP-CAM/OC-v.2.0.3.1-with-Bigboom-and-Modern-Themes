@@ -93,6 +93,12 @@
 				padding: 0 20px;
 				.navbar-toggle {
 					color: inherit;
+					&:focus,
+					&:active {
+						outline: none;
+						border: none;
+						box-shadow: none;
+					}
 				}
 			}
 			div.dropdown-menu {
@@ -104,6 +110,7 @@
 				float: none;
 				padding: 0;
 				max-height: none;
+				border: none;
 				.nav {
 					margin: 0;
 					> li {
@@ -124,9 +131,9 @@
 								display: none;
 							}
 						}
-						&:first-child {
+						&:last-child {
 							> a {
-								border-top: 1px solid #ddd;
+								border-bottom: none;
 							}
 						}
 						&.open,
@@ -217,7 +224,7 @@
 					.dropdown {
 						visibility: visible;
 						@include opacity(1);
-						top: 100%;
+						top: 50px;
 					}
 				}
 				&.item-has-dropdown {

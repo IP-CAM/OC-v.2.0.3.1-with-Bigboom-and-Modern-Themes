@@ -10,8 +10,8 @@
 						<div class="dropdown-inner">
 							<div class="sub-menu-wrapper">
 								<ul class="list-unstyled sub-menu-1 sub-home">
-									<li><a href="<?php echo $home1; ?>">Home1</a></li>
-									<li><a href="<?php echo $home2; ?>">Home2</a></li>					
+									<li><a href="<?php echo $home2; ?>">Home2</a></li>
+									<li><a href="<?php echo $home3; ?>">Home3</a></li>					
 								</ul>
 							</div>
 						</div>

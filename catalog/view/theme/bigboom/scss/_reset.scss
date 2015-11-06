@@ -31,16 +31,6 @@ a {
 		outline: none;
 	}
 }
-ul {
-	> li {
-		> a {
-			color: #555;
-			&:hover {
-				color: $main-color;
-			}
-		}
-	}
-}
 
 img {
 	max-width: 100%;
