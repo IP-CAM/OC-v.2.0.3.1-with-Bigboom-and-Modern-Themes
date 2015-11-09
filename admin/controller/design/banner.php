@@ -335,6 +335,8 @@ class ControllerDesignBanner extends Controller {
 			$banner_info = $this->model_design_banner->getBanner($this->request->get['banner_id']);
 		}
 
+
+
 		$data['token'] = $this->session->data['token'];
 
 		if (isset($this->request->post['name'])) {
@@ -356,7 +358,7 @@ class ControllerDesignBanner extends Controller {
 		if (isset($this->request->post['status'])) {
 			$data['status'] = $this->request->post['status'];
 		} elseif (!empty($banner_info)) {
-			$data['status'] = $block_info['status'];
+			$data['status'] = $banner_info['status'];
 		} else {
 			$data['status'] = true;
 		}
