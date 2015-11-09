@@ -43,6 +43,13 @@ class ControllerModulefeaturedEx extends Controller {
 			$data['resp640']=3;
 		}
 
+		if(isset($setting['margin'])){
+			$data['margin'] = $setting['margin'];
+		}
+		else{
+			$data['margin']=10;
+		}
+
 	
 		$data['item']=$setting['item'];
 

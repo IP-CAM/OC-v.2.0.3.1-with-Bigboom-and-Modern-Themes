@@ -226,19 +226,23 @@
           </div>          
           <div class="form-group row-slider">
             <label class="col-sm-2 control-label" for="input-row"><?php echo $entry_row; ?></label>
-            <div class="col-sm-3">
+            <div class="col-sm-2">
               <input type="text" name="row" value="<?php echo $row; ?>" placeholder="<?php echo $entry_row; ?>" id="input-row" class="form-control" />
               <?php if ($error_row) { ?>
               <div class="text-danger"><?php echo $error_row; ?></div>
               <?php } ?>
             </div> 
              <label class="col-sm-2 control-label" for="input-row"><?php echo "Items"; ?></label>
-              <div class="col-sm-3">
+              <div class="col-sm-1">
               <input type="text" name="item" value="<?php echo $item; ?>" placeholder="<?php echo $item; ?>" id="input-item" class="form-control" />
               <?php if ($error_item) { ?>
               <div class="text-danger"><?php echo $error_item; ?></div>
               <?php } ?>
             </div>
+            <label class="col-sm-2 control-label" for="input-margin"><?php echo "Items margin" ?></label>
+            <div class="col-sm-1">
+                <input type="text" name="margin" value="<?php echo $margin; ?>" placeholder="<?php echo $margin; ?>" class="form-control"/>
+            </div>            
 
              <label class="col-sm-1 control-label" for="carousel-content" style="text-align:right"><?php echo "Uncarousel" ?></label>
             <div class="col-sm-1">            
@@ -246,11 +250,7 @@
               <input type="checkbox" name="uncarousel" value="yes" id="id-carousel" data-stcheck="<?php echo $stcarousel; ?>" style="margin-top:9px;">
             </div>         
           </div>    
-          <div class="form-group row-slider">
-            <label class="col-sm-2 control-label" for="input-0px"><?php echo "0px"; ?></label>
-            <div class="col-sm-2">
-                <input type="text" name="resp0" value="<?php echo $resp0 ;?>" placeholder="<?php echo $resp0; ?>" class="form-control"/>
-            </div>
+          <div class="form-group row-slider">           
             <label class="col-sm-2 control-label"  for="input-480px"><?php echo "480px"; ?></label>
             <div class="col-sm-2">
                 <input type="text" name="resp480" value="<?php echo $resp480; ?>" placeholder="<?php echo $resp480; ?>" class="form-control"/>
@@ -259,7 +259,11 @@
             <div class="col-sm-2">
                 <input type="text" name="resp640" value="<?php echo $resp640; ?>" placeholder="<?php echo $resp640; ?>" class="form-control"/>
             </div>
-          </div>        
+             <label class="col-sm-2 control-label" for="input-0px"><?php echo "768px"; ?></label>
+            <div class="col-sm-2">
+                <input type="text" name="resp0" value="<?php echo $resp0 ;?>" placeholder="<?php echo $resp0; ?>" class="form-control"/>
+            </div>
+          </div>             
           <div class="form-group">
             <label class="col-sm-2 control-label" for="input-limit"><?php echo $entry_limit; ?></label>
             <div class="col-sm-10">
