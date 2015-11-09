@@ -150,6 +150,16 @@ class ControllerModulefeaturedEx extends Controller {
 			$data['title'] = '';
 		}
 
+		if(isset($this->request->post['margin'])){
+			$data['margin'] = $this->request->post['margin'];
+		}
+		elseif(isset($module_info['margin'])){
+			$data['margin'] = $module_info['margin'];
+		}
+		else{
+			$data['margin'] = 10;
+		}
+
 		if(isset($this->request->post['products'])){
 			$data['cate_products']=$this->request->post['products'];
 		}

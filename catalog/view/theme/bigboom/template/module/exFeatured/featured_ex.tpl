@@ -84,7 +84,7 @@
     <script type="text/javascript">
       $('.owl-carousel').owlCarousel({
           loop:true,
-          margin:10,
+          margin:<?php echo $margin; ?>,
           nav:true,  
           mouseDrag:false,     
           responsive:{
