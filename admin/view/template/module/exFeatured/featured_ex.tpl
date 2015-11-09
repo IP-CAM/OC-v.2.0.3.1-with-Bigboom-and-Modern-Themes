@@ -45,17 +45,7 @@
             </div>
           </div>          
            <div class="form-group">
-            <label class="col-sm-2 control-label" for="input-categories"><?php echo "Product display"; ?></label>
-            <!--<div class="col-sm-10">
-              <select name="categories" id="input-categories" class="form-control">
-                  <?php  foreach ($category_id as $ctid) { ?>
-                    <option value="<?php echo $ctid['category_id']; ?>"
-                    <?php if($category_sl==$ctid['category_id']){echo "selected";} ?>> 
-                    <?php echo $ctid['name']; ?>
-                    </option>
-                  <?php }?>
-              </select>
-            </div> Display by category-->             
+            <label class="col-sm-2 control-label" for="input-categories"><?php echo "Product display"; ?></label>                 
             <div class="col-sm-2 group-choose">
             <?php  if(($cate_products=="featured")||($cate_products=="ypn")) {?>
                 <input type="radio" name="products" value="featured" checked="checked">All Products
@@ -102,9 +92,7 @@
                             </tbody>
                           </table>
                         </div>                      
-                      <div class="row">
-                       <!--<div class="col-sm-6 text-left"><?php echo $pagination; ?></div>
-                        <div class="col-sm-6 text-right"><?php echo $results; ?></div>-->
+                      <div class="row">                      
                       </div>
                     </div>
                 </div>       
@@ -250,14 +238,28 @@
               <?php if ($error_item) { ?>
               <div class="text-danger"><?php echo $error_item; ?></div>
               <?php } ?>
-            </div> 
+            </div>
 
              <label class="col-sm-1 control-label" for="carousel-content" style="text-align:right"><?php echo "Uncarousel" ?></label>
             <div class="col-sm-1">            
               <input type="hidden"  name="uncarousel" value="no"> 
               <input type="checkbox" name="uncarousel" value="yes" id="id-carousel" data-stcheck="<?php echo $stcarousel; ?>" style="margin-top:9px;">
             </div>         
-          </div>                    
+          </div>    
+          <div class="form-group row-slider">
+            <label class="col-sm-2 control-label" for="input-0px"><?php echo "0px"; ?></label>
+            <div class="col-sm-2">
+                <input type="text" name="resp0" value="<?php echo $resp0 ;?>" placeholder="<?php echo $resp0; ?>" class="form-control"/>
+            </div>
+            <label class="col-sm-2 control-label"  for="input-480px"><?php echo "480px"; ?></label>
+            <div class="col-sm-2">
+                <input type="text" name="resp480" value="<?php echo $resp480; ?>" placeholder="<?php echo $resp480; ?>" class="form-control"/>
+            </div>
+            <label class="col-sm-2 control-label" for="input-640"><?php echo "640px"; ?></label>
+            <div class="col-sm-2">
+                <input type="text" name="res640" value="<?php echo $resp640; ?>" placeholder="<?php echo $resp640; ?>" class="form-control"/>
+            </div>
+          </div>        
           <div class="form-group">
             <label class="col-sm-2 control-label" for="input-limit"><?php echo $entry_limit; ?></label>
             <div class="col-sm-10">

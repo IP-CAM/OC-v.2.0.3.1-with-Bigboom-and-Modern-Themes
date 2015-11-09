@@ -242,6 +242,36 @@ class ControllerModulefeaturedEx extends Controller {
 			$data['item'] = 4;
 		}
 
+		if(isset($this->request->post['resp0'])){
+			$data['resp0'] = $this->request->post['resp0'];
+		}
+		else if(isset($module_info['resp0'])){
+			$data['resp0'] = $module_info['resp0'];
+		}
+		else{
+			$data['resp0']=1;
+		}
+
+		if(isset($this->request->post['resp480'])){
+			$data['resp480']= $this->request->post['resp480'];
+		}
+		else if(isset($module_info['resp480'])){
+			$data['resp480']	= $module_info['resp480'];
+		}
+		else{
+			$data['resp480']	= 2;
+		}
+
+		if(isset($this->request->post['resp640'])){
+			$data['resp640']= $this->request->post['resp640'];
+		}
+		else if(isset($module_info['resp640'])){
+			$data['resp640'] = $module_info['resp640'];
+		}
+		else {
+			$data['resp640'] = 3;
+		}
+
 		if (isset($this->request->post['uncarousel'])) {
 			$data['stcarousel'] = $this->request->post['uncarousel'];
 		} elseif (!empty($module_info)) {
