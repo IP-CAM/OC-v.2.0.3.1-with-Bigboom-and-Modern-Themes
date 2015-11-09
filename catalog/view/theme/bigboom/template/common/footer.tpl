@@ -1,9 +1,9 @@
-<div id="footer-ads-wrapper">
-	<div class="container">	
-		<?php if(isset($cms_block[6])) { echo html_entity_decode($cms_block[6]['content']);} ?>			
-	</div>
-</div>
 <footer class="footer-1">
+	<div id="footer-ads-wrapper">
+		<div class="container">	
+			<?php if(isset($cms_block[6])) { echo html_entity_decode($cms_block[6]['content']);} ?>			
+		</div>
+	</div>
 	<div class="container">
 		<div class="main-footer">
 			<div class="row">

@@ -295,6 +295,9 @@
 
 .product-grid {
 	margin-bottom: 30px;
+	&:last-child {
+		margin-bottom: 0!important;
+	}
 }
 .common-home {
 	.product-grid {

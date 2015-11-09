@@ -1,6 +1,10 @@
 //Deal of day
 
 .deal-product {
+	margin-bottom: 25px;
+	&:last-child {
+		margin-bottom: 0;
+	}
 	.deal-of-day-timer {
 		> li {
 			float: left;

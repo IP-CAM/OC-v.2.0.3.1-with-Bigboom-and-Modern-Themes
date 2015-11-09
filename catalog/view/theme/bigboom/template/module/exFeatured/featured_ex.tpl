@@ -8,7 +8,7 @@
         $prod_quick_view=json_encode($product);         
        
      ?>
-      <div class="product-layout product-grid" data-special="<?php echo $special; ?>">
+      <div class="product-layout product-grid">
         <!--col-lg-3 col-md-3 col-sm-6 col-xs-12-->          
         <div class="product-thumb">
          <?php if(in_array($product['product_id'], $new_product_id)||in_array($product['product_id'],$spec_product_id )) { ?> 
