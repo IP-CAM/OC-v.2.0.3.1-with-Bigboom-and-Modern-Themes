@@ -22,14 +22,29 @@ class ControllerModulefeaturedEx extends Controller {
 
 		$data['row']=$setting['row'];
 
+		if(isset($setting['resp0'])) {
+			$data['resp0'] = $setting['resp0'];
+			
+		} else {
+			$data['resp0']=1;
+		}
+
+		if(isset($setting['resp480'])) {
+			$data['resp480'] = $setting['resp480'];
+			
+		} else {
+			$data['resp480']=2;
+		}
+
+		if(isset($setting['resp640'])) {
+			$data['resp640'] = $setting['resp640'];
+			
+		} else {
+			$data['resp640']=3;
+		}
+
+	
 		$data['item']=$setting['item'];
-
-		$data['resp0'] = $setting['resp0'];
-
-		$data['resp480'] = $setting['resp480'];
-
-		$data['resp640']= $setting['resp640'];
-
 
 
 		$this->load->model('catalog/product');

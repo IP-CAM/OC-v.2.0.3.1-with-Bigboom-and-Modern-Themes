@@ -257,7 +257,7 @@
             </div>
             <label class="col-sm-2 control-label" for="input-640"><?php echo "640px"; ?></label>
             <div class="col-sm-2">
-                <input type="text" name="res640" value="<?php echo $resp640; ?>" placeholder="<?php echo $resp640; ?>" class="form-control"/>
+                <input type="text" name="resp640" value="<?php echo $resp640; ?>" placeholder="<?php echo $resp640; ?>" class="form-control"/>
             </div>
           </div>        
           <div class="form-group">
