@@ -9,7 +9,10 @@
 			$data['button_cart'] = $this->language->get('button_cart');
 			$data['button_wishlist'] = $this->language->get('button_wishlist');
 			$data['button_compare'] = $this->language->get('button_compare');
-			$data['button_quickview']="Quick view";			
+			$data['button_quickview']="Quick view";
+			$data['limit']	= $setting['limit'];		
+
+			$data['title']	=	$setting['title'];	
 			$specials=array_slice($this->model_catalog_product->getProductSpecials(),0,(int)$setting['limit']);		
 			
 			$deal_item=array();
@@ -58,12 +61,19 @@
 			}
 			$data['deal_total']=$deal_item;
 
-				if(file_exists(DIR_TEMPLATE . $this->config->get('config_template'). '/template/module/exFeatured/deal_of_day.tpl')){
-					return $this->load->view($this->config->get('config_template'). '/template/module/exFeatured/deal_of_day.tpl',$data);
+				if($setting['layout']){
+					if(file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/module/exFeatured/deal_of_day_grid.tpl')){
+						 return $this->load->view($this->config->get('config_template') . '/template/module/exFeatured/deal_of_day_grid.tpl',$data);
+					}
+				}					
+				else{
+					if(file_exists(DIR_TEMPLATE . $this->config->get('config_template'). '/template/module/exFeatured/deal_of_day.tpl')){
+						return $this->load->view($this->config->get('config_template'). '/template/module/exFeatured/deal_of_day.tpl',$data);
+					}
 				}
-				/*else{
-					return $this->load->view('bigbom/template/module/exFeatured/deal_of_day.tpl',$data);
-			}	*/		
+
+
+				
 		}
 	}
 ?>

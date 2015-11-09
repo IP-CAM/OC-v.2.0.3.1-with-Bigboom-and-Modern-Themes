@@ -1,10 +1,8 @@
 <h3 class="heading-title featured-title"><?php echo $title; ?></h3>
-<div class="row">
-	<?php foreach ($deal_total as $deal_item) {  $prod_quick_view=json_encode($deal_item); ?>
-	<div class="deal-product col-sm-12 col-xs-6">	
-		<div class="row">
-			<div class="product-grid col-sm-12">
-				<div class="product-thumb">
+<div id="countdown-carousel">
+	<?php foreach ($deal_total as $deal_item) {  $prod_quick_view=json_encode($deal_item) ; ?>
+		<div class="item deal-product">		
+			<div class="product-thumb">
 						<div class="product-label">
 						  <div class="label label-hot">
 						    <span>hot</span>
@@ -71,18 +69,26 @@
 								<i class="fa fa-exchange"></i>						
 							</a>
 						</div>
-				</div>
-			</div>
+			</div>			
 		</div>
-		<script type="text/javascript">		
-		 	$(".countdown").each(function(){
-		 		$(this).jCounter({ 		
-		 		date: $(this).data('datend'),		 		
-		 		twoDigits:"on",
-		  		fallback: function() { console.log("count finished!")}
-				});	
-		 	});
-		</script>
-	</div>
 	<?php } ?>
 </div>
+
+<script type="text/javascript">
+	
+	$('#countdown-carousel').owlCarousel({
+		items:<?php echo $limit; ?>,		
+		margin:10,	
+		mouseDrag:false,
+		nav:false,
+		dots:false	
+	});
+
+	$(".countdown").each(function(){
+ 		$(this).jCounter({ 		
+ 		date: $(this).data('datend'),		 		
+ 		twoDigits:"on",
+  		fallback: function() { console.log("count finished!")}
+		});	
+ 	});
+</script>

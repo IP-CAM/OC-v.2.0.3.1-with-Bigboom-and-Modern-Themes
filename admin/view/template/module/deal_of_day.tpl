@@ -1,4 +1,3 @@
-<script src="//cdn.ckeditor.com/4.4.7/full/ckeditor.js"></script>
 <?php echo $header; ?><?php echo $column_left; ?>
 	<div id="content">
   <div class="page-header">
@@ -37,6 +36,16 @@
                   <?php } ?>
                 </div>
          		</div>
+
+            <div class="form-group">
+              <label class="col-sm-2 control-label" for="input-title"><?php echo $entry_title ?></label>
+              <div class="col-sm-10">
+                <input type="text" name="title" value="<?php echo $title; ?>" placeholder="<?php echo $entry_title; ?>" id="input=name" class="form-control"/>
+                <?php if($error_title) { ?>
+                  <div class="text-danger"><?php echo $error_title ?></div>
+                <?php } ?>
+              </div>
+            </div>
             <div class="form-group">
               <label class="col-sm-2 control-label" for="input-limit"><?php echo $entry_limit ?></label>
               <div class="col-sm-10">
@@ -44,6 +53,21 @@
                 <?php if($error_limit) { ?>
                   <div class="text-danger"><?php echo $error_limit; ?></div>
                 <?php } ?>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="col-sm-2 control-label" for="input-layout"><?php echo $entry_layout; ?></label>
+              <div class="col-sm-10">
+                <select name="layout" id="input-layout" class="form-control">
+                  <?php if($layout) { ?>
+                    <option value="1" selected="selected"><?php echo $text_grid; ?></option>
+                    <option value="0"><?php echo $text_list; ?></option>
+                  <?php } else { ?>
+                    <option value="1"><?php echo $text_grid; ?></option>
+                    <option value="0" selected><?php echo $text_list; ?></option>
+                  <?php } ?>
+                </select>
               </div>
             </div>
         		<div class="form-group">

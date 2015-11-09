@@ -30,6 +30,10 @@
 			$data['button_save']=$this->language->get('button_save');			
 			$data ['entry_name']=$this->language->get('entry_name');
 			$data['entry_limit']	= $this->language->get('entry_limit');
+			$data['entry_layout']	=	$this->language->get('entry_layout');
+			$data['text_list']		=	$this->language->get('text_list');
+			$data['text_grid']		=	$this->language->get('text_grid');
+			$data['entry_title']	= 	$this->language->get('entry_title');			
 
 			$data['heading_title']=$this->language->get('heading_title');
 			$data['text_edit']=$this->language->get('text_edit');
@@ -70,6 +74,11 @@
 			} else {
 				$data['error_name'] = '';
 			}
+			if (isset($this->error['title'])) {
+				$data['error_title'] = $this->error['title'];
+			} else {
+				$data['error_title'] = '';
+			}
 
 			if(isset($this->error['limit'])){
 				$data['error_limit']	= $this->error['limit'];
@@ -99,14 +108,34 @@
 				$data['name'] = '';
 			}
 
+
+			if (isset($this->request->post['title'])) {
+				$data['title'] = $this->request->post['title'];
+			} elseif (!empty($module_info['title'])) {
+				$data['title'] = $module_info['title'];
+			} else {
+				$data['title'] = '';
+			}
+
 			if(isset($this->request->post['limit'])){
 				$data['limit']	= $this->request->post['limit'];
 			}
-			else if(!empty($module_info['limit'])){
+			else if(!empty($module_info['limit'])){				
 				$data['limit']	= $module_info['limit'];
 			}
 			else {
 				$data['limit']	=	'';
+			}			
+
+			if(isset($this->request->post['layout'])){
+				$data['layout']	=	$this->request->post['layout'];
+			}
+			elseif(isset($module_info['layout'])){	
+				$data['layout']	= $module_info['layout'];
+			}
+			else{
+
+				$data['layout']	= 1;
 			}
 
 			if (isset($this->request->post['status'])) {
@@ -131,6 +160,10 @@
 
 		if ((utf8_strlen($this->request->post['name']) < 3) || (utf8_strlen($this->request->post['name']) > 64)) {
 			$this->error['name'] = $this->language->get('error_name');
+		}	
+
+		if ((utf8_strlen($this->request->post['title']) < 3) || (utf8_strlen($this->request->post['title']) > 64)) {
+			$this->error['title'] = $this->language->get('error_title');
 		}	
 
 		if(!is_numeric($this->request->post['limit'])){
