@@ -26,6 +26,6 @@
         </div>    
         <?php if($ex_position) { echo $ex_position;} ?>                  
     </div>  
-    <?php if($top_footer) { echo $top_footer; } ?>
+    <?php echo $top_footer; ?>  
 </div>  
 <?php echo $footer; ?>

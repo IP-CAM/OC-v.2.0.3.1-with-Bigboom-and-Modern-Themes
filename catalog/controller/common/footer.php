@@ -18,7 +18,13 @@ class ControllerCommonFooter extends Controller {
 
 		}
 
-
+		$this->load->model('design/cms_block');
+			$cms_block = $this->model_design_cms_block->getBlocks();	
+			$blocks_id=array();
+			foreach ($cms_block as $block) {
+				array_push($blocks_id, $block['id']);
+			}	
+		$data['cms_block']= array_combine($blocks_id, $cms_block);
 
 		$data['text_information'] = $this->language->get('text_information');
 
@@ -49,8 +55,6 @@ class ControllerCommonFooter extends Controller {
 		$data['text_newsletter'] = $this->language->get('text_newsletter');
 
 		$data['button_cart'] = $this->language->get('button_cart');
-
-
 
 		if (is_file(DIR_IMAGE . $this->config->get('config_logo'))) {
 

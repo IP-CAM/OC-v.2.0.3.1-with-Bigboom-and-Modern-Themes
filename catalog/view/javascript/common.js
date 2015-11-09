@@ -28,8 +28,8 @@ $(document).ready(function() {
 	
 	if (cols1 == 2) {
 		$('#content .product-layout:nth-child(2n+2)').after('<div class="clearfix visible-md visible-sm"></div>');
-	} else if (cols1 == 1) {
-		$('#content .product-layout:nth-child(3n+3)').after('<div class="clearfix visible-lg"></div>');
+	} else if (cols1 == 1) {		
+		$('#content .product-layout:nth-child(4n+4)').after('<div class="clearfix visible-lg"></div>');
 	} else {
 		$('#content .product-layout:nth-child(4n+4)').after('<div class="clearfix"></div>');
 	}

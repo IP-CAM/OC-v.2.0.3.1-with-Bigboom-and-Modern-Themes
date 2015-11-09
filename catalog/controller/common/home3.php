@@ -17,12 +17,12 @@ class ControllerCommonHome3 extends Controller {
 		$data['header'] = $this->load->controller('common/header');
 		$data['ex_position']	=$this->load->controller('common/ex_position');
 		$data['two_column']		=$this->load->controller('common/two_column');
-		$data['three_column']	=$this->load->controller('common/three_column');
-		$data['top_footer']		=$this->load->controller('common/top_footer');
+		$data['three_column']	=$this->load->controller('common/three_column');		
 		$data['top_banner']		=$this->load->controller('common/top_banner');
 		$data['home']			=$this->url->link('common/home');		
 		$data['Threecolumns_1']		=$this->load->controller('common/Threecolumns_1');
-		$data['banner1']	=$this->load->controller('common/banner1');		
+		$data['banner1']	=$this->load->controller('common/banner1');	
+		$data['top_footer']	= $this->load->controller('common/top_footer');	
 
 		//Addition position
 
