@@ -89,13 +89,13 @@
           mouseDrag:false,     
           responsive:{
               0:{
-                  items:1
+                  items:<?php echo $resp0; ?>
               },
               480:{
-                  items:2
+                  items:<?php echo $resp480; ?>
               },
               640:{
-                  items:3
+                  items:<?php echo $resp640; ?>
               },
               1000:{
                   items:$('#ypn-carousel-<?php echo $random ?>').data("items")

@@ -22,9 +22,13 @@ class ControllerModulefeaturedEx extends Controller {
 
 		$data['row']=$setting['row'];
 
-
-
 		$data['item']=$setting['item'];
+
+		$data['resp0'] = $setting['resp0'];
+
+		$data['resp480'] = $setting['resp480'];
+
+		$data['resp640']= $setting['resp640'];
 
 
 
