@@ -17,7 +17,7 @@
   	nav: true,
   	/*navigationText: ['<i class="fa fa-chevron-left fa-5x"></i>', '<i class="fa fa-chevron-right fa-5x"></i>'],*/
   	pagination: true,
-    margin:10,
+    margin:12,
     responsive:{
         0:{
             items:1
@@ -26,10 +26,10 @@
             items:3
         }, 
         640: {
-          items: 4
+          items: 5
         },      
         1000:{
-            items:5
+            items:6
         }
     }
   });

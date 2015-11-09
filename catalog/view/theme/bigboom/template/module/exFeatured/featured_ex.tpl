@@ -88,15 +88,17 @@
           nav:true,  
           mouseDrag:false,     
           responsive:{
-              0:{
-                  items:<?php echo $resp0; ?>
-              },
+              
               480:{
                   items:<?php echo $resp480; ?>
               },
               640:{
                   items:<?php echo $resp640; ?>
               },
+              768:{
+                  items:<?php echo $resp0; ?>
+              },
+             
               1000:{
                   items:$('#ypn-carousel-<?php echo $random ?>').data("items")
               }
