@@ -133,11 +133,15 @@ footer {
 	color: $body-color;
 	margin-bottom: 30px;
 	padding: 8px 15px;
+	@include box-shadow(3px 4px 5px #888);
 	a {
 		color: $main-color;
 		&:hover {
 			text-decoration: underline;
 		}
+	}
+	button.close {
+		margin-left: 30px;
 	}
 }
 
@@ -149,7 +153,6 @@ footer {
 	background: #fff;
 	z-index: 999;
 	padding: 15px;
-	box-shadow: 2px solid #ddd;
 
 }
 
@@ -302,10 +305,10 @@ footer {
 	position: relative;
 	&:before, &:after {
 		position: absolute;
-		top: 15px;
-		right: 15px;
-		bottom: 15px;
-		left: 15px;
+		top: 5px;
+		right: 5px;
+		bottom: 5px;
+		left: 5px;
 		content: "";
 		@include transition(opacity 0.35s ease 0s);
 		@include transition(transform 0.35s ease 0s);
@@ -329,13 +332,13 @@ footer {
 			@include transform(scale(1));
 		}
 		&:before {
-			left: 10px;
-			right: 10px;
+			left: 0px;
+			right: 0px;
 			z-index: 99;
 		}
 		&:after {
-			top: 10px;
-			bottom: 10px;
+			top: 0px;
+			bottom: 0px;
 			z-index: 100;
 		}
 	}
@@ -574,7 +577,7 @@ footer {
 	top: 130px;
 	right: -185px;
 	width: 230px;
-	z-index: 999999;	
+	z-index: 999;	
 	.bb-facebook{
 		background: #39599f;
 	}

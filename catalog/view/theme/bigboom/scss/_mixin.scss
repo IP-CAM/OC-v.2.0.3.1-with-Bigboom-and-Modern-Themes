@@ -28,3 +28,8 @@
 	-webkit-animation:  $animation;
 	-o-animation: $animation;
 }
+@mixin box-shadow($box-shadow) {
+	-webkit-box-shadow: $box-shadow;
+	-moz-box-shadow: $box-shadow;
+	box-shadow: $box-shadow;
+}
