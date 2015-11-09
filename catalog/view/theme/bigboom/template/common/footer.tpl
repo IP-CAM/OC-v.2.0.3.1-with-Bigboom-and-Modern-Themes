@@ -1,3 +1,8 @@
+<div id="footer-ads-wrapper">
+	<div class="container">	
+		<?php if(isset($cms_block[6])) { echo html_entity_decode($cms_block[6]['content']);} ?>			
+	</div>
+</div>
 <footer class="footer-1">
 	<div class="container">
 		<div class="main-footer">
@@ -94,8 +99,8 @@ Please donate via PayPal to donate@opencart.com
 					  	<button class="add-to-cart-button" type="button"><?php echo $button_cart; ?></button> 
                   	</div>            
 					<div class="button-group button-action ">   
-							<button class="btn-compare btn-link compare" type="button" data-toggle="tooltip" title="<?php echo $button_compare; ?>" ><i class="fa fa-exchange"></i></button>
-							<button class="btn-wishlist btn-link wishlist" type="button" data-toggle="tooltip" title="<?php echo $button_wishlist; ?>"><i class="fa fa-heart"></i></button>    
+							<button class="btn-compare btn-link compare" type="button" data-toggle="tooltip" title="Add to compare" ><i class="fa fa-exchange"></i></button>
+							<button class="btn-wishlist btn-link wishlist" type="button" data-toggle="tooltip" title="Add to wishlist"><i class="fa fa-heart"></i></button>    
                     </div>                    
                   </li>  
                 </ul>
@@ -107,6 +112,8 @@ Please donate via PayPal to donate@opencart.com
   </div>
 </div>
 <!--end Product-quickview-->
-
+<script type="text/javascript">	
+	$('#product-quickview .btn-link').tooltip({'z-index':'99999'});
+</script>
 </body>
 </html>

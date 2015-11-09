@@ -15,7 +15,7 @@
 				$data['grid_layout']='col-lg-6 col-md-6 col-sm-12 col-xs-6'; 
 			}
 			else if($column_left||$column_right){
-				$data['grid_layout']='col-lg-4 col-md-4 col-sm-6 col-xs-6';
+				$data['grid_layout']='col-lg-3 col-md-3 col-sm-6 col-xs-6';
 			}
 			else{
 				$data['grid_layout']='col-lg-3 col-md-3 col-sm-6 col-xs-6';
