@@ -45,7 +45,7 @@
                       <?php if ($product['rating'] < $i) { ?>
                       <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x" style="color:#999;"></i></span>
                       <?php } else { ?>
-                      <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i><i class="fa fa-star fa-stack-2x" tyle="color:#999;"></i></span>
+                      <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i><i class="fa fa-star fa-stack-2x"></i></span>
                       <?php } ?>
                       <?php } ?>
                     </div>

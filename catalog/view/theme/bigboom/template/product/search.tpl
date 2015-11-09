@@ -17,7 +17,6 @@
       <div class="search-header">
         <h1><?php echo $heading_title; ?></h1>
         <label class="control-label" for="input-search"><?php echo $entry_search; ?></label>
-        <div class="row">                   
         <h2><?php echo $text_search; ?></h2>
         <?php if ($products) { ?>
         <p><a href="<?php echo $compare; ?>" id="compare-total"><?php echo $text_compare; ?></a></p>
@@ -26,8 +25,9 @@
             <div class="col-md-5 clearfix">
               <label class="control-label pull-left">View as: &nbsp;&nbsp;</label>
               <div class="btn-group pull-left">
-                <button type="button" id="list-view" onclick="location ='<?php echo $default; ?>&layout=list'" class="btn btn-default <?php if($layout=='list') {echo 'button-layout';} ?> " data-toggle="tooltip" title="<?php echo $button_list; ?>"><i class="fa fa-th-list"></i></button>
-                <button type="button" id="grid-view" onclick="location ='<?php echo $default; ?>&layout=grid'" class="btn btn-default <?php if($layout=='grid') {echo 'button-layout';} ?>" data-toggle="tooltip" title="<?php echo $button_grid; ?>"><i class="fa fa-th"></i></button>
+                <button type="button" id="grid-view" onclick="location ='<?php echo $default; ?>&layout=grid'" class="btn btn-default <?php if($layout=='grid') {echo 'button-layout';} ?>" data-toggle="tooltip" title="<?php echo $button_grid; ?>">Grid</button>
+                <span class="view-mode-split"> / </span>
+                <button type="button" id="list-view" onclick="location ='<?php echo $default; ?>&layout=list'" class="btn btn-default <?php if($layout=='list') {echo 'button-layout';} ?> " data-toggle="tooltip" title="<?php echo $button_list; ?>">List</button>
               </div>
             </div>
             <div class="col-md-4 col-xs-6 clearfix">
@@ -43,7 +43,7 @@
               </select>
             </div>
             <div class="col-md-3 col-xs-6 clearfix text-right">
-              <div>
+              <div style="display: inline-block">
                 <label class="control-label" for="input-limit"><?php echo $text_limit; ?></label>
                 <select id="input-limit" class="form-control" onchange="location = this.value;">
                   <?php foreach ($limits as $limits) { ?>
@@ -77,7 +77,6 @@
     </div>  
     <?php echo $content_bottom; ?></div>
     <?php echo $column_right; ?></div>
-  </div>
 </div>
 <script type="text/javascript"><!--
 $('#button-search').bind('click', function() {

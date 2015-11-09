@@ -26,18 +26,7 @@
 	margin-bottom: 15px;
 }
 /************Page contact*************/
-.information-contact {
-	.buttons {
-		.btn-primary {
-			background-color: $main-color;
-			border: none;
-			padding: 8px 25px;
-			&:hover {
-				background-color: #222;
-			}
-		}
-	}
-}
+
 /************Page product modal *************/
 .modal-dialog {
 	border: none;
@@ -198,14 +187,13 @@
 			}
 		}
 	}
-	.buttons {
-		.btn-primary {
-			padding: 12px 20px;
-			background-color: $main-color;
-			color: #fff;
-			border: none;
-			&:hover {
-				background-color: #222;
+	.table-responsive {
+		td:nth-child(2) {
+			a {
+				color: $main-color;
+				&:hover {
+					text-decoration: underline;
+				}
 			}
 		}
 	}

@@ -48,7 +48,7 @@
 			margin-bottom: 35px;
 		}
 	}
-	.common-home {
+	[class*='common-home'] {
 		#column-left {
 			width: 33%;
 			float: left;
@@ -62,6 +62,11 @@
 		}
 		#column-right {
 			display: none;
+		}
+		#top-menu {
+			.header-menu {
+				margin-left: 32.3%;
+			}
 		}
 	}
 	#footer-ads-wrapper {
@@ -101,7 +106,7 @@
 			}
 		}
 	}
-	.common-home {
+	[class*='common-home'] {
 		#top-menu {
 			.header-menu {
 				margin-left: 32%;
@@ -111,10 +116,16 @@
 							font-size: 11px;
 							padding: 0 10px;
 				 		}
+				 		&:hover {
+				 			.dropdown {
+				 				top: 49px;
+				 			}
+				 		}
 				 	}
 				}
 			}
 		}
+
 	}
 	#top-menu {
 		.header-menu {

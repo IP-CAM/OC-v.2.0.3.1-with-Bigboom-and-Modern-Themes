@@ -21,34 +21,35 @@
       </div>
       <div class="view-bar">
         <div class="row">
-          <div class="col-md-7 clearfix">
-            <span class="pull-left">View as: &nbsp;&nbsp;</span>
+          <div class="col-md-5 clearfix">
+            <label class="control-label pull-left">View as: &nbsp;&nbsp;</label>
             <div class="btn-group pull-left">
-              <button type="button" id="list-view" onclick="location ='<?php echo $default; ?>&layout=list'" class="btn btn-default <?php if($layout=='list') {echo 'button-layout';} ?> " data-toggle="tooltip" title="<?php echo $button_list; ?>"><i class="fa fa-th-list"></i></button>
-              <button type="button" id="grid-view" onclick="location ='<?php echo $default; ?>&layout=grid'" class="btn btn-default <?php if($layout=='grid') {echo 'button-layout';} ?>" data-toggle="tooltip" title="<?php echo $button_grid; ?>"><i class="fa fa-th"></i></button>
+              <button type="button" id="grid-view" onclick="location ='<?php echo $default; ?>&layout=grid'" class="btn btn-default <?php if($layout=='grid') {echo 'button-layout';} ?>" data-toggle="tooltip" title="<?php echo $button_grid; ?>">Grid</button>
+              <span class="view-mode-split"> / </span>
+              <button type="button" id="list-view" onclick="location ='<?php echo $default; ?>&layout=list'" class="btn btn-default <?php if($layout=='list') {echo 'button-layout';} ?> " data-toggle="tooltip" title="<?php echo $button_list; ?>">List</button>
             </div>
           </div>
-          <div class="col-md-3 col-xs-6 clearfix">
+          <div class="col-md-4 col-xs-6 clearfix">
             <label class="control-label" for="input-sort"><?php echo $text_sort; ?></label>
             <select id="input-sort" class="form-control" onchange="location = this.value;">
               <?php foreach ($sorts as $sorts) { ?>
               <?php if ($sorts['value'] == $sort . '-' . $order) { ?>
-              <option value="<?php echo $sorts['href']; ?>" selected="selected"><?php echo $sorts['text']; ?></option>
+              <option value="<?php echo $sorts['href']; ?>&layout=<?php echo $layout; ?>" selected="selected"><?php echo $sorts['text']; ?></option>
               <?php } else { ?>
-              <option value="<?php echo $sorts['href']; ?>"><?php echo $sorts['text']; ?></option>
+              <option value="<?php echo $sorts['href']; ?>&layout=<?php echo $layout; ?>"><?php echo $sorts['text']; ?></option>
               <?php } ?>
               <?php } ?>
             </select>
           </div>
-          <div class="col-md-2 col-xs-6 clearfix text-right">
-            <div>
+          <div class="col-md-3 col-xs-6 clearfix text-right">
+            <div style="display: inline-block">
               <label class="control-label" for="input-limit"><?php echo $text_limit; ?></label>
               <select id="input-limit" class="form-control" onchange="location = this.value;">
                 <?php foreach ($limits as $limits) { ?>
                 <?php if ($limits['value'] == $limit) { ?>
-                <option value="<?php echo $limits['href']; ?>" selected="selected"><?php echo $limits['text']; ?></option>
+                <option value="<?php echo $limits['href']; ?>&layout=<?php echo $layout; ?>" selected="selected"><?php echo $limits['text']; ?></option>
                 <?php } else { ?>
-                <option value="<?php echo $limits['href']; ?>"><?php echo $limits['text']; ?></option>
+                <option value="<?php echo $limits['href']; ?>&layout=<?php echo $layout; ?>"><?php echo $limits['text']; ?></option>
                 <?php } ?>
                 <?php } ?>
               </select>

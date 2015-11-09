@@ -597,18 +597,20 @@ footer {
 	.bb-mail{
 		background: #2A056F;
 	}
-	a{
+	a {
 		display: block;
 		margin-bottom: 2px;
 		@include transition(0.3s);
 		color:#fff;
-		&:hover{
+		&:hover {
 			margin-left: -120px;
 		}
 
 	}
-	span{text-decoration: underline;}
-	i{
+	span {
+		text-decoration: underline;
+	}
+	.fa {
 		height: 45px;
 		width: 45px;
 		text-align: center;
@@ -626,4 +628,9 @@ div.required {
 			font-weight: bold;
 		}
 	}
+}
+
+//Large image in quickview
+.mfp-content {
+	z-index: 9999999;
 }
