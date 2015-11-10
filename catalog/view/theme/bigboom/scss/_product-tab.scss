@@ -5,7 +5,17 @@
 	&:last-child {
 		margin-bottom: 0;
 	}
+	.product-image-box {
+		margin-bottom: 13px;
+	}
+	.product-name {
+		margin-bottom: 6px;
+	}
+	.product-price-content {
+		margin-bottom: 12px;
+	}
 	.deal-of-day-timer {
+		margin-bottom: 10px;
 		> li {
 			float: left;
 			width: 23%;

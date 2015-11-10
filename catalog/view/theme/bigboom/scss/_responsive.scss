@@ -95,7 +95,7 @@
 		}
 	}
 }
-@media only screen and (min-width : 768px) and (max-width : 992px) {
+@media only screen and (min-width : 768px) and (max-width : 991px) {
 	#top-nav {
 		.top-left,
 		.top-right .toplink-wrapper {
@@ -135,6 +135,28 @@
 						padding: 0 10px;
 					}
 				}
+			}
+		}
+	}
+	.common-home3 {
+		#column-left-ex {
+			.featured-product{
+				&:first-child {
+					.product-image-box {
+						width: 100%;
+					}
+					.button-action {
+						&:before {
+							margin: auto;
+						}
+					}
+				}
+				&:nth-child(2) {
+					display: none;
+				}
+			}
+			.image-block {
+				display: none;
 			}
 		}
 	}
@@ -180,10 +202,24 @@
 			width: 33%;
 			float: left;
 		}
+		#content {
+
+		}
 	}
 	.common-home2 {
 		#content {
 			width: 100%;
+		}
+	}
+	.common-home3 {
+		#column-left-ex {
+			margin-bottom: 25px;
+			.image-block {
+				display: none;
+			}
+		}
+		#content-ex {
+			margin-bottom: 25px;
 		}
 	}
 	.random-product-slide {
@@ -211,6 +247,9 @@
 				margin-bottom: 25px;
 			}
 		}
+		.main-footer-col {
+			min-height: auto;
+		}
 		.footer-bottom-col {
 			text-align: center;
 			.icon-payment-wrapper {
@@ -230,9 +269,6 @@
 				display: inline-block;
 			}
 		}
-
-
-
 		&.footer-2 {
 			.footer-top {
 				text-align: center;
@@ -244,6 +280,9 @@
 			}
 			.newsletter {
 				display: inline-block;
+			}
+			.main-footer-col {
+				min-height: 190px;
 			}
 		}
 	}
@@ -268,15 +307,24 @@
 			}
 		}
 	}
-	.common-home {
+	[class*='common-home'] {
 		#content {
 			width: 100%;
+			margin-bottom: 30px;
 		}
 		#column-right {
 			display: none;
 		}
-		#content {
-			margin-bottom: 30px;
+	}
+	.common-home2  {
+		.static-block {
+			[class*='col'] {
+				margin-bottom: 25px;
+				text-align: center;
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
 		}
 	}
 	.random-product-slide {
@@ -299,7 +347,7 @@
 		}
 	}
 	footer {
-		.main-footer-col {
+		&.footer-2 .main-footer-col {
 			min-height: auto;
 		}
 	}
@@ -307,13 +355,24 @@
 }
 @media only screen and (max-width: 479px) {
 	.header {
-		.top-search {
-			display: none;
+		#search-custom {
+			.search-input {
+				width: 95px;
+				padding:  0 10px;
+			}
+			#btn-search {
+				padding: 0 10px;
+			}
 		}
 	}
 	#cart {
 		.dropdown-menu {
 			right: 0;
+		}
+	}
+	#footer-ads-wrapper {
+		.footer-ads {
+			min-height: auto;
 		}
 	}
 	.footer-2 {
