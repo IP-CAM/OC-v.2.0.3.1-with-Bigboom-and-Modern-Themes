@@ -23,5 +23,13 @@ $(document).ready(function(){
 
 		($(this).find('.fly-sub-menu')).css('width',width+'px');	
 
+
+		fly_height = $(this).find('.fly-sub-menu').height();
+		height_image = $(this).find('.fly-sub-menu img').height();
+	
+		var top = fly_height - height_image;	
+
+		$(this).find('.fly-sub-menu img').parent().css({'position':'relative','top':top+'px'});
+
 	});
 });
