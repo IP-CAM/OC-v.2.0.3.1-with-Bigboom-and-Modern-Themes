@@ -24,7 +24,7 @@
 						<h5 class="footer-list-title">Our newsletter</h5>
 						<form action=" ">
 							<input type="text" name="" class="input-email" placeholder="Your email address">
-							<input type="submit" class="subcribe-button" value="SUBSCRIBE">
+							<a  class="subcribe-button" href="<?php echo $url_new_letter; ?>">SUBCRIBE</a>
 						</form>
 					</div>
 				</div>

@@ -273,10 +273,17 @@ var wishlist = {
 
 				if (json['success']) {
 					$('#content').parent().before('<div class="alert alert-success"><i class="fa fa-check-circle"></i> ' + json['success'] + '<button type="button" class="close" data-dismiss="alert">&times;</button></div>');
+
+					setTimeout(function(){
+						$('.alert.alert-success').hide('slow');
+					},2000);
 				}
 
 				if (json['info']) {
 					$('#content').parent().before('<div class="alert alert-info"><i class="fa fa-info-circle"></i> ' + json['info'] + '<button type="button" class="close" data-dismiss="alert">&times;</button></div>');
+					setTimeout(function(){
+						$('.alert.alert-info').hide('slow');
+					},2000);
 				}
 
 				$('#wishlist-total span').html(json['total']);
@@ -304,9 +311,13 @@ var compare = {
 				if (json['success']) {
 					$('#content').parent().before('<div class="alert alert-success"><i class="fa fa-check-circle"></i> ' + json['success'] + '<button type="button" class="close" data-dismiss="alert">&times;</button></div>');
 
+					setTimeout(function(){
+						$('.alert.alert-success').hide('slow');
+					},2000);
+					
 					$('#compare-total').html(json['total']);
 
-					$('html, body').animate({ scrollTop: 0 }, 'slow');
+					//$('html, body').animate({ scrollTop: 0 }, 'slow');
 				}
 			}
 		});

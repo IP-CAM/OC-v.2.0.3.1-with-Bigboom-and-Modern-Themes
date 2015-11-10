@@ -143,7 +143,7 @@ footer {
 			color: #fff;
 			background-color: $main-color;
 			border: none;
-			padding: 6px 12px;
+			padding: 8px 14px;
 			@include transition(0.2s);
 			&:hover {
 				background-color: #666;
@@ -281,7 +281,7 @@ footer {
 			}
 		}
 		.subcribe-button {
-			padding: 10px 20px 11px 20px;
+			padding: 13px 20px 12px 20px;
 		}
 	}
 	.contact-info {

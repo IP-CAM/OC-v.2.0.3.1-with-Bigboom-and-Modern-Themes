@@ -54,6 +54,8 @@ class ControllerCommonFooter extends Controller {
 
 		$data['text_newsletter'] = $this->language->get('text_newsletter');
 
+		$data['url_new_letter']   = $this->url->link('account/login');
+
 		$data['button_cart'] = $this->language->get('button_cart');
 
 		if (is_file(DIR_IMAGE . $this->config->get('config_logo'))) {
