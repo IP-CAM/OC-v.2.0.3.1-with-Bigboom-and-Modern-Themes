@@ -70,9 +70,8 @@
 				@include transition(0.3s); 			
 				top:0;
 				left:120%;
-				z-index: 9;							
-				padding: 25px;
-				padding-right: 0;	
+				z-index: 9999;
+				padding: 25px 0 0 25px;	
 				border:1px solid #ddd;	
 				> div {
 					float: left;
@@ -89,7 +88,7 @@
 						margin-right: 10px;	
 						margin-bottom: 20px;
 						color: #555;
-						min-width: 250px;
+						min-width: 200px;
 						h4 {
 							font-weight: bold;
 							font-family: $font-title;
@@ -117,6 +116,8 @@
 										font-size:5px;
 										margin-right: 5px;
 										display: inline-block;
+										position: relative;
+										top: -3px;
 									}
 									&:hover {
 										color: $main-color;
