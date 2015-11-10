@@ -1,5 +1,11 @@
 $(document).ready(function () { 
 
+    $('#top .close').click(function(){
+        $('#top').hide('slow');
+    });
+      
+
+
     var input_search=$('#search').find('input');
 
 	var quickview = $('.btn-quickview');

@@ -47,6 +47,7 @@
 </head>
 <body class="<?php echo $class; ?>">	
 	<div id="top">
+		<span class="close fa fa-times"></span>
 		<h2>Special Offer!</h2>
 		<h4>Rewarding all customers with a 15% discount.</h4>
 		<h5>this offer is available from 9th December to 19th December 2015</h5>
