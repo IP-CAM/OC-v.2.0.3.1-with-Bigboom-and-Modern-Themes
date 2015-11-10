@@ -31,7 +31,7 @@
 					<p>Sign up for Our Newsletter &amp; Promotions</p>
 					<form action=" ">
 						<input type="text" name="" class="input-email" placeholder="Your email address">
-						<input type="submit" class="subcribe-button" value="SUBSCRIBE">
+						<a  class="subcribe-button" href="<?php echo $url_new_letter; ?>">SUBCRIBE</a>
 					</form>
 				</div>
 			</div>

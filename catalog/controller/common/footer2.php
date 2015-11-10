@@ -58,6 +58,8 @@ class ControllerCommonFooter2 extends Controller {
 
 		$data['button_cart'] = $this->language->get('button_cart');
 
+		$data['url_new_letter']   = $this->url->link('account/login');
+
 
 
 		if (is_file(DIR_IMAGE . $this->config->get('config_logo'))) {

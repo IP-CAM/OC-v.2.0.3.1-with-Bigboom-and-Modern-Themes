@@ -16,6 +16,12 @@ class ControllerCommonSearch extends Controller {
 
 		// 3 Level Category Search
 		$data['categories'] = array();
+		if(isset($this->request->get['category_id'])){
+			$data['category_id'] = $this->request->get['category_id'];
+		}	
+		else{
+			$data['category_id'] = -1;
+		}	
 
 		$categories_1 = $this->model_catalog_category->getCategories(0);
 
