@@ -1,6 +1,6 @@
 <div class="header-menu">
 	<ul>
-		<li class="home"><a href="#">Home</a>
+		<li class="home"><a  href="<?php echo $home; ?>">Home</a>
 			<div class="dropdown">
 				<ul class="sub-menu-1">
 					<li><a href="<?php echo $home2 ?>">Homepage 2</a></li>
@@ -17,9 +17,8 @@
 			<div class="dropdown featured-content">
 				<?php if(isset($cms_block[4])) { echo html_entity_decode($cms_block[4]['content']);} ?>	
 			</div>
-		</li>
-		<li><a href="#">Clearance</a></li>
-		<li><a href="#">Blogs</a></li>
-		<li><a href="#">Contact us</a></li>
+		</li>		
+		<li><a href="<?php echo $url_blog; ?>">Blogs</a></li>
+		<li><a href="<?php echo $url_contact; ?>">Contact us</a></li>
 	</ul>			
 </div>

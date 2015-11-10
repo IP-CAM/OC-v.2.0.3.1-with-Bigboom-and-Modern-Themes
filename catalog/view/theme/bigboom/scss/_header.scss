@@ -90,8 +90,9 @@
 		height: 28px;
 		line-height: 28px;
 		text-align: center;
-		background: rgba(104, 104, 104, 0.4) none repeat scroll 0% 0%;
+		background: rgba(104, 104, 104, 0.8) none repeat scroll 0% 0%;
 		cursor: pointer;
+		@include opacity(0.5);
 	}
 }
 #top-nav {
