@@ -51,7 +51,7 @@
 
 // random-product-slide
 .random-product-slide {
-	padding: 18px 20px;
+	padding: 16px 20px;
 	border: 1px solid #efefef;
 	.product-thumb {
 		border: none;
@@ -64,6 +64,7 @@
 		.product-image-box {
 			float: left;
 			margin-right: 10px;
+			margin-bottom: 0;
 		}
 		.product-name {
 			margin-top: 10px;

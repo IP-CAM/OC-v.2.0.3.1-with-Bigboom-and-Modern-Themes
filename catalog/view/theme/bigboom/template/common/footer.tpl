@@ -38,12 +38,12 @@
 		</div>
 		<div class="footer-bottom">
 			<div class="row">
-				<div class="footer-bottom-col col-lg-8 col-md-7">
+				<div class="footer-bottom-col col-lg-8 col-md-7 col-sm-6">
 					<div class="footer-copyright">
 						<?php echo $powered; ?>
 					</div>
 				</div>
-				<div class="footer-bottom-col col-lg-4 col-md-5">
+				<div class="footer-bottom-col col-lg-4 col-md-5 col-sm-6">
 					<div class="icon-payment-wrapper">
 						<a class="icon-payment paypal-icon" href="#" data-toggle="tooltip" title="Paypal">paypal</a>
 						<a class="icon-payment visa-icon" href="#" data-toggle="tooltip" title="Visa">visa</a>

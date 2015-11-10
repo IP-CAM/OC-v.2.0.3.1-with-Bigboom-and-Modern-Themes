@@ -166,6 +166,10 @@
 		display: none;
 	}
 	.header {
+		#cart {
+			display: inline-block;
+			width: auto;
+		}
 		#top-nav {
 			text-align: center;
 			.top-left,
@@ -190,7 +194,7 @@
 	}
 	#cart {
 		 .dropdown-menu {
-			right: 28%;
+			right: -25%;
 		}
 	}
 	#column-left {
@@ -365,11 +369,7 @@
 			}
 		}
 	}
-	#cart {
-		.dropdown-menu {
-			right: 0;
-		}
-	}
+
 	#footer-ads-wrapper {
 		.footer-ads {
 			min-height: auto;

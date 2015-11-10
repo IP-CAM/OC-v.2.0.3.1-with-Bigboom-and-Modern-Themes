@@ -16,7 +16,7 @@
 		font-weight: bold;
 		text-transform: uppercase;
 		float: left;
-		line-height: 41px;
+		line-height: 51px;
 	}
 	.nav {
 		> li {
@@ -285,6 +285,7 @@
 				padding: 0 20px;
 				.navbar-toggle {
 					color: inherit;
+					margin-right: 0;
 					&:focus,
 					&:active {
 						outline: none;
@@ -376,7 +377,7 @@
 					z-index: 999;
 					padding: 11px 20px;
 					top:0px;
-					right: 28px;
+					right: 12px;
 					cursor: pointer;
 				}
 			}
