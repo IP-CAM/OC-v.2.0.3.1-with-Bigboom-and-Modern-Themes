@@ -81,7 +81,25 @@
 			margin:10,	
 			mouseDrag:false,
 			nav:false,
-			dots:false	
+			dots:false,	
+			responsive:{
+			    0:{
+			        items:1
+			    },
+			    480:{
+			        items:2
+			    },
+			    640:{
+			        items:2
+			    },
+			    768:{
+			        items:3
+			    },
+			   
+			    1000:{
+			        items:4
+			    }
+			},
 		});
 
 		$(".countdown").each(function(){

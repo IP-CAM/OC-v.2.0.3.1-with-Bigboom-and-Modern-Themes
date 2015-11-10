@@ -8,10 +8,16 @@
 		<?php foreach ($categories as $category) { $k=$category['category_id']; ?>	
 			<?php if(!empty($category['children'])) { ?>	
 			<li>
-				<a href="<?php echo $category['href']; ?>"><?php if(isset($cate_conf[$k]['icon_url'])){ ?><img src="<?php echo $cate_conf[$k]['icon_url']; ?>" alt=" "><?php } ?><span><?php echo $category['name']; ?><span><i class="fa fa-caret-right"></i></a>
+				<a href="<?php echo $category['href']; ?>">
+					<?php if(isset($cate_conf[$k]['icon_url'])){ ?>
+					<img src="<?php echo $cate_conf[$k]['icon_url']; ?>" alt=" ">
+					<?php } ?>
+					<span><?php echo $category['name']; ?><span>
+					<i class="fa fa-caret-right"></i>
+				</a>
 				<div class="fly-sub-menu">						
 					<div class="link-cate">	
-						<?php foreach (array_chunk($category['children'],3) as $key=>$children) { ?>						
+						<?php foreach (array_chunk($category['children'],2) as $key=>$children) { ?>
 							<div class="row-cate-wrapper">
 								<?php foreach ($children as $child) { ?>
 								<div class="element-cate-wrapper">

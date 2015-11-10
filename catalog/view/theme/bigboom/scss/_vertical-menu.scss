@@ -34,6 +34,7 @@
 					display: block;
 					padding:15px 18px 15px 20px;
 					@include transition(0.2s);
+					line-height: 1;
 					span {
 						font-size: 14px;
 					}
@@ -44,7 +45,7 @@
 						display: inline-block;
 						margin-right: 14px;
 						position: relative;
-						top: -3px;
+						top: -2px;
 					}
 				}		
 				
@@ -88,7 +89,7 @@
 						margin-right: 10px;	
 						margin-bottom: 20px;
 						color: #555;
-						min-width: 76px;
+						min-width: 250px;
 						h4 {
 							font-weight: bold;
 							font-family: $font-title;
@@ -107,7 +108,7 @@
 								}
 								> a {
 									display: block;
-									padding:7px 0px 7px 5px;
+									padding:7px 0px;
 									color:#555;
 									@include transition(0.4s);
 									&:before{

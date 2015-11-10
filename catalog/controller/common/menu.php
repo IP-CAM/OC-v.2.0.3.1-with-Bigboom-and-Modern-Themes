@@ -7,7 +7,8 @@
 			$this->load->model('tool/image');
 
 			$data['home1'] = $this->url->link('common/home');
-			$data['home2'] = $this->url->link('common/home2');			
+			$data['home2'] = $this->url->link('common/home2');	
+			$data['home3'] = $this->url->link('common/home3');		
 			$data['blog_href']	=$this->url->link('blogs/blogs');
 			$data['text_all'] = $this->language->get('text_all');
 			$data['contact_href']=$this->url->link('information/contact');

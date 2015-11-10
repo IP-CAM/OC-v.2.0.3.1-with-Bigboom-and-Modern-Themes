@@ -88,7 +88,9 @@
           nav:true,  
           mouseDrag:false,     
           responsive:{
-              
+              0:{
+                  items:1
+              },
               480:{
                   items:<?php echo $resp480; ?>
               },

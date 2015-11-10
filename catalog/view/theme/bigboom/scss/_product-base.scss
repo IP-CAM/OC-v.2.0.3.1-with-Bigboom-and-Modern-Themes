@@ -148,7 +148,7 @@
 	border: 1px solid #efefef;
 	padding: 7px;
 	.product-image-box {
-		margin-bottom: 5px;
+		margin-bottom: 12px;
 		.product-quickview {
 			> span {
 				width: 68px;
@@ -194,6 +194,7 @@
 	.product-name {
 		margin-top: 0;
 		margin-bottom: 4px;
+		line-height: 14px;
 		a {
 			font-weight: bold;
 			font-size: 14px;

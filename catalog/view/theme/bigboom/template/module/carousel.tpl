@@ -20,14 +20,17 @@
     margin:12,
     responsive:{
         0:{
-            items:1
+            items:2
         },
         480:{
             items:3
         }, 
         640: {
+          items: 4
+        }, 
+        768: {
           items: 5
-        },      
+        },     
         1000:{
             items:6
         }

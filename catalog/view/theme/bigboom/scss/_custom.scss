@@ -55,13 +55,10 @@
 
 	.image-block {
 		margin-bottom: 25px;
-		&:last-child {
-			margin-bottom: 0;
-		}
 	}
 
 	.static-block {
-		margin-bottom: 25px;
+		margin-bottom: 0px;
 	}
 	#lastest-blog {
 		margin-bottom: 65px;
@@ -94,6 +91,9 @@
 	}
 	.deal-of-day {
 		margin-bottom: 30px;
+	}
+	.featured-product {
+		margin-bottom: 25px;
 	}
 }
 
@@ -157,8 +157,11 @@
 					margin-left: 113px;
 				}
 			}
+			.wishlist-compare {
+				display: none;
+			}
 			.product-thumb {
-				padding: 20px 0px 20px 0px;
+				padding: 17px 0px;
 				margin: 0 7px;
 				border: none;
 				border-bottom: 1px solid #eee;
@@ -181,7 +184,7 @@
 		}
 	}
 	.main-content {
-		margin-bottom: 5px;
+		margin-bottom: 24px;
 	}
 	.deal-of-day {
 		margin-bottom: 30px;
