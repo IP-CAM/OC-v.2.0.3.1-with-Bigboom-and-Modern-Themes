@@ -61,6 +61,7 @@
 	text-align: center;
 	padding-top: 33px;
 	padding-bottom: 43px;
+	position: relative;
 	h2 {
 		font-weight: bold;
 		font-family: $font-title;
@@ -80,6 +81,17 @@
 		font-size: 14px;
 		color: #aaa;
 		margin: 0;
+	}
+	.close{
+		position: absolute;
+		top: 15px;
+		right: 89px;
+		width: 28px;
+		height: 28px;
+		line-height: 28px;
+		text-align: center;
+		background: rgba(104, 104, 104, 0.4) none repeat scroll 0% 0%;
+		cursor: pointer;
 	}
 }
 #top-nav {
