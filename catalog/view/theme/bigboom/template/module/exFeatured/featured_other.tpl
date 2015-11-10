@@ -43,8 +43,6 @@
     </div>
     <?php } ?>
     </div>
-  <script type="text/javascript" src="catalog/view/javascript/owl.carousel.2.0.0-beta.2.4/owl.
-  carousel.js"></script>
     <script type="text/javascript">
       $('.owl-carousel').owlCarousel({
           loop:true,
