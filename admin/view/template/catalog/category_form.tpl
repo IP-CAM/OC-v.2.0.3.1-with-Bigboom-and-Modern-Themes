@@ -172,7 +172,7 @@
                 <div class="col-sm-10">
                   <input type="text" name="sort_order" value="<?php echo $sort_order; ?>" placeholder="<?php echo $entry_sort_order; ?>" id="input-sort-order" class="form-control" />
                 </div>
-              </div>             
+              </div>
               <div class="form-group">
                 <label class="col-sm-2 control-label" for="input-status"><?php echo $entry_status; ?></label>
                 <div class="col-sm-10">
@@ -186,7 +186,7 @@
                     <?php } ?>
                   </select>
                 </div>
-              </div>              
+              </div>
             </div>
             <div class="tab-pane" id="tab-design">
               <div class="table-responsive">
@@ -238,65 +238,64 @@
   <script type="text/javascript"><!--
 <?php foreach ($languages as $language) { ?>
 $('#input-description<?php echo $language['language_id']; ?>').summernote({
-	height: 300
+  height: 300
 });
 <?php } ?>
-
 //--></script> 
   <script type="text/javascript"><!--
 $('input[name=\'path\']').autocomplete({
-	'source': function(request, response) {
-		$.ajax({
-			url: 'index.php?route=catalog/category/autocomplete&token=<?php echo $token; ?>&filter_name=' +  encodeURIComponent(request),
-			dataType: 'json',
-			success: function(json) {
-				json.unshift({
-					category_id: 0,
-					name: '<?php echo $text_none; ?>'
-				});
+  'source': function(request, response) {
+    $.ajax({
+      url: 'index.php?route=catalog/category/autocomplete&token=<?php echo $token; ?>&filter_name=' +  encodeURIComponent(request),
+      dataType: 'json',
+      success: function(json) {
+        json.unshift({
+          category_id: 0,
+          name: '<?php echo $text_none; ?>'
+        });
 
-				response($.map(json, function(item) {
-					return {
-						label: item['name'],
-						value: item['category_id']
-					}
-				}));
-			}
-		});
-	},
-	'select': function(item) {
-		$('input[name=\'path\']').val(item['label']);
-		$('input[name=\'parent_id\']').val(item['value']);
-	}
+        response($.map(json, function(item) {
+          return {
+            label: item['name'],
+            value: item['category_id']
+          }
+        }));
+      }
+    });
+  },
+  'select': function(item) {
+    $('input[name=\'path\']').val(item['label']);
+    $('input[name=\'parent_id\']').val(item['value']);
+  }
 });
 //--></script> 
   <script type="text/javascript"><!--
 $('input[name=\'filter\']').autocomplete({
-	'source': function(request, response) {
-		$.ajax({
-			url: 'index.php?route=catalog/filter/autocomplete&token=<?php echo $token; ?>&filter_name=' +  encodeURIComponent(request),
-			dataType: 'json',
-			success: function(json) {
-				response($.map(json, function(item) {
-					return {
-						label: item['name'],
-						value: item['filter_id']
-					}
-				}));
-			}
-		});
-	},
-	'select': function(item) {
-		$('input[name=\'filter\']').val('');
+  'source': function(request, response) {
+    $.ajax({
+      url: 'index.php?route=catalog/filter/autocomplete&token=<?php echo $token; ?>&filter_name=' +  encodeURIComponent(request),
+      dataType: 'json',
+      success: function(json) {
+        response($.map(json, function(item) {
+          return {
+            label: item['name'],
+            value: item['filter_id']
+          }
+        }));
+      }
+    });
+  },
+  'select': function(item) {
+    $('input[name=\'filter\']').val('');
 
-		$('#category-filter' + item['value']).remove();
+    $('#category-filter' + item['value']).remove();
 
-		$('#category-filter').append('<div id="category-filter' + item['value'] + '"><i class="fa fa-minus-circle"></i> ' + item['label'] + '<input type="hidden" name="category_filter[]" value="' + item['value'] + '" /></div>');
-	}
+    $('#category-filter').append('<div id="category-filter' + item['value'] + '"><i class="fa fa-minus-circle"></i> ' + item['label'] + '<input type="hidden" name="category_filter[]" value="' + item['value'] + '" /></div>');
+  }
 });
 
 $('#category-filter').delegate('.fa-minus-circle', 'click', function() {
-	$(this).parent().remove();
+  $(this).parent().remove();
 });
 //--></script> 
   <script type="text/javascript"><!--

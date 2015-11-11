@@ -19,7 +19,7 @@
 					$this->model_extension_module->editModule($this->request->get['module_id'],$this->request->post);
 				}
 
-				$this->session->data['success']=$this->language->get['text_success'];
+				$this->session->data['success']=$this->language->get('text_success');
 				$this->response->redirect($this->url->link('extension/module','token=' . $this->session->data['token'],'SSL'));
 			}		
 

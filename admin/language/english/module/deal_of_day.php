@@ -9,6 +9,8 @@
 	$_['text_grid']		="Grid";
 	$_['text_list']		="List";
 
+	$_['text_success']     = 'Success: You have modified deal of day module!';
+
 	$_['entry_limit']	= "Limit";
 	$_['error_limit']	=	"Limit entry must type numeric!";
 	$_['entry_title']	=	"Title";

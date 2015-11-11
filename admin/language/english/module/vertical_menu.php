@@ -6,4 +6,5 @@
 	$_['entry_status']="Status";
 	$_['entry_name'] = 'Module Name';
 	$_['error_name']="Name is required";
+	$_['text_success']     = 'Success: You have modified vertical menu module!';
  ?>

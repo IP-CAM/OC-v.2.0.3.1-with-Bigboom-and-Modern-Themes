@@ -1,6 +1,5 @@
 <?php
 class ControllerCatalogCategory extends Controller {
-
 	private $error = array();
 
 	public function index() {
@@ -10,20 +9,17 @@ class ControllerCatalogCategory extends Controller {
 
 		$this->load->model('catalog/category');
 
-		$var =$this->model_catalog_category->getCategoryStores(27);
-
 		$this->getList();
 	}
 
 	public function add() {
 		$this->load->language('catalog/category');
 
-		$this->document->setTitle($this->language->get('heading_title'));		
+		$this->document->setTitle($this->language->get('heading_title'));
 
 		$this->load->model('catalog/category');
 
-		if (($this->request->server['REQUEST_METHOD'] == 'POST') && $this->validateForm()) {			
-
+		if (($this->request->server['REQUEST_METHOD'] == 'POST') && $this->validateForm()) {
 			$this->model_catalog_category->addCategory($this->request->post);
 
 			$this->session->data['success'] = $this->language->get('text_success');
@@ -54,12 +50,9 @@ class ControllerCatalogCategory extends Controller {
 		$this->document->setTitle($this->language->get('heading_title'));
 
 		$this->load->model('catalog/category');
-		//print_r($this->request->post);die;
 
 		if (($this->request->server['REQUEST_METHOD'] == 'POST') && $this->validateForm()) {
-
 			$this->model_catalog_category->editCategory($this->request->get['category_id'], $this->request->post);
-			
 
 			$this->session->data['success'] = $this->language->get('text_success');
 
@@ -136,7 +129,6 @@ class ControllerCatalogCategory extends Controller {
 	}
 
 	protected function getList() {
-
 		if (isset($this->request->get['sort'])) {
 			$sort = $this->request->get['sort'];
 		} else {
@@ -195,6 +187,7 @@ class ControllerCatalogCategory extends Controller {
 		);
 
 		$category_total = $this->model_catalog_category->getTotalCategories();
+
 		$results = $this->model_catalog_category->getCategories($filter_data);
 
 		foreach ($results as $result) {
@@ -230,6 +223,7 @@ class ControllerCatalogCategory extends Controller {
 
 		if (isset($this->session->data['success'])) {
 			$data['success'] = $this->session->data['success'];
+
 			unset($this->session->data['success']);
 		} else {
 			$data['success'] = '';
@@ -255,6 +249,7 @@ class ControllerCatalogCategory extends Controller {
 
 		$data['sort_name'] = $this->url->link('catalog/category', 'token=' . $this->session->data['token'] . '&sort=name' . $url, 'SSL');
 		$data['sort_sort_order'] = $this->url->link('catalog/category', 'token=' . $this->session->data['token'] . '&sort=sort_order' . $url, 'SSL');
+
 		$url = '';
 
 		if (isset($this->request->get['sort'])) {
@@ -286,7 +281,8 @@ class ControllerCatalogCategory extends Controller {
 	}
 
 	protected function getForm() {
-		$data['heading_title'] = $this->language->get('heading_title');		
+		$data['heading_title'] = $this->language->get('heading_title');
+
 		$data['text_form'] = !isset($this->request->get['category_id']) ? $this->language->get('text_add') : $this->language->get('text_edit');
 		$data['text_none'] = $this->language->get('text_none');
 		$data['text_default'] = $this->language->get('text_default');
@@ -490,7 +486,7 @@ class ControllerCatalogCategory extends Controller {
 			$data['column'] = $category_info['column'];
 		} else {
 			$data['column'] = 1;
-		}	
+		}
 
 		if (isset($this->request->post['sort_order'])) {
 			$data['sort_order'] = $this->request->post['sort_order'];
@@ -528,13 +524,11 @@ class ControllerCatalogCategory extends Controller {
 	}
 
 	protected function validateForm() {
-
 		if (!$this->user->hasPermission('modify', 'catalog/category')) {
 			$this->error['warning'] = $this->language->get('error_permission');
 		}
 
 		foreach ($this->request->post['category_description'] as $language_id => $value) {
-		
 			if ((utf8_strlen($value['name']) < 2) || (utf8_strlen($value['name']) > 255)) {
 				$this->error['name'][$language_id] = $this->language->get('error_name');
 			}
@@ -542,10 +536,9 @@ class ControllerCatalogCategory extends Controller {
 			if ((utf8_strlen($value['meta_title']) < 3) || (utf8_strlen($value['meta_title']) > 255)) {
 				$this->error['meta_title'][$language_id] = $this->language->get('error_meta_title');
 			}
-		}	
+		}
 
 		if (utf8_strlen($this->request->post['keyword']) > 0) {
-
 			$this->load->model('catalog/url_alias');
 
 			$url_alias_info = $this->model_catalog_url_alias->getUrlAlias($this->request->post['keyword']);
@@ -570,6 +563,7 @@ class ControllerCatalogCategory extends Controller {
 		if (!$this->user->hasPermission('modify', 'catalog/category')) {
 			$this->error['warning'] = $this->language->get('error_permission');
 		}
+
 		return !$this->error;
 	}
 
